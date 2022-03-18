@@ -6,7 +6,7 @@
 import sys
 import pathlib
 
-palabras_vacias = ['alla','de','despues','no','por'] # algunas palabras a ignorar
+palabras_vacias = [] # algunas palabras a ignorar
 
 MIN_LENGTH = 2
 MAX_LENGTH = 50
@@ -97,11 +97,16 @@ def normalize(token):
 
 def save_terms(frequencies):
     global terms_with_freq_one
-    with open("terminos.txt", "w") as f:
+    with open("terminos.txt", "w", encoding="utf-8") as f:
         for key in sorted(frequencies):
-            f.write(f'{key} {frequencies[key][0]} {frequencies[key][1]}\n')
-            if frequencies[key][0] == 1:
-                terms_with_freq_one += 1
+            try:
+                f.write(f'{key} {frequencies[key][0]} {frequencies[key][1]}\n')
+                if frequencies[key][0] == 1:
+                    terms_with_freq_one += 1
+            except Exception as e:
+                print(e)
+                print(key)
+                print(frequencies[key])
 
 def save_collection_stats(): 
        
@@ -109,7 +114,7 @@ def save_collection_stats():
         f.write(f'{total_docs}\n')
         f.write(f'{total_tokens} {total_terms}\n')
         f.write(f'{total_tokens/total_docs} {total_terms/total_docs}\n')
-        f.write(f'{total_terms_length/total_docs}\n')
+        f.write(f'{total_terms_length/total_terms}\n')
         f.write(f'{tokens_in_shortest_doc} {terms_in_shortest_doc} {tokens_in_longest_doc} {terms_in_longest_doc}\n')
         f.write(f'{terms_with_freq_one}\n')
 
@@ -130,7 +135,8 @@ def read_palabras_vacias(path):
         for line in f.readlines():
             stop_words = line.split(",")
             output.append(stop_words)
-    return output
+    return [item for sublist in output for item in sublist]
+
 # -------------------------------------
 
 if __name__ == '__main__':
@@ -141,6 +147,7 @@ if __name__ == '__main__':
     dirpath = sys.argv[1]
     if len(sys.argv) == 3:
         palabras_vacias = read_palabras_vacias(sys.argv[2])
+        print(palabras_vacias)
     process_dir(dirpath)
 
 

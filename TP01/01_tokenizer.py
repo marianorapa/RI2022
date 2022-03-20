@@ -1,10 +1,7 @@
-# - Recorrer todos los archivos de un directorio y contar frecuencias de palabras
-# - Eliminar del análisis a aquellas palabras que pertecen al grupo de "palabras vacías"
-# - Pasar a minúsculas y eliminar las tildes de las palabras procesadas
-# - Crear bar chart de frecuencias
-
 import sys
 import pathlib
+import os
+
 
 palabras_vacias = [] # algunas palabras a ignorar
 
@@ -97,7 +94,7 @@ def normalize(token):
 
 def save_terms(frequencies):
     global terms_with_freq_one
-    with open("terminos.txt", "w", encoding="utf-8") as f:
+    with open("output_01/terminos.txt", "w", encoding="utf-8") as f:
         for key in sorted(frequencies):
             try:
                 f.write(f'{key} {frequencies[key][0]} {frequencies[key][1]}\n')
@@ -110,7 +107,7 @@ def save_terms(frequencies):
 
 def save_collection_stats(): 
        
-    with open("estadisticas.txt", "w") as f:
+    with open("output_01/estadisticas.txt", "w") as f:
         f.write(f'{total_docs}\n')
         f.write(f'{total_tokens} {total_terms}\n')
         f.write(f'{total_tokens/total_docs} {total_terms/total_docs}\n')
@@ -119,7 +116,7 @@ def save_collection_stats():
         f.write(f'{terms_with_freq_one}\n')
 
 def save_top_last_10_frequencies(frequencies):
-     with open("frecuencias.txt", "w") as f:
+     with open("output_01/frecuencias.txt", "w") as f:
         ordered = dict(sorted(frequencies.items(), key=lambda item: item[1]))
         keys = list(ordered.keys())
         for key in keys[-10:]:
@@ -147,7 +144,9 @@ if __name__ == '__main__':
     dirpath = sys.argv[1]
     if len(sys.argv) == 3:
         palabras_vacias = read_palabras_vacias(sys.argv[2])
-        print(palabras_vacias)
+        print(palabras_vacias)    
+    if not os.path.exists("./output_01"):
+        os.mkdir("./output_01")    
     process_dir(dirpath)
 
 

@@ -1,0 +1,13 @@
+academia 1 1
+academy 1 1
+cisco 1 1
+contacto 2 2
+cursos 4 3
+de 1 1
+escuela 1 1
+home 1 1
+inscripcion 1 1
+local 1 1
+netkorking 1 1
+tecnologia 3 2
+unnoba 2 1

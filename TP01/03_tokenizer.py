@@ -1,7 +1,7 @@
 import sys
 import pathlib
 import os
-
+from nltk.stem.snowball import SpanishStemmer
 
 palabras_vacias = [] # algunas palabras a ignorar
 
@@ -33,6 +33,8 @@ def process_dir(filepath):
 
 def count_frequencies(dirpath):
     
+    stemmer = SpanishStemmer()
+
     global total_docs
     global total_tokens
     global total_terms
@@ -54,9 +56,13 @@ def count_frequencies(dirpath):
         with open(in_file, "r", encoding="utf-8") as f:
             
             for line in f.readlines():
+                                
                 tokens_list =  filter(lambda x: x not in palabras_vacias and len(x) >= MIN_LENGTH and len(x) <= MAX_LENGTH,
-                                     [normalize(x) for x in line.strip().split()])                                
-                for token in tokens_list:
+                                     [normalize(x, stemmer) for x in line.strip().split()])                 
+                
+                for token in tokens_list:  
+                    if (token in ["aport"]):
+                        print(line)                  
                     total_doc_tokens += 1
                     total_tokens     += 1
                     if token in frequencies.keys():
@@ -87,14 +93,20 @@ def translate(to_translate):
 	return to_translate.translate(translate_table)
 
 
-def normalize(token):
+def normalize_old(token):
     result = token.lower()
-    result = translate(result)  
+    result = translate(result)           
     return result
+
+def normalize(token, stemmer):
+    result = token.lower()
+    result = translate(result)       
+    return stemmer.stem(result)
+    #return result
 
 def save_terms(frequencies):
     global terms_with_freq_one
-    with open("output_01/terminos.txt", "w", encoding="utf-8") as f:
+    with open("output_03/terminos.txt", "w", encoding="utf-8") as f:
         for key in sorted(frequencies):
             try:
                 f.write(f'{key} {frequencies[key][0]} {frequencies[key][1]}\n')
@@ -107,7 +119,7 @@ def save_terms(frequencies):
 
 def save_collection_stats(): 
        
-    with open("output_01/estadisticas.txt", "w") as f:
+    with open("output_03/estadisticas.txt", "w") as f:
         f.write(f'{total_docs}\n')
         f.write(f'{total_tokens} {total_terms}\n')
         f.write(f'{total_tokens/total_docs} {total_terms/total_docs}\n')
@@ -116,7 +128,7 @@ def save_collection_stats():
         f.write(f'{terms_with_freq_one}\n')
 
 def save_top_last_10_frequencies(frequencies):
-     with open("output_01/frecuencias.txt", "w") as f:
+     with open("output_03/frecuencias.txt", "w") as f:
         ordered = dict(sorted(frequencies.items(), key=lambda item: item[1]))
         keys = list(ordered.keys())
         for key in keys[-10:]:
@@ -145,8 +157,8 @@ if __name__ == '__main__':
     if len(sys.argv) == 3:
         palabras_vacias = read_palabras_vacias(sys.argv[2])
         print(palabras_vacias)    
-    if not os.path.exists("./output_01"):
-        os.mkdir("./output_01")    
+    if not os.path.exists("./output_03"):
+        os.mkdir("./output_03")    
     process_dir(dirpath)
 
 

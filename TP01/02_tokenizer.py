@@ -35,6 +35,7 @@ def process_dir(filepath):
     save_collection_stats()
     save_top_last_10_frequencies(frequencies)
     print_lists()
+    save_lists()
 
 def get_proper_names(line):
     regex = "(?<!\A)(?<!(?:\.\s))((?:(?:[A-Z][a-z]+)+)(?:[ ]*(?:[A-Z][a-z]+))*)[^\.]"        # Won't consider proper names after a ". " since it could mean the start of a sentence
@@ -208,6 +209,17 @@ def print_lists():
     print(numbers_list)
     print("\n Nombres propios: ")
     print(proper_names_list)
+
+def save_list_to_file(file, list):
+    with open(f"output_02/{file}", "w") as f:
+        for entry in list:
+            f.write(f"\"{entry}\",")            
+
+def save_lists():
+    save_list_to_file("abreviaturas.csv", abbreviations_list)
+    save_list_to_file("mails_urls.csv", mails_urls_list)
+    save_list_to_file("numbers.csv", numbers_list)
+    save_list_to_file("proper_names.csv", proper_names_list)
 
 # -------------------------------------
 

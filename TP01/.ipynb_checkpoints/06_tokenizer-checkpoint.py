@@ -2,7 +2,6 @@ import sys
 import pathlib
 import os
 from nltk.stem.snowball import SpanishStemmer
-import re
 
 palabras_vacias = [] # algunas palabras a ignorar
 
@@ -57,23 +56,25 @@ def count_frequencies(dirpath):
         with open(in_file, "r", encoding="utf-8") as f:
             
             for line in f.readlines():
-              
-                tokens_list = [remove_punctuation(normalize(x, stemmer)) for x in line.strip().split()]
-
-                for token in tokens_list:                                      
+                                
+                tokens_list =  filter(lambda x: x not in palabras_vacias and len(x) >= MIN_LENGTH and len(x) <= MAX_LENGTH,
+                                     [normalize(x, stemmer) for x in line.strip().split()])                 
+                
+                for token in tokens_list:  
+                    if (token in ["aport"]):
+                        print(line)                  
                     total_doc_tokens += 1
                     total_tokens     += 1
-                    if token not in palabras_vacias and len(token) >= MIN_LENGTH and len(token) <= MAX_LENGTH:
-                        if token in frequencies.keys():
-                            frequencies[token] = [frequencies[token][0] + 1, frequencies[token][1]]             # Aumenta CF                       
-                        else: # Si es la primera vez que veo este token, se agrega a los términos
-                            frequencies[token] = [1, 0]         ## DF se inicializa en 0 porque a continuación se incrementa la primera vez
-                            total_terms += 1
-                            total_terms_length += len(token)
-                        if token not in document_terms:             # Si es la primera vez que aparece el token en el documento
-                            total_doc_terms += 1
-                            document_terms.append(token)
-                            frequencies[token] = [frequencies[token][0], frequencies[token][1] + 1]            # Aumenta DF    
+                    if token in frequencies.keys():
+                        frequencies[token] = [frequencies[token][0] + 1, frequencies[token][1]]             # Aumenta CF                       
+                    else: # Si es la primera vez que veo este token, se agrega a los términos
+                        frequencies[token] = [1, 0]         ## DF se inicializa en 0 porque a continuación se incrementa la primera vez
+                        total_terms += 1
+                        total_terms_length += len(token)
+                    if token not in document_terms:             # Si es la primera vez que aparece el token en el documento
+                        total_doc_terms += 1
+                        document_terms.append(token)
+                        frequencies[token] = [frequencies[token][0], frequencies[token][1] + 1]            # Aumenta DF    
             # Comparo los tokens del documento para ver si es el más corto o el más largo hasta el momento
             if (total_doc_tokens < tokens_in_shortest_doc):
                 tokens_in_shortest_doc = total_doc_tokens
@@ -85,14 +86,12 @@ def count_frequencies(dirpath):
 
 
 def translate(to_translate):
-	tabin = u'áäâàãéëèêẽíïĩìîóõöòôúüùûũ'
-	tabout = u'aaaaaeeeeeiiiiiooooouuuuu'
+	tabin = u'áéíóú'
+	tabout = u'aeiou'
 	tabin = [ord(char) for char in tabin]
 	translate_table = dict(zip(tabin, tabout))
 	return to_translate.translate(translate_table)
 
-def remove_punctuation(token):
-    return re.sub("\W", "", token)
 
 def normalize_old(token):
     result = token.lower()

@@ -1,18 +1,13 @@
 import sys
 import pathlib
 import os
-from nltk.stem.snowball import SpanishStemmer
+from nltk.stem.snowball import PorterStemmer
 import re
 
 palabras_vacias = [] # algunas palabras a ignorar
 
 MIN_LENGTH = 2
-MAX_LENGTH = 100
-
-## [doc_name, total_tokens, total_terms, total_terms_length]
-TOTAL_TOKENS_POS        = 1
-TOTAL_TERMS_POS         = 2
-TOTAL_TERMS_LENGTH_POS  = 3
+MAX_LENGTH = 25
 
 total_docs = 0
 total_tokens = 0
@@ -34,7 +29,7 @@ def process_dir(filepath):
 
 def count_frequencies(dirpath):
     
-    stemmer = SpanishStemmer()
+    stemmer = PorterStemmer()
 
     global total_docs
     global total_tokens
@@ -58,12 +53,13 @@ def count_frequencies(dirpath):
             
             for line in f.readlines():
               
-                tokens_list = [remove_punctuation(normalize(x, stemmer)) for x in line.strip().split()]
+                tokens_list = [remove_punctuation(normalize(x)) for x in line.strip().split()]
 
                 for token in tokens_list:                                      
                     total_doc_tokens += 1
                     total_tokens     += 1
                     if token not in palabras_vacias and len(token) >= MIN_LENGTH and len(token) <= MAX_LENGTH:
+                        token = stemmer.stem(token)
                         if token in frequencies.keys():
                             frequencies[token] = [frequencies[token][0] + 1, frequencies[token][1]]             # Aumenta CF                       
                         else: # Si es la primera vez que veo este token, se agrega a los términos
@@ -94,16 +90,11 @@ def translate(to_translate):
 def remove_punctuation(token):
     return re.sub("\W", "", token)
 
-def normalize_old(token):
+def normalize(token):
     result = token.lower()
     result = translate(result)           
     return result
 
-def normalize(token, stemmer):
-    result = token.lower()
-    result = translate(result)       
-    return stemmer.stem(result)
-    #return result
 
 def save_terms(frequencies):
     global terms_with_freq_one

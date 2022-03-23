@@ -9,10 +9,6 @@ palabras_vacias = []
 MIN_LENGTH = 2
 MAX_LENGTH = 25
 
-## [doc_name, total_tokens, total_terms, total_terms_length]
-TOTAL_TOKENS_POS        = 1
-TOTAL_TERMS_POS         = 2
-TOTAL_TERMS_LENGTH_POS  = 3
 
 total_docs              = 0
 total_tokens            = 0

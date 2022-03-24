@@ -1,0 +1,11 @@
+# created by virtualenv automatically
+pyenv.cfg
+bin
+languageIdentificationData
+cisi
+cisi_collection
+lib/*
+output_*
+RI-tknx-data
+test
+*.csv

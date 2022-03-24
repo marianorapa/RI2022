@@ -79,7 +79,8 @@ def read_palabras_vacias(path):
 
 if __name__ == '__main__':
     
-    if len(sys.argv) < 2:
+    if len(sys.argv) < 3
+     :
         print('Usage: 04_tokenizer_stemmers <path> <stemmer> [stop_words_path]. Es necesario pasar como argumento un path a un directorio y el tipo de stemmer: lancaster o porter')
         sys.exit(0)
     dirpath = sys.argv[1]

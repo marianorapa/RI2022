@@ -5,10 +5,10 @@ import re
 import time
 
 palabras_vacias = []
+deep_abbrv_process = False
 
 MIN_LENGTH = 2
 MAX_LENGTH = 25
-
 
 total_docs              = 0
 total_tokens            = 0
@@ -49,20 +49,28 @@ def get_numbers(token):
     regex = "([\+\-]?(?:[0-9]+[,\-]?)*[0-9](?:[.][0-9]+)?)"     # accepts some form of telephone numbers and also numbers starting with + or -
     return re.findall(regex, token)
 
-def is_abbreviation(token, collection):
-    regex_1 = "([a-zA-Z]\.[a-zA-Z]+(?:\.[a-zA-Z]+)*)" # matches "i.e", "i.e.", "u.s.a", etc
-    regex_2 = "[A-Z][bcdfghj-np-tvxz]+\."             # extracted from article, matches capital letter followed by consonants
-    regex_3 = "(?:^|\W)([A-Z]{2,5})(?:$|\W)"          # matches abbreviations as capital letters with initials like NASA or JFK
-    regex_4 = "((?:^|\W)[bcdfghj-np-tvxz]+\.)"        # matches all consonants ending in period
+def get_abbreviations(token, collection):
+    #regex_1 = "([a-zA-Z]\.[a-zA-Z]+(?:\.[a-zA-Z]+)*)" # matches "i.e", "i.e.", "u.s.a", etc
+    regex_1 = "(?:\A|\W)(?:[a-zA-Z](?:\.[a-zA-Z])+)(?:\Z|\W)"             # matches "i.e", "i.e.", "u.s.a", etc
+    regex_2 = "(?:[A-Z][bcdfghj-np-tvxz]+\.)"                             # extracted from article, matches capital letter followed by consonants
+    regex_3 = "(?:^|\W)(?:[A-Z]{2,5})(?:$|\W)"                            # matches abbreviations as capital letters with initials like NASA or JFK
+    regex_4 = "(?:(?:^|\W)[bcdfghj-np-tvxz]{2,4}\.)"                      # matches all consonants ending in period
+    regex_5 = "(?:[A-Z][aeiou][bcdfghj-np-tvxz]\.)"                       # matches "Lic.", "Mag."
+    regex_6 = "(?:^|\W)(?:[a-zA-Z]{1,2}(?:\.[a-zA-Z]{1,2})+)(?:$|\W)"
     exists_without_last_period = False
+    exists_lower = False
     if (re.match("[A-Za-z]+\.", token)):
         exists_without_last_period = token[:-1] in collection       # if it ends with period, checks if it's in the collection without it
-    return bool(re.match(f"{regex_1}|{regex_2}|{regex_3}|{regex_4}", token)) and not exists_without_last_period
+    if (re.match("[A-Z]+", token)):
+        exists_lower = token.lower() in collection
+    if not exists_without_last_period and not exists_lower:
+        return re.findall(f"{regex_1}|{regex_2}|{regex_3}|{regex_4}|{regex_5}|{regex_6}", token)
 
 def is_mail_or_url(token):
     url_regex = "([A-Za-z]+:/+[A-Za-z0-9_\-\.]+\.[A-Za-z0-9_\-\./]+[^https:])"        # takes into account when there are 2 urls sticked together
+    url_regex_2 = "(www\.[a-z0-9]+(?:\.[a-z]{2,4}){1,4})"
     mail_regex = "([A-Za-z0-9_\-\.]+@[A-Za-z]+(?:\.[A-Za-z]+)+)"
-    return bool(re.match(f"{url_regex}|{mail_regex}", token))
+    return bool(re.match(f"{url_regex}|{mail_regex}|{url_regex_2}", token))
 
 def remove_punctuation(token):
     return re.sub("\W", "", token)
@@ -81,7 +89,6 @@ def count_frequencies(dirpath):
     global numbers_list
     global proper_names_list
     global mails_urls_list
-
     
     # "casa": [collection_freq, doc_freq]
     frequencies = {}    
@@ -117,15 +124,20 @@ def count_frequencies(dirpath):
                         token = numbers[0]
                         tokens_list.extend(numbers[1:])
                         numbers_list.extend(numbers)
-                    elif (is_abbreviation(raw_token, frequencies)):
-                        abbreviations_list.append(raw_token)
-                        special_token = True
                     elif (is_mail_or_url(raw_token)):
                         mails_urls_list.append(raw_token)                                            
                         special_token = True
-                    elif (not is_date(raw_token)):
-                        token = remove_punctuation(raw_token)
-                        token = translate(token.lower())                    
+                    else:
+                        abbreviations = get_abbreviations(raw_token, frequencies)
+                        if (abbreviations and len(abbreviations) > 0):
+                            abbreviations_list.extend(abbreviations)                            
+                        # Las abreviaciones detectadas se eliminan del raw_token
+                        if deep_abbrv_process:
+                            for abbrv in abbreviations_list:
+                                raw_token.replace(abbrv, "")
+                        if (not is_date(raw_token)):
+                            token = remove_punctuation(raw_token)
+                            token = translate(token.lower())                    
                     if special_token or ((not special_token) and (token not in palabras_vacias) and (len(token) >= MIN_LENGTH) and (len(token) <= MAX_LENGTH)):                        
                         if token in frequencies.keys():
                             frequencies[token] = [frequencies[token][0] + 1, frequencies[token][1]]             # Aumenta CF                       
@@ -227,8 +239,10 @@ if __name__ == '__main__':
         print('Es necesario pasar como argumento un path a un directorio')
         sys.exit(0)
     dirpath = sys.argv[1]
-    if len(sys.argv) == 3:
-        palabras_vacias = read_palabras_vacias(sys.argv[2])
+    if len(sys.argv) == 3:        
+        deep_abbrv_process = sys.argv[2].lower() == "true"        
+    if len(sys.argv) == 4:        
+        palabras_vacias = read_palabras_vacias(sys.argv[3])
         print(palabras_vacias)
     if not os.path.exists("./output_02"):
         os.mkdir("./output_02")    

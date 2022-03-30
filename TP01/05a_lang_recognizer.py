@@ -19,11 +19,11 @@ def train_models(dirpath):
             for line in f.readlines():
                 line = line.lower()
                 line = re.sub("[^a-z]", "", line)
-            for char in line:
-                if char in models[in_file.name]:
-                    models[in_file.name][char] += 1
-                else:
-                    models[in_file.name][char] = 1     
+                for char in line:
+                    if char in models[in_file.name]:
+                        models[in_file.name][char] += 1
+                    else:
+                        models[in_file.name][char] = 1     
 
     return models
 

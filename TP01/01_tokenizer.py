@@ -77,7 +77,7 @@ def count_frequencies(dirpath):
     return frequencies
 
 def remove_punctuation(token):
-    return re.sub("\W", "", token)
+    return re.sub("[\W_]", "", token)
 
 def translate(to_translate):
 	tabin = u'áéíóú'

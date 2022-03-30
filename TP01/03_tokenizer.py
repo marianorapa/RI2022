@@ -88,7 +88,7 @@ def translate(to_translate):
 	return to_translate.translate(translate_table)
 
 def remove_punctuation(token):
-    return re.sub("\W", "", token)
+    return re.sub("\W_", "", token)
 
 def normalize(token):
     result = token.lower()

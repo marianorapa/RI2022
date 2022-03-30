@@ -73,7 +73,7 @@ def is_mail_or_url(token):
     return bool(re.match(f"{url_regex}|{mail_regex}|{url_regex_2}", token))
 
 def remove_punctuation(token):
-    return re.sub("\W", "", token)
+    return re.sub("[\W_]", "", token)
 
 def count_frequencies(dirpath):
     

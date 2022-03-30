@@ -60,7 +60,7 @@ def translate(to_translate):
 	return to_translate.translate(translate_table)
 
 def remove_punctuation(token):
-    return re.sub("\W", "", token)
+    return re.sub("[\W_]", "", token)
 
 def normalize(token):
     result = token.lower()
@@ -79,8 +79,7 @@ def read_palabras_vacias(path):
 
 if __name__ == '__main__':
     
-    if len(sys.argv) < 3
-     :
+    if len(sys.argv) < 3:
         print('Usage: 04_tokenizer_stemmers <path> <stemmer> [stop_words_path]. Es necesario pasar como argumento un path a un directorio y el tipo de stemmer: lancaster o porter')
         sys.exit(0)
     dirpath = sys.argv[1]

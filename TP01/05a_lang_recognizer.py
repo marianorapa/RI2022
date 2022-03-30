@@ -35,7 +35,7 @@ def get_input_distributions(path):
             line = line.lower()
             if (len(line.strip()) > 0):
                 lang_detect_results.append(detect(line))  
-            line = re.sub("[^a-z]", "", line)
+            line = re.sub("[^a-z]", "", line)            
             for char in line:
                 if char in test_model:
                     test_model[char] += 1
@@ -44,10 +44,10 @@ def get_input_distributions(path):
             result.append(test_model)
     return result
 
-def get_closer_model(models, inputs):
+def get_closest_model(models, inputs):
     result = []
     # Complete missing keys in each other
-    for input in inputs:
+    for input in inputs:        
         for key in models.keys():
             for subkey in models[key]:
                 if (subkey not in input):
@@ -57,22 +57,27 @@ def get_closer_model(models, inputs):
                 if (input_key not in models[model_key]):
                     models[model_key][input_key] = 0            
         
-        input = dict(sorted(input.items()))
+        sorted_input = dict(sorted(input.items()))
         
         # Sort each model dictionary
         for key in models:
             models[key] = dict(sorted(models[key].items()))
 
         # Calculate Pearson correlation coef
-        max_correlation = 0
+        max_correlation = -10
         closer_model = None
-        for key in models.keys():        
-            model_corr = np.corrcoef(list(models[key].values()), list(input.values()))[0,1]
-            if (abs(model_corr) > max_correlation):
-                closer_model = key
-                max_correlation = abs(model_corr)
-        result.append(closer_model)
+        for key in models.keys():           
 
+            for i in range(0, len(input)):
+                if list(models[key].keys())[i] != list(sorted_input.keys())[i]:
+                    print(f"Error. Disordered keys: {list(models[key].keys())[i]} vs {list(sorted_input.keys())[i]}")
+           
+            model_corr = np.corrcoef(list(models[key].values()), list(sorted_input.values()))[0,1]
+           
+            if (abs(model_corr) > max_correlation):                
+                closer_model = key
+                max_correlation = abs(model_corr)        
+        result.append(closer_model)
     return result
 
 def save_predictions(predictions):
@@ -121,9 +126,10 @@ if __name__ == '__main__':
     testfilepath = sys.argv[2]    
     if not os.path.exists("./output_05"):
         os.mkdir("./output_05")    
-    models = train_models(dirpath)    
-    input_distributions = get_input_distributions(testfilepath)        
-    prediction = get_closer_model(models, input_distributions)
+    models = train_models(dirpath)  
+    
+    input_distributions = get_input_distributions(testfilepath)     
+    prediction = get_closest_model(models, input_distributions)
     save_predictions(prediction)
     if (len(sys.argv)) == 4:
         solutions = load_solutions(sys.argv[3])

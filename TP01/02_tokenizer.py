@@ -7,7 +7,7 @@ import time
 palabras_vacias = []
 deep_abbrv_process = False
 
-MIN_LENGTH = 2
+MIN_LENGTH = 3
 MAX_LENGTH = 25
 
 total_docs              = 0
@@ -35,11 +35,11 @@ def process_dir(filepath):
     save_lists()
 
 def get_proper_names(line):
-    regex = "(?<!\A)(?<!(?:\.\s))((?:(?:[A-Z][a-z]+)+)(?:[ ]*(?:[A-Z][a-z]+))*)[^\.]"        # Won't consider proper names after a ". " since it could mean the start of a sentence
+    regex = "((?<!\A)(?<!(?:\.\s))(?:(?:(?:[A-Z][a-z]+)+)(?:[ ]*(?:[A-Z][a-z]+))*)[^\.])"        # Won't consider proper names after a ". " since it could mean the start of a sentence
     result = re.findall(regex, line)
     
     return list(filter(lambda x: x.lower() not in palabras_vacias and len(x) >= MIN_LENGTH and len(x) <= MAX_LENGTH,
-                                     [x for x in result])) 
+                                     [x.strip() for x in result])) 
     
 def is_date(token):
     regex = "(\d+[\/\.\-]\d+[\/\.\-]\d+)"
@@ -49,8 +49,7 @@ def get_numbers(token):
     regex = "([\+\-]?(?:[0-9]+[,\-]?)*[0-9](?:[.][0-9]+)?)"     # accepts some form of telephone numbers and also numbers starting with + or -
     return re.findall(regex, token)
 
-def get_abbreviations(token, collection):
-    #regex_1 = "([a-zA-Z]\.[a-zA-Z]+(?:\.[a-zA-Z]+)*)" # matches "i.e", "i.e.", "u.s.a", etc
+def get_abbreviations(token, collection):    
     regex_1 = "(?:\A|\W)(?:[a-zA-Z](?:\.[a-zA-Z])+)(?:\Z|\W)"             # matches "i.e", "i.e.", "u.s.a", etc
     regex_2 = "(?:[A-Z][bcdfghj-np-tvxz]+\.)"                             # extracted from article, matches capital letter followed by consonants
     regex_3 = "(?:^|\W)(?:[A-Z]{2,5})(?:$|\W)"                            # matches abbreviations as capital letters with initials like NASA or JFK
@@ -100,7 +99,8 @@ def count_frequencies(dirpath):
         total_doc_terms  = 0
         document_terms = []
         with open(in_file, "r", encoding="utf-8") as f:                
-            for line in f.readlines():                
+            for line in f.readlines():  
+                line = translate(line).strip()              
                 # Intentar identificar nombres propios 
                 proper_names = get_proper_names(line)
                 for name in proper_names: 
@@ -108,7 +108,7 @@ def count_frequencies(dirpath):
                     line.replace(name, "")
                     proper_names_list.append(name)
                 
-                tokens_list = [translate(x) for x in line.strip().split()]
+                tokens_list = line.strip().split()
 
                 tokens_list.extend(proper_names)
 
@@ -117,7 +117,7 @@ def count_frequencies(dirpath):
                     total_doc_tokens += 1
                     total_tokens     += 1
                     
-                    token = raw_token               
+                    token = raw_token.strip()                                   
                     special_token = False                       
                     numbers = get_numbers(raw_token)                    
                     if (len(numbers) > 0):
@@ -138,7 +138,7 @@ def count_frequencies(dirpath):
                         if (not is_date(raw_token)):
                             token = remove_punctuation(raw_token)
                             token = translate(token.lower())                    
-                    if special_token or ((not special_token) and (token not in palabras_vacias) and (len(token) >= MIN_LENGTH) and (len(token) <= MAX_LENGTH)):                        
+                    if special_token or ((not special_token) and (token not in palabras_vacias) and (len(token) >= MIN_LENGTH) and (len(token) <= MAX_LENGTH)):                                                
                         if token in frequencies.keys():
                             frequencies[token] = [frequencies[token][0] + 1, frequencies[token][1]]             # Aumenta CF                       
                         else: # Si es la primera vez que veo este token, se agrega a los términos
@@ -221,9 +221,13 @@ def print_lists():
     print(proper_names_list)
 
 def save_list_to_file(file, list):
-    with open(f"output_02/{file}", "w") as f:
+    with open(f"output_02/{file}", "w", encoding="utf-8") as f:
         for entry in list:
-            f.write(f"\"{entry}\",")            
+            try:
+                f.write(f"\"{entry}\",")            
+            except Exception as e:
+                print(e)
+                print(entry)
 
 def save_lists():
     save_list_to_file("abreviaturas.csv", abbreviations_list)

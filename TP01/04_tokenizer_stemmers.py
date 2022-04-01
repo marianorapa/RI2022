@@ -9,7 +9,7 @@ import time
 
 palabras_vacias = [] # algunas palabras a ignorar
 
-MIN_LENGTH = 2
+MIN_LENGTH = 3
 MAX_LENGTH = 25
 
 total_docs = 0

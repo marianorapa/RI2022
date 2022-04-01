@@ -1,12 +1,12 @@
 import sys
 import pathlib
 import os
-from nltk.stem.snowball import PorterStemmer
+from nltk.stem.snowball import SnowballStemmer
 import re
 
 palabras_vacias = [] # algunas palabras a ignorar
 
-MIN_LENGTH = 2
+MIN_LENGTH = 3
 MAX_LENGTH = 25
 
 total_docs = 0
@@ -29,7 +29,7 @@ def process_dir(filepath):
 
 def count_frequencies(dirpath):
     
-    stemmer = PorterStemmer()
+    stemmer = SnowballStemmer('spanish')
 
     global total_docs
     global total_tokens

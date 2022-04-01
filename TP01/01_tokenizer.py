@@ -6,7 +6,7 @@ import time
 
 palabras_vacias = [] # algunas palabras a ignorar
 
-MIN_LENGTH = 2
+MIN_LENGTH = 3
 MAX_LENGTH = 25
 
 total_docs = 0
@@ -77,7 +77,7 @@ def count_frequencies(dirpath):
     return frequencies
 
 def remove_punctuation(token):
-    return re.sub("[\W_]", "", token)
+    return re.sub("\W_", "", token)
 
 def translate(to_translate):
 	tabin = u'áéíóú'

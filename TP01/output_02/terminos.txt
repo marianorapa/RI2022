@@ -1,4 +1,3 @@
-+0 2 1
 +54 23 16
 +54-02954-451600 7 2
 +54-11-4788-5400 2 1
@@ -20,7 +19,6 @@
 -08 4 1
 -08-24 1 1
 -09 2 2
--1 11 8
 -1,00 1 1
 -1-01 2 1
 -1-02 2 1
@@ -45,7 +43,6 @@
 -1877601-1 1 1
 -192.168 1 1
 -1997 2 1
--2 7 2
 -2000 8 1
 -2003 2 1
 -2004 11 3
@@ -56,7 +53,6 @@
 -2012 170 3
 -2215256-3 5 1
 -23 1 1
--3 1 1
 -3-155 1 1
 -3-156 1 1
 -3-171 1 1
@@ -74,17 +70,14 @@
 -62 1 1
 -639347-1 1 1
 -6947 1 1
--7 1 1
 -784238-6 4 2
 -890547-1 7 1
--9 1 1
 -9006 1 1
 0,217 1 1
 0.1857 1 1
 0.6 1 1
 0.75 40 2
 0.9 2 1
-00 181 34
 000 8 4
 0001 1 1
 0002 1 1
@@ -138,15 +131,12 @@
 0060 2 1
 0061 2 1
 009 1 1
-01 130 44
 01.03 1 1
 011 7 2
 011-15-54724092 1 1
 011-1554724092 10 1
 011-449-7862 1 1
-01103098-20030900456759 1 1
 015719750316696878402 1 1
-02 374 54
 02-11-2010 1 1
 02-12-2010 1 1
 0200071 1 1
@@ -204,7 +194,6 @@
 02954-451640 1 1
 0298 1 1
 0298-4435700 1 1
-03 108 30
 03-06 1 1
 03-10-2011 1 1
 03.02 1 1
@@ -214,7 +203,6 @@
 0314 1 1
 0328 1 1
 0328-1205 1 1
-0328-12052004000100010 1 1
 0335 1 1
 034 1 1
 0341 9 5
@@ -245,7 +233,6 @@
 03783-427589 1 1
 0381 1 1
 0381-4220696 1 1
-04 106 35
 04-06-2009 1 1
 04-11-2011 1 1
 0401 1 1
@@ -288,7 +275,6 @@
 048 1 1
 0483 1 1
 049 1 1
-05 96 25
 05-04-2011 1 1
 05-12-2011 1 1
 05.04 2 1
@@ -296,7 +282,6 @@
 050 1 1
 054-343-4243054 1 1
 054-381-423 2 1
-06 128 32
 06-05-2009 1 1
 06-09-2010 1 1
 06.02 2 2
@@ -306,7 +291,6 @@
 066 1 1
 0660 1 1
 0674 2 1
-07 360 48
 07-09-2011 1 1
 07.00 1 1
 07.02 3 3
@@ -317,7 +301,6 @@
 076 2 2
 0761 1 1
 0792966 1 1
-08 154 43
 08-02-2012 1 1
 08-09-2010 2 2
 08-09-2011 1 1
@@ -333,7 +316,6 @@
 0855761 1 1
 088 1 1
 089 1 1
-09 190 46
 09-09-2009 1 1
 09-10-2009 1 1
 09-11-2011 1 1
@@ -377,7 +359,6 @@
 1.986 1 1
 1.996 1 1
 1.997 1 1
-10 542 124
 10,20 1 1
 10-06-05 1 1
 10-06-2009 1 1
@@ -447,7 +428,6 @@
 1090 1 1
 1091 1 1
 1093 1 1
-11 408 100
 11,30 1 1
 11-03-2011 1 1
 11-05-2010 2 1
@@ -499,7 +479,6 @@
 1195 1 1
 1196 1 1
 1198 1 1
-12 411 102
 12,13 1 1
 12,30 13 3
 12-05-2010 1 1
@@ -549,7 +528,6 @@
 1294 1 1
 1296 1 1
 1298 2 2
-13 390 75
 13-1-2012 1 1
 13.00 4 3
 13.02 1 1
@@ -582,7 +560,6 @@
 1386 1 1
 139 5 3
 1399 1 1
-14 224 84
 14,30 1 1
 14-10-2011 2 1
 14-16 1 1
@@ -621,7 +598,6 @@
 148 6 3
 149 5 2
 1499 1 1
-15 248 85
 15,9 1 1
 15-02-2012 2 2
 15-12-2009 1 1
@@ -661,7 +637,6 @@
 1595 1 1
 1596 4 1
 1597 1 1
-16 233 77
 16-06-2011 1 1
 16-09-2008 1 1
 16-09-2011 1 1
@@ -702,7 +677,6 @@
 1694 1 1
 1695 1 1
 1698 1 1
-17 136 65
 17,00 11 1
 17-6 2 1
 17.00 5 3
@@ -743,7 +717,6 @@
 1791 1 1
 1792 1 1
 1794 2 1
-18 169 69
 18,30 1 1
 18.00 3 3
 18.000 1 1
@@ -803,7 +776,6 @@
 1895 3 1
 1897 4 2
 1899 1 1
-19 149 68
 19-08-2011 1 1
 19-09-2011 1 1
 19-12-2008 1 1
@@ -963,7 +935,6 @@
 2.8 3 1
 2.800 1 1
 2.9 7 3
-20 179 72
 20,30 1 1
 20-12-2011 1 1
 20-24 2 1
@@ -1120,7 +1091,6 @@
 20889 1 1
 209 4 3
 2097 1 1
-21 312 64
 21,30 1 1
 21-06-2011 2 1
 21-07-2010 1 1
@@ -1142,7 +1112,6 @@
 218 2 1
 2180 1 1
 219 7 4
-22 164 68
 22-02-2012 1 1
 22-06-2010 1 1
 22-11-2011 1 1
@@ -1178,7 +1147,6 @@
 2293439670 1 1
 2293439679 1 1
 2293439688 2 1
-23 109 50
 23-09-2011 1 1
 23-11-10 1 1
 23-11-2009 1 1
@@ -1213,7 +1181,6 @@
 2387 2 1
 239 3 2
 2398 1 1
-24 147 63
 24-08-2010 2 1
 24-11-2011 1 1
 24-26 1 1
@@ -1246,7 +1213,6 @@
 2488 1 1
 249 3 2
 2491 1 1
-25 147 75
 25-09-2010 1 1
 25-10-2010 1 1
 25-2011 3 1
@@ -1274,7 +1240,6 @@
 2585 1 1
 2587 1 1
 259 5 3
-26 99 45
 26-04-2011 1 1
 26-1-2012 1 1
 26-10-2009 1 1
@@ -1307,7 +1272,6 @@
 2683 1 1
 269 3 2
 2695 11 3
-27 96 48
 27-12-2011 1 1
 27.05 1 1
 27.10 1 1
@@ -1331,7 +1295,6 @@
 2789 1 1
 279 6 3
 2797 1 1
-28 99 47
 28-05-2010 1 1
 28-09-2010 1 1
 28-1-2012 1 1
@@ -1359,7 +1322,6 @@
 2873 1 1
 288 2 1
 289 3 2
-29 122 61
 29-08-2011 1 1
 29-10-2008 1 1
 29-12-2011 2 1
@@ -1409,7 +1371,6 @@
 3.724 1 1
 3.800 3 2
 3.9 5 2
-30 231 66
 30-05-2009 1 1
 30-07-2008 1 1
 30-08-2010 1 1
@@ -1436,7 +1397,6 @@
 3084 1 1
 309 4 3
 30900456 1 1
-31 60 30
 31.01 1 1
 31.05 2 2
 31.10 1 1
@@ -1461,7 +1421,6 @@
 318 3 2
 3181717 1 1
 319 3 2
-32 13 10
 320 3 2
 321 3 2
 3215 1 1
@@ -1478,7 +1437,6 @@
 3286 1 1
 329 2 1
 3291 1 1
-33 10 6
 330 7 4
 3301 1 1
 331 3 2
@@ -1494,7 +1452,6 @@
 337 3 2
 338 2 1
 339 3 2
-34 12 7
 340 5 4
 3400 3 2
 341 21 6
@@ -1512,7 +1469,6 @@
 3470 2 1
 348 2 2
 349 2 2
-35 21 11
 35-39 2 1
 350 2 1
 3500 1 1
@@ -1532,7 +1488,6 @@
 3577 1 1
 358 1 1
 359 2 1
-36 34 16
 36.407 2 2
 360 4 3
 3600 1 1
@@ -1553,7 +1508,6 @@
 368.33 1 1
 369 3 2
 3697 2 1
-37 10 6
 37-53 1 1
 370 2 1
 371 4 2
@@ -1571,7 +1525,6 @@
 378 2 1
 3783 7 2
 379 2 1
-38 11 6
 380 5 4
 381 8 6
 382 6 5
@@ -1586,7 +1539,6 @@
 388 3 2
 389 2 1
 3891 2 1
-39 19 10
 39.801 1 1
 390 2 1
 3901 1 1
@@ -1618,7 +1570,6 @@
 4.50 1 1
 4.600 2 1
 4.7 2 1
-40 78 17
 400 11 8
 4000 8 5
 40018969 1 1
@@ -1763,7 +1714,6 @@
 40998663 1 1
 40998698 1 1
 40999881 1 1
-41 16 10
 410 2 1
 41003043 1 1
 41006048 1 1
@@ -1858,7 +1808,6 @@
 41988998 1 1
 41989575 1 1
 41997343 1 1
-42 11 8
 42.200 1 1
 420 2 1
 420064 1 1
@@ -2482,7 +2431,6 @@
 429529 1 1
 429614 4 1
 429615 1 1
-43 10 6
 430 4 3
 4300 6 2
 4301-5240 1 1
@@ -2551,7 +2499,6 @@
 439682 2 2
 439688 1 1
 439850 1 1
-44 12 9
 440 3 2
 4400 1 1
 440090 1 1
@@ -2595,7 +2542,6 @@
 4490398 1 1
 4490399 1 1
 4494097 1 1
-45 27 13
 450 5 4
 4509-500 1 1
 451 5 3
@@ -2622,7 +2568,6 @@
 459 3 2
 4595000 1 1
 4595144 1 1
-46 29 5
 460 2 1
 461 2 1
 46111662 1 1
@@ -2658,7 +2603,6 @@
 4676380 2 2
 468 1 1
 469 2 1
-47 46 11
 470 2 2
 471 3 2
 471286 1 1
@@ -2691,7 +2635,6 @@
 4799873665552372272 1 1
 4799873665552473259 1 1
 4799873665552473571 1 1
-48 31 15
 480 2 1
 480-4558 1 1
 480-8520 1 1
@@ -2729,7 +2672,6 @@
 489-5646 12 1
 4890-1204 1 1
 4898 1 1
-49 9 5
 490 1 1
 491 4 4
 492 7 3
@@ -2761,7 +2703,6 @@
 5.1 3 2
 5.2 3 2
 5.9 7 2
-50 61 23
 50-54 2 1
 50.000 2 2
 500 11 8
@@ -2782,7 +2723,6 @@
 50721 1 1
 508 4 2
 509 1 1
-51 12 8
 510 2 2
 511 2 1
 512 3 2
@@ -2797,7 +2737,6 @@
 5174 1 1
 518 3 2
 519 1 1
-52 10 7
 520 2 1
 520300 2 1
 520320 1 1
@@ -2816,7 +2755,6 @@
 5288209 1 1
 529 3 2
 5291 1 1
-53 13 6
 530 2 1
 531 8 2
 532 2 1
@@ -2828,7 +2766,6 @@
 537 3 2
 538 4 2
 539 1 1
-54 60 20
 54-03442-42-1500 1 1
 54-03722-443742 1 1
 54-0385-4213481 2 1
@@ -2854,7 +2791,6 @@
 548 2 1
 5480 1 1
 549 2 1
-55 10 7
 550 3 3
 5501 4 1
 5502 1 1
@@ -2869,7 +2805,6 @@
 556 4 2
 558 1 1
 559 1 1
-56 15 10
 560 2 2
 561 1 1
 562 1 1
@@ -2881,7 +2816,6 @@
 568 1 1
 569 1 1
 5690 1 1
-57 11 6
 5700 9 9
 571 1 1
 572 2 2
@@ -2895,7 +2829,6 @@
 578 1 1
 579 1 1
 5794 1 1
-58 18 8
 580 2 2
 5800 7 2
 5801873365 1 1
@@ -2909,7 +2842,6 @@
 5875 1 1
 588 1 1
 589 1 1
-59 14 9
 59-789 1 1
 590 1 1
 592 1 1
@@ -2934,7 +2866,6 @@
 6.5 3 1
 6.7 2 1
 6.700 1 1
-60 38 13
 600 14 11
 6000 1 1
 601 15 5
@@ -2946,7 +2877,6 @@
 607 1 1
 608 1 1
 609 1 1
-61 9 6
 610 1 1
 611 1 1
 613 1 1
@@ -2954,7 +2884,6 @@
 616 1 1
 617 1 1
 619 1 1
-62 5 2
 620 1 1
 621 2 2
 622 1 1
@@ -2965,7 +2894,6 @@
 627 1 1
 628 1 1
 629 2 2
-63 11 6
 630 1 1
 6300 2 2
 631 2 2
@@ -2980,7 +2908,6 @@
 638 1 1
 6382 1 1
 639 1 1
-64 4 2
 640 4 3
 641 2 2
 642 1 1
@@ -2989,7 +2916,6 @@
 645 2 2
 646 1 1
 649 2 2
-65 9 5
 65-69 2 1
 651 2 2
 652 1 1
@@ -3001,7 +2927,6 @@
 6595 1 1
 6596 1 1
 6597 1 1
-66 13 4
 66-73 2 2
 660 2 2
 6600 1 1
@@ -3017,7 +2942,6 @@
 667 1 1
 668 1 1
 669 1 1
-67 6 3
 670 1 1
 6700 7 4
 671 1 1
@@ -3030,7 +2954,6 @@
 677 5 3
 6789101112 2 1
 679 1 1
-68 8 4
 680 2 2
 681 1 1
 682 1 1
@@ -3042,7 +2965,6 @@
 687 2 2
 688 1 1
 689 3 3
-69 4 2
 690 1 1
 691 1 1
 692 1 1
@@ -3063,7 +2985,6 @@
 7.5 8 2
 7.6 3 1
 7.9 2 1
-70 25 15
 70.000 2 2
 700 10 9
 700-800 1 1
@@ -3075,7 +2996,6 @@
 7045 2 1
 705 1 1
 706 1 1
-71 4 1
 713 1 1
 714 2 2
 715 1 1
@@ -3083,25 +3003,21 @@
 717 1 1
 718 1 1
 719 1 1
-72 6 3
 721 4 1
 727 6 3
 7275 1 1
 729 1 1
-73 5 2
 730 1 1
 7300 8 2
 731 1 1
 736 3 1
 737 2 2
-74 6 3
 740 1 1
 7400 1 1
 741 1 1
 745 2 2
 746 1 1
 747 1 1
-75 18 8
 75-84 1 1
 750 2 2
 750,00 1 1
@@ -3111,13 +3027,11 @@
 753 1 1
 7578 1 1
 758 9 2
-76 13 5
 76-83 1 1
 7602 1 1
 764 1 1
 765 2 2
 768 5 5
-77 10 6
 77-84 1 1
 773 1 1
 774 1 1
@@ -3126,14 +3040,12 @@
 776 4 4
 777 1 1
 779 1 1
-78 6 3
 780 3 2
 781 1 1
 7843 1 1
 786 1 1
 787 1 1
 788 2 1
-79 7 3
 79-86 1 1
 8,30 1 1
 8.00 5 4
@@ -3146,7 +3058,6 @@
 8.8 1 1
 8.871 1 1
 8.9 5 2
-80 36 16
 80-84 1 1
 80.000 2 2
 800 17 13
@@ -3154,14 +3065,11 @@
 8000 3 3
 803 1 1
 807 1 1
-81 8 2
 81-88 1 1
 8113 1 1
 815 1 1
 817 2 1
-82 5 2
 82-89 1 1
-83 13 5
 83-90 1 1
 834 2 2
 835 2 2
@@ -3169,39 +3077,33 @@
 837 1 1
 838 2 1
 839 2 1
-84 6 3
 84-91 2 1
 840 2 1
 848 1 1
 849 2 1
-85 13 7
 850 1 1
 851 1 1
 852 1 1
 853 1 1
 85713 1 1
-86 12 5
 86.265 1 1
 8648 1 1
 865 1 1
 866 3 1
 8666 2 1
 868 12 6
-87 4 2
 871 2 1
 8737 1 1
 8742 1 1
 8745 1 1
 8768 1 1
 878 1 1
-88 16 5
 880 1 1
 883 1 1
 8847 1 1
 885 1 1
 886 1 1
 888 1 1
-89 14 2
 890 1 1
 893 1 1
 895 1 1
@@ -3216,7 +3118,6 @@
 9.30 2 2
 9.5 7 2
 9.9 3 1
-90 28 12
 900 1 1
 9000 1 1
 902 1 1
@@ -3224,7 +3125,6 @@
 904 2 2
 908 1 1
 909 2 1
-91 18 5
 910 1 1
 9101 1 1
 9102 1 1
@@ -3266,11 +3166,9 @@
 917 1 1
 918 1 1
 919 1 1
-92 17 7
 92,9 1 1
 92.9 3 1
 92042711 1 1
-93 30 8
 93.1 1 1
 9301 1 1
 9302 1 1
@@ -3310,7 +3208,6 @@
 937 1 1
 93743469 1 1
 938,02 1 1
-94 22 7
 940 1 1
 94024034 1 1
 94078215 1 1
@@ -3327,7 +3224,6 @@
 94601631 1 1
 948 1 1
 949 1 1
-95 41 2
 950 14 13
 950-656-013-7 1 1
 950-656-014-5 1 1
@@ -3345,31 +3241,19 @@
 953 1 1
 956 2 2
 957 2 1
-96 32 4
 96.5 1 1
 961 1 1
 962 1 1
-97 56 6
 972 1 1
 974 1 1
 978 2 2
 978-987-558-224-8392 1 1
 978-987-558-237-8544 1 1
-98 35 7
 981 1 1
 984 2 2
 987 1 1
-99 53 15
 995 1 1
 9965 1 1
-________________ 21 1
-_new 15 1
-_notes 2 1
-_privatemiercoles 1 1
-_uacct 29 11
-_vti_infhtmlmiercoles 1 1
-a_img 1 1
-aa 8 2
 aaba 1 1
 aacademica 1 1
 aacc 1 1
@@ -3524,8 +3408,6 @@ abuseprint 1 1
 abusivo 1 1
 abuso 9 4
 abyectos 1 1
-ac 52 15
-ac_fl_runcontent 4 4
 aca 13 5
 acaba 1 1
 acababa 3 1
@@ -3557,7 +3439,6 @@ academicarequisitos 1 1
 academicas 139 66
 academicascarrera 1 1
 academico 312 87
-academicoadministrativa 1 1
 academicocp 1 1
 academicocuerpo 6 1
 academicodptos 1 1
@@ -3676,6 +3557,7 @@ acertada 5 1
 acertadamente 1 1
 acervo 3 1
 acevedo 1 1
+acflruncontent 4 4
 acha 2 2
 acierto 2 2
 aclara 1 1
@@ -3743,7 +3625,6 @@ acostumbra 1 1
 acostumbrados 2 2
 acostumbramiento 1 1
 acquisition 1 1
-acr 2 1
 acrecentada 2 1
 acredita 5 3
 acreditable 1 1
@@ -3762,13 +3643,12 @@ acredite 5 4
 acrediten 1 1
 acredito 4 4
 acritica 1 1
-acro 8 1
+acro 10 1
 acrobat 4 3
 acroce@inifta.unlp.edu.ar 1 1
 acronimo 1 1
 across 1 1
 act 1 1
-act_y_reun 2 1
 acta 14 6
 actas 18 11
 actasver 4 1
@@ -3840,6 +3720,7 @@ actuando 2 2
 actuar 12 8
 actuara 1 1
 actuo 1 1
+actyreun 2 1
 acual 2 2
 acuales 1 1
 acualizaciones 1 1
@@ -3875,7 +3756,6 @@ acuña 1 1
 acuñacodirector 1 1
 acuñado 1 1
 acuñafecha 1 1
-ad 7 6
 adaptacion 7 7
 adaptacionactiva 1 1
 adaptada 7 7
@@ -3937,8 +3817,7 @@ adicional 10 8
 adicionales 9 6
 adicionalmente 1 1
 adicionarle 1 1
-adida 1 1
-adidas 2 1
+adidas 3 1
 adiestramiento 2 2
 adilton 1 1
 adios 7 5
@@ -3949,7 +3828,6 @@ adjetivos 1 1
 adjheight 2 1
 adjudica 1 1
 adjudicaciones 1 1
-adjudicacionestramites 1 1
 adjudicado 9 1
 adjudicar 1 1
 adjunta 10 8
@@ -3968,7 +3846,6 @@ administracia³n 4 1
 administracion 394 84
 administracion@biblioteca.uncoma.edu.ar 1 1
 administracion@caece.edu.ar. 1 1
-administracionfacultad 2 1
 administracionultima 2 1
 administracionviernes 2 1
 administrado 3 3
@@ -3979,14 +3856,12 @@ administrar 4 3
 administrara 1 1
 administration 4 1
 administrativa 81 33
-administrativabiblioteca 6 1
 administrativao 5 3
 administrativas 22 13
 administrativaviernes 1 1
 administrativizada 1 1
 administrativo 71 27
 administrativoa 1 1
-administrativoacademico 1 1
 administrativos 12 7
 administrativosacceso 1 1
 administrator 9 6
@@ -4038,12 +3913,11 @@ adquirir 2 2
 adquisicion 12 8
 adquisiciones 1 1
 adquisitiva 1 1
-adri 2 1
 adrian 9 7
 adriana 21 12
+adrianrousseau 2 1
 adrogue 2 1
 adscripcion 24 3
-adscripcionadscripcion 2 1
 adscripciones 22 6
 adscripto 1 1
 adscriptos 3 2
@@ -4108,8 +3982,7 @@ affairs 4 1
 affectant 1 1
 affecting 1 1
 affirmation 2 1
-afganist 2 1
-afganistan 2 1
+afganistan 4 1
 afgano 3 1
 afianza 1 1
 afianzado 1 1
@@ -4177,7 +4050,7 @@ agent 1 1
 agente 3 3
 agentes 16 10
 agentia 1 1
-agentiajos_session 1 1
+agentiajossession 1 1
 ages 1 1
 agil 2 2
 agilidad 1 1
@@ -4226,7 +4099,7 @@ agregado 6 5
 agregados 1 1
 agregan 1 1
 agregandole 1 1
-agregar 18 9
+agregar 17 8
 agregariamos 1 1
 agrego 3 2
 agregue 1 1
@@ -4273,7 +4146,6 @@ agropecuarias 18 10
 agropecuariasfacultad 2 1
 agropecuario 4 4
 agropecuarios 9 6
-agropecuariosbenintende 2 1
 agroquimicos 2 1
 agrotecnica 1 1
 agroturismo 1 1
@@ -4304,7 +4176,7 @@ agudos 2 2
 aguero 3 2
 aguerre 1 1
 aguiar 1 1
-aguilar 7 4
+aguilar 6 4
 aguilar@biol.unlp.edu.ar 1 1
 aguilares 1 1
 aguilas 1 1
@@ -4313,14 +4185,14 @@ aguirre 6 5
 agujero 3 1
 agujeros 1 1
 agulla 1 1
-agust 2 2
 agustin 27 9
 agustina 22 2
+agustincalleri 1 1
+agustinpichot 1 1
 aha 2 2
 ahendu 1 1
 ahi 19 3
 ahighslidecredits 2 1
-ahighslidecreditshover 2 1
 ahijuna 1 1
 ahinco 1 1
 ahistorica 1 1
@@ -4335,6 +4207,7 @@ aidofa 1 1
 ailen 6 1
 ailin 1 1
 aime 1 1
+aimg 1 1
 ainchil 1 1
 aingresar 1 1
 air 1 1
@@ -4370,7 +4243,6 @@ ajuste 5 2
 ajusten 2 2
 ajustes 1 1
 ajusto 2 1
-al 1437 251
 ala 6 4
 alaban 1 1
 alach 1 1
@@ -4398,7 +4270,6 @@ albert 1 1
 albertautores 1 1
 albertengo 1 1
 alberto 49 28
-albertovernetbasuald 1 1
 albiceleste 1 1
 albin 1 1
 albina 1 1
@@ -4454,8 +4325,7 @@ alem 2 2
 aleman 9 5
 alemana 3 1
 alemanes 2 1
-alemani 1 1
-alemania 11 5
+alemania 12 5
 alemaniase 1 1
 alemanlatinoamericana 1 1
 alemany 1 1
@@ -4530,7 +4400,7 @@ alinearse 1 1
 alink 1 1
 alivia 1 1
 aliviar 1 1
-aljazir 1 1
+aljazira 1 1
 alkurdi 1 1
 all 12 10
 alla 29 9
@@ -4568,15 +4438,13 @@ alquiler 1 1
 alrededor 10 9
 alrededores 3 3
 alrededoresdra 1 1
-alsin 1 1
-alsina 4 2
+alsina 5 2
 also 5 3
 alta 33 24
 altamente 8 7
 altamira@eicam.unsj.edu.ar 2 1
 altamiranda 1 1
 altas 6 4
-altatemperaturadirector 1 1
 altavista 1 1
 altbach 3 1
 altera 1 1
@@ -4617,7 +4485,6 @@ alumnado 9 5
 alumnado.cri@unne.edu.ar 1 1
 alumnado@eco.unne.edu.ar 1 1
 alumnado@med.unne.edu.ar 1 1
-alumnadotutoriasprograma 7 1
 alumni 1 1
 alumniclub@uade.edu.ar 1 1
 alumnmos@mdp.edu.ar 1 1
@@ -4656,7 +4523,6 @@ alyazira 1 1
 alza 1 1
 alzogaray 1 1
 alzueta 1 1
-am 4 3
 ama 6 1
 amaba 5 2
 amable 1 1
@@ -4718,6 +4584,7 @@ amenazante 1 1
 amenazas 4 4
 amerca 1 1
 america 60 28
+americalatina 1 1
 american 21 6
 americana 5 3
 americanas 1 1
@@ -4770,11 +4637,9 @@ ampliatorias 1 1
 amplificadores 1 1
 amplio 12 8
 amplios 4 3
-an 9 7
 ana 39 19
 anabel 2 1
 anabela 1 1
-anabitartemarianotitulo 1 1
 anaclara 1 1
 anacrusa 1 1
 anagrama 2 1
@@ -4805,7 +4670,7 @@ analogias 1 1
 analogicodigitales 1 1
 analyse 1 1
 analysis 6 2
-anamar 1 1
+anamariaclement 1 1
 ananke 1 1
 anapaulamulet@gmail.com 1 1
 anarquia 1 1
@@ -4930,7 +4795,6 @@ anteojos 1 1
 antepais 1 1
 anteproyecto 3 1
 anterior 53 22
-anteriordetenerreproducir 2 1
 anteriores 55 21
 anterioresa 1 1
 anterioreslic 1 1
@@ -4982,8 +4846,8 @@ anton 1 1
 antonella 3 1
 antoni 2 2
 antonio 35 20
-antoniopern 1 1
-antonioport 1 1
+antoniopernias 1 1
+antonioporta 1 1
 antony 1 1
 antorcha 1 1
 antorchas 1 1
@@ -5021,11 +4885,9 @@ any 2 2
 anyones 1 1
 anything 1 1
 anywhere 1 1
-ao 1 1
 aol 1 1
 aoleculares 1 1
 aolvido 16 4
-ap 4 3
 apache 6 3
 apacible 1 1
 apacigua 1 1
@@ -5069,12 +4931,10 @@ apenas 2 2
 apendice 1 1
 apensaste 10 1
 apercibimiento 1 1
-apertur 1 1
-apertura 41 26
+apertura 42 26
 apesar 1 1
 apetencia 1 1
-apex_solicitud_tipoweb 8 7
-apex_solicitud_tipowebvar 2 2
+apexsolicitudtipoweb 8 7
 apicola 4 3
 aplazado 1 1
 aplica 2 1
@@ -5236,7 +5096,6 @@ aquila 1 1
 aquino 1 1
 aquisi 1 1
 aquiuniversidad 1 1
-ar 19 2
 ara 1 1
 arabe 2 2
 arabes 2 2
@@ -5250,7 +5109,6 @@ arancel 2 2
 arancelada 7 5
 arancelado 1 1
 arancelaria 1 1
-arancelarialicenciatura 1 1
 aranceles 42 16
 aranda 1 1
 arandanos 4 1
@@ -5283,7 +5141,7 @@ archivado 4 1
 archivar 2 2
 archives 1 1
 archivo 56 24
-archivo_agenda 4 1
+archivoagenda 4 1
 archivopdf 2 1
 archivos 40 20
 archubiclaudio 1 1
@@ -5316,13 +5174,11 @@ argentina 775 214
 argentinaalemania 1 1
 argentinaantologia 1 1
 argentinaargentina 7 1
-argentinacontrataciones 1 1
 argentinade 1 1
 argentinadestacamos 1 1
 argentinadirector 17 1
 argentinael 2 1
 argentinaemail 1 1
-argentinafortalecimiento 1 1
 argentinagabioud 2 1
 argentinala 1 1
 argentinamexicosuiza 1 1
@@ -5335,7 +5191,7 @@ argentinatelfax 1 1
 argentinatomas 1 1
 argentine 1 1
 argentinegermany 1 1
-argentino 90 43
+argentino 89 43
 argentinoderecho 1 1
 argentinodesde 1 1
 argentinofarias 2 1
@@ -5508,7 +5364,6 @@ artists 1 1
 arts 3 1
 arturo 4 3
 arzobispado 1 1
-as 69 28
 asado 1 1
 asaff 1 1
 asaga 2 1
@@ -5644,7 +5499,6 @@ aspiramos 1 1
 aspiran 6 5
 aspirante 15 5
 aspirantes 61 25
-aspirantesobservaciones 5 1
 aspiro 1 1
 aspurc 1 1
 assessment 1 1
@@ -5679,7 +5533,6 @@ asuncion 5 5
 asunto 2 2
 asuntos 89 29
 asyt 2 1
-at 38 20
 ata 4 1
 ataba 2 1
 atacante 1 1
@@ -5722,11 +5575,11 @@ atiene 2 1
 atinentes 4 1
 atino 1 1
 atisba 1 1
-atl 3 1
 atlantico 2 2
 atlas 3 3
 atletas 2 1
-atletico 6 2
+atletico 8 2
+atleticomadrid 1 1
 atletismo 3 1
 atmosfera 2 2
 atmosfericas 1 1
@@ -5768,7 +5621,6 @@ attempts 1 1
 attraction 1 1
 attributes 1 1
 atuncpba 2 1
-au 9 1
 auapsi 25 3
 aucal 1 1
 auckland 1 1
@@ -5933,7 +5785,6 @@ auxiliar 18 7
 auxiliares 39 16
 auxilio 1 1
 auza 1 1
-av 70 35
 available 4 3
 aval 3 3
 avalado 1 1
@@ -5958,7 +5809,7 @@ aveleyra 2 1
 avellaneda 14 6
 avendaño 7 2
 avenida 78 29
-avenidaespa 1 1
+avenidaespañ 1 1
 avenidahotel@acerca.com.ar 1 1
 aventura 5 4
 averiadas 1 1
@@ -5983,7 +5834,6 @@ awmalturl 1 1
 awruch 1 1
 axel 1 1
 axiologicas 1 1
-ay 1 1
 ayacucho 2 2
 ayala 3 3
 ayatola 1 1
@@ -5996,7 +5846,6 @@ ayllon 1 1
 aymara 1 1
 ayuda 51 32
 ayudacursos 1 1
-ayudagraduadostramites 6 1
 ayudan 4 3
 ayudando 3 2
 ayudandonos 1 1
@@ -6113,8 +5962,7 @@ ballesteros 2 2
 ballet 1 1
 ballon 2 1
 baltar 1 1
-balvaner 1 1
-balvanera 1 1
+balvanera 2 1
 balvarez@exa.unne.edu.ar 1 1
 balyan 1 1
 ban 2 1
@@ -6255,10 +6103,8 @@ baños 1 1
 bcentral 1 1
 bcentralcssmartes 1 1
 bcr 1 1
-bd 2 1
 bdegregorio@fibertel.com.ar 1 1
 bdm 1 1
-be 20 11
 beade 5 1
 beatitudes 1 1
 beatles 1 1
@@ -6293,12 +6139,12 @@ beforeshowday 1 1
 begin 1 1
 beginning 4 2
 behaviour 1 1
-beijing 4 2
+beijing 3 2
 being 3 2
 beira 1 1
 beker 1 1
 belen 22 6
-belgica 7 5
+belgica 8 5
 belgich 5 1
 belgrano 56 15
 belicas 1 1
@@ -6398,7 +6244,6 @@ between 5 4
 bevilacqua 1 1
 beyond 3 3
 bgcolorffffccvar 1 1
-bi 1 1
 biaggio 2 1
 biagini 2 2
 bialet 2 1
@@ -6432,7 +6277,6 @@ bibliotecarios 2 2
 bibliotecariosmartes 1 1
 bibliotecas 126 36
 bibliotecasreglamento 7 1
-bibliotecasuniversidad 1 1
 bibliotecaunpeduar 1 1
 bibliotecologia 4 3
 bibliounlz@yahoo.com.ar 1 1
@@ -6572,7 +6416,7 @@ bliechmar 1 1
 block 3 3
 blocking 1 1
 blog 66 17
-blog_date 2 1
+blogdate 2 1
 blogs 30 13
 bloque 8 5
 bloquea 2 2
@@ -6584,10 +6428,8 @@ bloques 3 1
 bluishticomar 3 1
 blunda 1 1
 bmaterias 6 1
-bn 4 1
 board 4 2
-boc 1 1
-boca 6 2
+boca 7 2
 bocas 3 2
 bocca 1 1
 boccabella 1 1
@@ -6646,13 +6488,13 @@ boost 1 1
 borcosque 1 1
 borda 1 1
 borde 4 2
-borde_top 1 1
 bordeaux 2 1
 bordehoreacademica@eco.mdp.edu.arhorario 1 1
 borderbottom 2 2
 bordertop 1 1
 bordes 1 1
 bordetella 1 1
+bordetop 1 1
 bordignon 1 1
 bordon 1 1
 borella 1 1
@@ -6701,8 +6543,7 @@ bovina 2 2
 bovino 1 1
 bovinos 1 1
 bow 1 1
-bower 1 1
-bowers 2 1
+bowers 3 1
 box 1 1
 boxeadores 2 1
 boxeo 1 1
@@ -6815,7 +6656,6 @@ bruto 5 3
 brutti 1 1
 bruzzonefecha 2 1
 brzilia 1 1
-bs 40 12
 bsas 4 4
 btp 2 1
 bucal 8 3
@@ -6894,10 +6734,7 @@ butterworth 1 1
 butti 1 1
 button 4 3
 buzon 3 3
-by 47 27
 bytes 3 1
-bº 8 2
-ca 2 2
 cab 10 2
 caba 14 4
 cabada 2 2
@@ -6988,9 +6825,7 @@ calderon 3 2
 caledario 2 1
 calefaccion 1 1
 calendario 215 64
-calendarioacadeacutemico 2 1
 calendariocalendario 4 4
-calendariocalendariomes 1 1
 calendarios 2 2
 calendariosacademicos 1 1
 caleta 1 1
@@ -7020,7 +6855,7 @@ calle 58 23
 calleja 1 1
 callejas 1 1
 callejeras 1 1
-calleri 2 1
+calleri 1 1
 calles 1 1
 calor 7 4
 calumnias 1 1
@@ -7066,7 +6901,7 @@ caminata 2 1
 camino 22 15
 caminos 43 14
 camioneta 1 1
-campagnoli 6 1
+campagnoli 5 1
 campamento 5 1
 campana 19 4
 campanha 1 1
@@ -7077,18 +6912,17 @@ campesinos 1 1
 campilobacteriosis 1 1
 campinas 2 1
 camping 2 2
-campo 86 41
+campo 85 40
 campobasso 1 1
 campodonico 1 1
 campora 1 1
-campos 33 20
+campos 34 20
 campus 228 60
 campus@favaloro.edu.ar 2 1
 campus@unsl.edu.ar 1 1
 can 10 5
 cana 2 2
-canad 1 1
-canada 5 5
+canada 6 5
 canadiense 1 1
 canal 19 14
 canales 7 5
@@ -7148,7 +6982,6 @@ cantumcantu@exa.unrc.edu.ar 1 1
 caos 1 1
 caotica 1 1
 cap 7 5
-capa_espera 6 5
 capabilities 1 1
 capable 1 1
 capaces 4 4
@@ -7171,6 +7004,7 @@ capacitar 4 4
 capacitaran 1 1
 capaciten 1 1
 capacito 1 1
+capaespera 6 5
 capas 1 1
 capataces 1 1
 capatulos 1 1
@@ -7183,8 +7017,7 @@ capes 1 1
 capillitas 1 1
 capital 65 32
 capitales 2 1
-capitalfedera 1 1
-capitalfederal 2 2
+capitalfederal 3 2
 capitalismo 10 3
 capitalista 5 2
 capitalizacion 2 1
@@ -7253,8 +7086,7 @@ carcova 1 1
 cardiaca 2 2
 cardiacas 3 2
 cardiaco 1 1
-cardif 1 1
-cardiff 1 1
+cardiff 2 1
 cardinali 1 1
 cardiograficas 1 1
 cardiologia 1 1
@@ -7284,7 +7116,7 @@ carid 2 1
 caries 2 1
 carillas 1 1
 carina 2 1
-caritas 2 1
+caritas 3 1
 cariño 1 1
 carla 6 6
 carlapeterson 1 1
@@ -7322,7 +7154,6 @@ carrerainauguracion 1 1
 carrerapresentaciones 1 1
 carreras 784 131
 carrerasinformaticas 2 2
-carreratutorisactividades 2 1
 carreteras 2 1
 carri 1 1
 carrieres 1 1
@@ -7398,7 +7229,7 @@ castiñeira 1 1
 castoriadis 1 1
 castorina 1 1
 castracion 8 1
-castro 26 6
+castro 25 6
 casual 4 3
 casuales 1 1
 casualidad 1 1
@@ -7406,7 +7237,7 @@ casuarina 1 1
 catacchio 1 1
 catala 4 4
 catalina 8 5
-catalina_home 1 1
+catalinahome 1 1
 catalizadores 1 1
 catalog 2 1
 catalogo 41 18
@@ -7427,7 +7258,6 @@ catecismo 1 1
 cateda 1 1
 catedra 134 26
 catedranueva 1 1
-catedraplanificaciones 6 1
 catedras 85 38
 categori 2 2
 categoria 58 16
@@ -7477,12 +7307,12 @@ cavidad 1 1
 cayo 6 4
 cazon 1 1
 cazzulo 1 1
+cañ 1 1
 cañas 3 1
 cañuelo 1 1
 cba 1 1
 cbn 1 1
 cbu 1 1
-cc 3 3
 ccc 14 1
 cccccc 1 1
 ccgsmtv 1 1
@@ -7491,13 +7321,11 @@ ccn 1 1
 ccoral@unsj.edu.ar 1 1
 cct 2 1
 ccuce@unsj.edu.ar 2 1
-cd 19 10
 cdd 6 2
 cdg 12 2
 cdrom 1 1
 cds 2 2
 cdv 2 1
-ce 1 1
 cea 9 4
 ceac 2 2
 ceae 2 1
@@ -7813,7 +7641,6 @@ chopra 1 1
 choque 1 1
 chos 1 1
 christian 7 6
-christianvonwernich 1 1
 christof 1 1
 chrome 1 1
 chs 4 1
@@ -7822,7 +7649,6 @@ chuliver 1 1
 chupa 1 1
 chupeteando 1 1
 chuquisaca 1 1
-ci 2 2
 cia 2 1
 ciad 1 1
 ciampini 1 1
@@ -7892,7 +7718,6 @@ cientificosescherla 1 1
 cientificotecnica 1 1
 cientificotecnicos 1 1
 cientificotecnologica 18 5
-cientificotecnologicas 1 1
 cientificotecnologico 2 2
 cientista 1 1
 ciento 12 7
@@ -8016,8 +7841,6 @@ civilizacionbarbarie 1 1
 civilizado 1 1
 civilizatorio 1 1
 civismo 2 1
-cj 1 1
-cl 1 1
 clama 1 1
 clamo 1 1
 clamores 1 1
@@ -8026,12 +7849,11 @@ clandestina 1 1
 clandestino 1 1
 clanicas 1 1
 claps 1 1
-clar 1 1
 clara 18 11
 claramente 8 5
 claras 1 1
 claridad 6 4
-clarin 11 6
+clarin 12 6
 clarinzurich 1 1
 claro 11 5
 claroline 6 1
@@ -8057,7 +7879,7 @@ classroom 2 2
 clastres 2 1
 claude 1 1
 claudia 30 17
-claudiagonz 1 1
+claudiagonzalez 1 1
 claudio 7 6
 clausthal 2 1
 claustral 2 1
@@ -8116,18 +7938,14 @@ club 21 10
 cluster 1 1
 clustering 1 1
 cluto 1 1
-cm 3 3
 cmaterias 6 1
 cmsmodulesnodenodecss 2 1
-cmsmodulessystemsystemcss 2 1
 cmsmodulesuserusercss 2 1
 cmv 1 1
-cn 3 1
 cnea 4 1
 cnel 7 2
 cno 1 1
 cnrs 1 1
-co 2 2
 coaccion 1 1
 coaching 12 2
 coacuterdoba 2 1
@@ -8202,7 +8020,6 @@ colabora 2 2
 colaboracion 62 19
 colaboraciones 7 2
 colaboracionesacerca 1 1
-colaboracionessurgimiento 1 1
 colaboracionprograma 7 1
 colaborador 3 3
 colaboradora 2 1
@@ -8238,7 +8055,6 @@ colectividades 3 3
 colectivista 1 1
 colectivo 13 6
 colectivos 10 6
-colectivosplanosenlaces 2 1
 colega 1 1
 colegas 7 5
 colegiado 2 2
@@ -8347,7 +8163,6 @@ comer 3 1
 comercial 44 12
 comerciales 14 10
 comercializacion 7 6
-comercializacionanalista 7 1
 comercializadores 1 1
 comercio 91 25
 comercios 1 1
@@ -8565,14 +8380,10 @@ compuesto 10 7
 compuestos 2 2
 compulsivas 1 1
 computacion 61 12
-computacionactividades 6 1
 computacional 5 4
 computacionales 5 4
-computacionlicenciatura 4 1
 computacionplan 1 1
-computacionsolicitudes 2 1
 computaciontesina 2 1
-computacionvencimientos 2 1
 computado 1 1
 computadora 6 5
 computadoras 23 11
@@ -8794,7 +8605,6 @@ conference 2 2
 conferences 1 1
 conferencia 54 19
 conferencias 33 18
-conferenciasactividades 1 1
 conferencistas 2 2
 conferir 2 1
 confiabilidad 1 1
@@ -8875,8 +8685,8 @@ congelo 1 1
 congenita 1 1
 congenito 1 1
 congratulations 1 1
-congres 4 2
-congreso 162 44
+congres 3 1
+congreso 163 44
 congresola 1 1
 congresos 57 20
 congresosunlpeduar 1 1
@@ -9285,7 +9095,6 @@ contract 2 2
 contractual 1 1
 contractualista 1 1
 contracursadas 2 1
-contracursadascursadas 17 1
 contradecir 1 1
 contradiccion 5 3
 contradicciones 4 3
@@ -9373,7 +9182,6 @@ conveniode 1 1
 convenioespecifico 1 1
 conveniogeneral 1 1
 convenios 67 33
-conveniosentidadessalas 5 1
 convergen 3 3
 convergencia 13 1
 conversacion 5 2
@@ -9466,7 +9274,6 @@ coperadora 2 1
 copes 1 1
 copia 22 12
 copiad 1 1
-copiadmalditosblogspotcom 1 1
 copiados 1 1
 copiadosplagiados 1 1
 copiar 1 1
@@ -9493,7 +9300,7 @@ cordiales 1 1
 cordialmente 3 2
 cordillerano 1 1
 cordillo 1 1
-cordoba 198 48
+cordoba 200 48
 cordobes 3 3
 cordobesa 2 1
 cordobesas 2 1
@@ -9668,7 +9475,6 @@ covertura 1 1
 covi 1 1
 coyuntura 4 3
 coyunturas 1 1
-cp 50 25
 cpa 13 4
 cpba 14 1
 cpellegrini 1 1
@@ -9677,7 +9483,6 @@ cpn 8 3
 cpostal 1 1
 cpres 1 1
 cpu 2 2
-cr 28 4
 cragm 1 1
 cragm@faa.unicen.edu.ar 1 1
 crashed 1 1
@@ -9842,9 +9647,7 @@ cruentas 1 1
 cruz 30 13
 cruzamiento 1 1
 cruzar 1 1
-cruzroj 1 1
-cruzroja 2 1
-cs 241 43
+cruzroja 3 1
 csbiologicas 1 1
 cscrimin@unne.edu.ar 2 1
 cse 2 1
@@ -9853,7 +9656,7 @@ csmedicas 1 1
 csp 1 1
 cspe 1 1
 css 3 3
-csslayout_simplecss 1 1
+csslayoutsimplecss 1 1
 cssmenucss 1 1
 cssresetcss 2 1
 cssrule 2 2
@@ -9901,7 +9704,6 @@ cuarta 1 1
 cuartango 1 1
 cuarteto 4 1
 cuarto 173 23
-cuartoredireccionandounrc 1 1
 cuat 1 1
 cuaternarios 1 1
 cuatia 1 1
@@ -9913,8 +9715,7 @@ cuatrimestreaula 1 1
 cuatrimestres 1 1
 cuatro 53 29
 cuatrocientos 1 1
-cub 1 1
-cuba 17 6
+cuba 18 6
 cubaculos 1 1
 cubana 2 2
 cubano 3 3
@@ -10108,7 +9909,6 @@ cuyas 5 3
 cuyo 37 20
 cuyos 10 7
 cuñado 3 1
-cv 45 12
 cvalenti@unr.edu.ar 1 1
 cvassena@citefa.gov.ar 1 1
 cvd 4 1
@@ -10124,7 +9924,6 @@ cynthia 1 1
 cyt 7 1
 cyt@unne.edu.ar 7 1
 cytunt 4 1
-da 38 19
 daba 3 1
 daban 1 1
 dabas 1 1
@@ -10199,9 +9998,9 @@ dasmi 87 2
 dasmicampana@mail.unlu.edu.arint 1 1
 dassen 1 1
 data 4 3
-data_config 1 1
 database 1 1
 dataciones 2 1
+dataconfig 1 1
 datan 2 2
 datasoftcied 1 1
 date 3 2
@@ -10226,13 +10025,10 @@ daysara 2 2
 daza 2 1
 dañadas 2 1
 daños 31 7
-dc 1 1
-dd 1 1
 ddhh 9 3
 ddi 2 1
 ddjj 1 1
 ddmmaa 2 1
-de 33043 455
 dea 1 1
 deadline 2 1
 dealbergar 1 1
@@ -10711,7 +10507,6 @@ desanimo 1 1
 desaparece 3 3
 desaparecer 1 1
 desaparecido 1 1
-desaparecidomuertotodas 2 1
 desaparecidos 3 3
 desaparezca 1 1
 desaparezcan 1 1
@@ -11172,7 +10967,6 @@ dextrinas 1 1
 dezafecha 1 1
 dfdfdf 1 1
 dfsarmiento 1 1
-dg 3 2
 dge 15 4
 dgiunsl 3 2
 dgiunslversion 6 1
@@ -11181,7 +10975,6 @@ dgti 1 1
 dhistoria 1 1
 dhtml 10 6
 dhtmlmenubuildercom 5 1
-di 90 23
 dia 133 55
 diabetes 9 3
 diablo 1 1
@@ -11265,8 +11058,8 @@ didactico 8 7
 didacticos 7 4
 didacticosdiseño 1 1
 diego 33 19
-diegogripp 1 1
-diegologripp 1 1
+diegogrippo 1 1
+diegologrippo 1 1
 dielectricosdirector 1 1
 dientes 1 1
 diera 2 2
@@ -11396,7 +11189,6 @@ diplomatica 3 3
 diplomatico 1 1
 diplomatura 152 7
 diplomaturas 19 5
-diplomaturauniversitaria 2 1
 dipltec 12 2
 dipticos 1 1
 diputados 5 4
@@ -11423,8 +11215,6 @@ direction 3 2
 directiva 6 4
 directivas 39 4
 directivo 46 20
-directivocarrerasboletan 1 1
-directivodocentescontacto 1 1
 directivos 22 11
 directivover 4 1
 directly 1 1
@@ -11687,11 +11477,9 @@ djokovic 1 1
 dlmmjvs 7 1
 dmaidana@ungs.edu.ar 2 1
 dmaterias 6 1
-dn 1 1
 dngu 2 1
 dni 37 23
 dnus 1 1
-do 16 6
 doblara 1 1
 doble 17 4
 doblegado 1 1
@@ -11699,25 +11487,22 @@ doblegando 1 1
 doblemente 1 1
 dobles 26 2
 doc 3 2
-doc_digitales 1 1
+docdigitales 1 1
 doce 5 4
 docedestinatarios 1 1
 docena 2 2
 docencia 113 42
-docencia_insue 1 1
 docenciacontacte 2 1
+docenciainsue 1 1
 docente 288 86
-docentealumnadosecretaria 6 1
 docentealumno 1 1
 docentebiblioteca 2 1
 docentecapacitacion 2 1
-docenteconcursoscarrera 6 1
 docentelistado 2 1
 docentenotas 5 1
 docenteprof 1 1
 docentes 411 106
 docentesconsejo 2 1
-docentesinvestigadores 3 3
 docentesistema 6 1
 docentesm 1 1
 docentesmiradas 2 1
@@ -11744,10 +11529,8 @@ doctrinarios 1 1
 doctrinas 1 1
 documedia 4 1
 document 11 8
-document_artxjquerybackup 6 1
 documentacio 1 1
 documentacion 109 43
-documentacionnulanrevista 2 1
 documentadramaticas 1 1
 documental 19 8
 documentales 12 7
@@ -11758,16 +11541,12 @@ documentation 7 3
 documentcentro 1 1
 documentcookie 1 1
 documentcookielength 1 1
-documentcookietestcookie 1 1
 documento 96 45
 documentopdf 1 1
 documentos 79 40
-documentosconclusiones 1 1
-documentosinvestigadores 1 1
 documents 1 1
 documentwrite 12 3
 documentwriteln 1 1
-doecntesinvestigadores 1 1
 doel 2 1
 doering 1 1
 does 1 1
@@ -11798,7 +11577,7 @@ dominado 1 1
 dominantes 3 2
 dominarlas 1 1
 domingo 24 13
-domingomoncalvill 1 1
+domingomoncalvillo 1 1
 domingos 1 1
 dominguez 9 5
 dominiales 12 2
@@ -11867,7 +11646,6 @@ dptocanje 1 1
 dptode 1 1
 dptofcia@unsl.edu.ar 1 1
 dptomat@unsl.edu.ar 1 1
-dr 262 50
 dra 127 42
 drafabiola 1 1
 dragado 2 1
@@ -11887,7 +11665,7 @@ drescher 3 2
 drive 8 4
 drivefor 1 1
 driven 1 1
-droga_ 1 1
+droga 1 1
 drogadicto 1 1
 drogas 9 7
 droguero@unlu.edu.ar 1 1
@@ -11900,11 +11678,9 @@ drupalempiece 2 2
 drupalpersonalice 2 2
 drupalpor 2 2
 dsalud@rec.unrc.edu.ar 1 1
-dt 2 2
 dti 2 1
 dto 7 6
 dtole 1 1
-du 10 1
 dualismo 1 1
 duautoridades 1 1
 dubai 1 1
@@ -11948,7 +11724,7 @@ duraderas 1 1
 duraderasdi 2 1
 duramente 1 1
 duran 1 1
-durand 6 3
+durand 5 3
 durango 1 1
 durante 179 84
 duras 1 1
@@ -11966,8 +11742,7 @@ dutrenit 2 1
 dvacunas 1 1
 dvd 1 1
 dwide 1 1
-dy 1 1
-dyn 1 1
+dyn 2 1
 dyna 1 1
 dynamic 12 8
 dynamics 1 1
@@ -12026,7 +11801,6 @@ economic 1 1
 economic@unlam.edu.ar 1 1
 economica 76 30
 economicamente 1 1
-economicapoliticasocial 1 1
 economicas 281 55
 economicasademas 1 1
 economicasdirectora 1 1
@@ -12036,7 +11810,6 @@ economico 47 22
 economicofinanciero 1 1
 economicolaborales 1 1
 economicos 45 26
-economicosocialesfacultad 2 1
 economics 6 3
 economies 1 1
 economista 2 2
@@ -12055,7 +11828,6 @@ ecuaciones 15 4
 ecuador 8 6
 ecvpt 1 1
 ecyt 9 1
-ed 24 4
 edad 21 7
 edades 6 4
 edadpoblacion 1 1
@@ -12114,10 +11886,8 @@ eduacion 1 1
 eduar 1 1
 eduardo 57 27
 educ 5 4
-educac 1 1
-educaci 1 1
 educacioacuten 2 1
-educacion 874 139
+educacion 875 139
 educacional 13 7
 educacionauditorio 1 1
 educacioncentro 1 1
@@ -12125,10 +11895,9 @@ educacioncipolletti 1 1
 educaciondirector 1 1
 educacionen 3 2
 educacionfacultad 2 1
-educaciontrabajandopor 1 1
 educacionusp 1 1
 educaciony 1 1
-educacon 1 1
+educacon 2 1
 educadoras 1 1
 educadores 8 3
 educando 2 2
@@ -12216,7 +11985,6 @@ egresadostaller 1 1
 egreso 10 4
 eguren 1 1
 ehermida@cnea.gov.ar 2 1
-ei_formulario 9 8
 eibarrasup 7 6
 eicam 14 1
 eicamunsjeduar 10 2
@@ -12225,6 +11993,7 @@ eidfs 3 1
 eidfsproductos 1 1
 eidfsunsjeduar 4 1
 eifiltrocolumna 4 4
+eiformulario 9 8
 eimlcolumna 9 8
 einar 2 2
 einstein 2 2
@@ -12232,7 +12001,6 @@ eisenberg 1 1
 eisman 1 1
 either 2 1
 eizaguirre 1 1
-ej 8 5
 eje 18 12
 ejecucion 33 16
 ejecuciontesis 1 1
@@ -12273,9 +12041,9 @@ ejercieron 2 2
 ejercio 2 2
 ejercitada 1 1
 ejercitamos 1 1
-ejercito 17 14
+ejercito 19 14
+ejercitoargentino 1 1
 ejes 11 8
-el 7082 323
 elabora 2 1
 elaboracion 24 15
 elaborado 11 8
@@ -12288,7 +12056,7 @@ elasticas 2 2
 elastico 1 1
 elasticos 1 1
 elastoplasticas 1 1
-elatl 1 1
+elatletico 1 1
 elcampus 1 1
 elconvenio 1 1
 elcurso 1 1
@@ -12326,7 +12094,6 @@ electrodeposicion 1 1
 electrodinamica 1 1
 electroerosion 1 1
 electrofisiologia 1 1
-electrofisiologicofavant 2 1
 electromagneticas 1 1
 electromagnetismo 4 1
 electromecanica 3 3
@@ -12419,7 +12186,7 @@ elogios 2 2
 elongacion 1 1
 eloy 1 1
 elperiodosincluya 1 1
-elplay 1 1
+elplayon 1 1
 elreconocimiento 2 1
 elsa 5 4
 else 92 30
@@ -12428,7 +12195,6 @@ elsistema 1 1
 elsolhoteljunin@speedy.com.ar 1 1
 eludir 1 1
 eluniverso 1 1
-em 1 1
 ema 5 4
 email 211 90
 emailalgunas 1 1
@@ -12490,7 +12256,6 @@ emilia 3 3
 emiliano 3 1
 emilie 1 1
 emilio 11 5
-emilioeduardomassera 1 1
 eminentes 1 1
 emir 1 1
 emision 7 6
@@ -12552,7 +12317,6 @@ emprededor 1 1
 emprendedor 7 2
 emprendedora 2 1
 emprendedores 24 12
-emprendedoresinformacion 1 1
 emprendedurismo 1 1
 emprender 1 1
 emprendera 1 1
@@ -12561,7 +12325,6 @@ emprendidas 1 1
 emprendimiento 9 6
 emprendimientos 10 6
 empresa 103 21
-empresaaccesousuarioclave 1 1
 empresajoomla 1 1
 empresaria 67 12
 empresariado 3 1
@@ -12584,7 +12347,6 @@ empuja 2 1
 empujandolo 1 1
 empuje 3 3
 empuñando 2 1
-en 9883 339
 enable 4 4
 enables 1 1
 enadministracion 1 1
@@ -12700,7 +12462,6 @@ enenseñanza 2 1
 energetico 2 2
 energi 1 1
 energia 48 20
-energiabiocombustibles 1 1
 energiabiomasa 2 1
 energias 13 7
 energica 1 1
@@ -12884,7 +12645,7 @@ entrara 2 2
 entrarentrar 3 3
 entrarian 2 1
 entrañas 2 2
-entre 493 129
+entre 492 129
 entrecruzamiento 1 1
 entredicho 1 1
 entrega 60 26
@@ -12908,6 +12669,7 @@ entrenamiento 6 5
 entrenar 1 1
 entreno 1 1
 entrepiso 1 1
+entrerios 1 1
 entrerriana 2 1
 entretenida 1 1
 entretenimiento 3 2
@@ -12986,7 +12748,6 @@ enzimatico 1 1
 enzo 1 1
 eol 1 1
 eolicos 1 1
-ep 1 1
 ep_maestrias@unr.edu.ar 1 1
 epctveduar 1 1
 epec 3 1
@@ -13049,7 +12810,6 @@ equivalentes 3 3
 equivoca 1 1
 equivocado 1 1
 equivocarnos 1 1
-er 2 1
 era 73 18
 eran 14 4
 erasmus 19 2
@@ -13084,11 +12844,10 @@ errecarte 1 1
 errecondo 4 1
 erroneo 1 1
 error 9 7
-error_strdebe 27 1
 errores 7 4
 errors 3 1
+errorstrdebe 27 1
 ersilla 1 1
-es 1330 179
 esa 81 34
 esas 13 7
 esba 1 1
@@ -13180,7 +12939,7 @@ escudo 27 6
 escuela 433 75
 escuela@epctv.edu.ar 1 1
 escueladra 1 1
-escuelamec 2 1
+escuelamecanica 2 1
 escuelaposgrado 4 1
 escuelas 89 36
 escuelatipo 2 1
@@ -13203,7 +12962,6 @@ esnaola 1 1
 eso 64 13
 esos 20 10
 esp 19 7
-espa 1 1
 espacial 9 4
 espaciales 2 2
 espacio 128 53
@@ -13217,6 +12975,7 @@ espantosas 1 1
 espantosos 1 1
 esparcimiento 2 2
 esparitu 1 1
+españ 1 1
 españa 25 17
 español 70 23
 española 5 5
@@ -13226,7 +12985,6 @@ especaficas 2 2
 especial 63 38
 especiales 65 26
 especialeslibros 1 1
-especialesschubertiada 1 1
 especialidad 11 8
 especialidades 5 5
 especialista 77 20
@@ -13326,8 +13084,8 @@ esquizofrenia 2 1
 esquizoparanoide 1 1
 ess 4 1
 essaunc@uncoma.edu.ar 1 1
-est 5 5
-esta 781 190
+est 4 4
+esta 782 190
 estaba 25 6
 estaban 18 8
 estabilidad 15 8
@@ -13383,8 +13141,7 @@ estadorasgo 1 1
 estados 42 16
 estadosocial 1 1
 estadosociedad 1 1
-estadosunido 3 2
-estadosunidos 6 2
+estadosunidos 9 3
 estadounidense 7 4
 estadounidenses 4 2
 estadual 4 1
@@ -13440,9 +13197,9 @@ estela 6 3
 estemos 1 1
 esten 11 9
 estequiometricas 1 1
-ester 3 2
+ester 1 1
 estereotipos 1 1
-estero 31 16
+estero 33 16
 esteroav 2 1
 esterocentro 1 1
 estes 4 2
@@ -13558,7 +13315,6 @@ estudiantesel 1 1
 estudiantesmigueles 2 1
 estudiantespsico 9 1
 estudiantespsico@listas.unt.edu.ar. 1 1
-estudiantesvivenciasbecas 1 1
 estudiantever 1 1
 estudiantil 65 28
 estudiantil-med@fmedic.unr.edu.ar 1 1
@@ -13566,7 +13322,6 @@ estudiantil@fapyd.unr.edu.ar 1 1
 estudiantil@fbioyf.unr.edu.ar 2 1
 estudiantila 2 1
 estudiantiles 84 33
-estudiantilesdireccion 2 1
 estudiantiloferta 1 1
 estudiar 101 27
 estudiarse 1 1
@@ -13591,7 +13346,6 @@ estuvieron 5 4
 estuvo 22 13
 esudiantes 1 1
 esun 1 1
-et 42 3
 etapa 38 19
 etapas 12 8
 etapes 1 1
@@ -13677,7 +13431,7 @@ evaluan 14 2
 evaluar 19 13
 evaluara 2 1
 evalueserve 2 1
-evaper 2 1
+evaperon 2 1
 evelina 1 1
 evelina@quimica.unlp.edu.ar 1 1
 evelyn 2 1
@@ -13716,7 +13470,6 @@ evolutivo 1 1
 evomorales 1 1
 evp 2 1
 ewolcan@inifta.unlp.edu.ar 1 1
-ex 34 16
 exacerbado 1 1
 exacta 1 1
 exactamente 1 1
@@ -13932,7 +13685,6 @@ exportacion 2 2
 exposicion 25 14
 exposicionduracion 1 1
 exposiciones 7 6
-exposicionesteatroelenco 1 1
 expositor 3 2
 expositores 2 2
 expresa 12 7
@@ -13975,15 +13727,12 @@ extension@biblio.unlp.edu.ar 1 1
 extension@psico.unlp.edu.ar 1 1
 extension@rec.unicen.edu.ar 5 1
 extensiona 2 2
-extensionalumnosservicios 1 1
 extensionarea 1 1
 extensionaño 1 1
 extensionconclusiones 1 1
 extensiondigital 1 1
-extensiondigitalfpsicoedu 17 1
 extensioneduraee 1 1
 extensiones 7 2
-extensionestudiantiles 3 1
 extensionextension 1 1
 extensionismo 1 1
 extensionista 4 4
@@ -14064,7 +13813,6 @@ exuberante 1 1
 ezcurra 1 1
 ezeiza 1 1
 ezequiel 16 4
-eñ 1 1
 fabian 5 4
 fabiana 1 1
 fabiani 1 1
@@ -14135,7 +13883,6 @@ facultadesver 1 1
 facultadinformacion 1 1
 facultadla 11 1
 facultadposgrado 1 1
-facultadposgradodoctorado 1 1
 facultael 2 1
 facultativo 2 1
 faculte 1 1
@@ -14217,7 +13964,6 @@ farias 3 2
 farid 1 1
 farina 1 1
 farmaceutica 1 1
-farmaceuticabioquimica 1 1
 farmaceuticas 14 3
 farmaceutico 3 3
 farmaceuticos 6 5
@@ -14281,7 +14027,7 @@ faz 10 2
 fba 1 1
 fbcb 1 1
 fbioyf 5 1
-fbioyf_unr 10 1
+fbioyfunr 10 1
 fca 1 1
 fcbyf 2 1
 fce 4 4
@@ -14308,7 +14054,6 @@ fcoeste 1 1
 fcpolit 4 1
 fcq 1 1
 fcv 1 1
-fe 100 33
 feature 2 2
 featured 3 1
 feb 64 8
@@ -14333,7 +14078,7 @@ fedeclaracion 1 1
 federacion 8 4
 federaciones 1 1
 federadassimari 2 1
-federal 67 29
+federal 66 29
 federales 2 1
 federalismo 2 2
 federanza 1 1
@@ -14390,12 +14135,11 @@ fermin 4 1
 fermina 1 1
 fermionico 1 1
 fermo 3 1
-fern 1 1
 fernaandez 1 1
 fernanda 5 4
 fernandez 21 12
 fernando 44 19
-fernandogarz 1 1
+fernandogarzon 1 1
 feroli 1 1
 feroz 3 2
 ferrando 1 1
@@ -14461,8 +14205,7 @@ ficha 42 14
 fichado 1 1
 ficticio 1 1
 fidanza 2 1
-fide 1 1
-fidel 17 4
+fidel 18 4
 fidelcastro 2 2
 fidelidad 1 1
 fidelistas 1 1
@@ -14479,7 +14222,7 @@ fiestas 4 3
 figini 1 1
 figliola 1 1
 figueredo 1 1
-figueroa 5 2
+figueroa 4 2
 figura 30 9
 figuraba 2 2
 figuran 3 2
@@ -14572,12 +14315,10 @@ financiacion 4 3
 financiado 4 3
 financiados 2 2
 financiamiento 19 11
-financiamientopropiedad 1 1
 financian 2 2
 financiar 3 3
 financiera 29 13
 financierasecretaria 6 1
-financierasubsecretaria 1 1
 financiero 11 8
 financieros 7 6
 finanzas 32 10
@@ -14716,7 +14457,6 @@ flujos 2 1
 fluminense 3 1
 fluviales 2 1
 fluya 2 2
-fm 3 3
 fmaterias 6 1
 fnbsf 2 2
 fobias 2 1
@@ -14784,7 +14524,6 @@ forenses 2 1
 forestacion 1 1
 forestal 20 3
 forestales 11 6
-forestalesbibliografia 1 1
 forestalesfacultad 2 1
 forester 1 1
 foretalesbiblioteca 2 1
@@ -15023,7 +14762,6 @@ frutas 1 1
 frutihorticolas 2 1
 fruto 1 1
 frutos 6 4
-fs 2 1
 fsnano 1 1
 fsta 3 1
 ftp 4 2
@@ -15141,7 +14879,6 @@ futuro 32 21
 futuros 23 11
 futurosmuller 2 1
 fuunsaj 1 1
-fx 1 1
 fyear 6 1
 gaasync 43 28
 gab 1 1
@@ -15151,13 +14888,12 @@ gabriel 17 11
 gabriela 21 13
 gabrielb@ciop.unlp.edu.ar 1 1
 gabriele 1 1
-gabrielgarc 1 1
+gabrielgarcia 1 1
 gabrielle 1 1
 gacetilla 2 2
 gacetillas 1 1
 gacetillaslunes 1 1
 gains 2 1
-gait 1 1
 gaitan 1 1
 gajshost 1 1
 gala 3 1
@@ -15172,8 +14908,8 @@ galego 3 3
 galeno 3 1
 galeri 1 1
 galeria 45 28
-galeria_shepherd 1 1
 galerias 5 2
+galeriashepherd 1 1
 gales 2 1
 galgano 1 1
 galilei 1 1
@@ -15238,8 +14974,7 @@ garaventta 1 1
 garay 3 1
 garbarino 1 1
 garbi 1 1
-garc 2 1
-garcia 42 25
+garcia 43 25
 garciamata 1 1
 gardel 1 1
 gardey 1 1
@@ -15264,11 +14999,11 @@ gasoductos 1 1
 gaspar 5 3
 gasrc 56 32
 gassa 1 1
-gast 1 1
 gastado 1 1
 gastao 1 1
 gasto 2 2
 gaston 5 3
+gastongaudio 1 1
 gastos 8 5
 gastron 5 2
 gastronomia 2 1
@@ -15282,7 +15017,7 @@ gattas 1 1
 gatto 1 1
 gatype 26 20
 gaucher 1 1
-gaudio 2 1
+gaudio 1 1
 gauge 1 1
 gaulle 1 1
 gavilan 5 2
@@ -15310,8 +15045,8 @@ gellon 1 1
 gelman 1 1
 gemini 1 1
 genaro 1 1
-gendarmer 1 1
 gendarmeria 1 1
+gendarmerianacional 1 1
 gene 1 1
 genealogia 2 1
 genera 17 12
@@ -15406,7 +15141,6 @@ geologiafcfmn 2 1
 geologicaauxiliares 1 1
 geologicajefes 1 1
 geologicas 6 2
-geologicavisitanoscomo 1 1
 geologicos 3 2
 geologo 8 3
 geologos 1 1
@@ -15479,8 +15213,7 @@ getuli 1 1
 geurts 1 1
 gfigueroa@agr.unne.edu.ar 1 1
 ggalvan@express.com.ar 1 1
-ghazn 2 1
-ghazni 4 1
+ghazni 6 1
 ghersevich 2 1
 ghersi 1 1
 ghezzi 3 2
@@ -15508,7 +15241,6 @@ gimnasia 1 1
 gimnasio 3 3
 gimnasta 2 1
 gimpera 1 1
-gin 1 1
 ginebra 1 1
 ginecocracia 1 1
 ginecologia 1 1
@@ -15540,7 +15272,6 @@ gisele 1 1
 giudice 1 1
 giuffra 3 1
 giuliana 1 1
-giulianimaximilianotitulo 1 1
 giusti@biol.unlp.edu.ar 1 1
 given 3 1
 gladys 8 4
@@ -15567,7 +15298,6 @@ gmt 1 1
 gnogueira@unsam.edu.ar 2 1
 gnu 2 2
 gnugpl 5 4
-go 7 3
 goa 1 1
 gob 1 1
 gobato 1 1
@@ -15582,11 +15312,10 @@ gobernante 1 1
 gobernantes 2 2
 gobernanza 3 2
 gobernar 6 2
-gobiern 1 1
 gobierna 1 1
 gobiernan 1 1
 gobierne 1 1
-gobierno 158 47
+gobierno 159 47
 gobiernos 14 9
 goce 35 1
 goces 5 2
@@ -15617,15 +15346,13 @@ gondolas 1 1
 gondra 1 1
 gonella 2 1
 gonnet 5 2
-gonz 2 2
 gonzalez 42 20
 gonzalo 17 10
-gonzaloacro 2 1
-gonzalogarc 1 1
+gonzaloacro 1 1
+gonzalogarcia 1 1
 gonzalolongo 1 1
 gonzalopedrotiesi 1 1
 google 19 10
-googleanalyticscomgajs 56 32
 googles 1 1
 gordillo 1 1
 gordini 1 1
@@ -15673,7 +15400,6 @@ gradofuncionestiene 1 1
 gradohorarios 1 1
 gradolas 2 1
 gradomuseo 1 1
-gradoposgradoseducacion 5 1
 grados 7 3
 gradotesinas 2 1
 gradua 1 1
@@ -15772,7 +15498,7 @@ gripe 9 4
 grippo 3 2
 gris 1 1
 griselda 6 3
-griseldasicilian 1 1
+griseldasiciliani 1 1
 griselli 1 1
 grisolia 2 1
 grita 1 1
@@ -15816,8 +15542,6 @@ guadalajara 8 2
 guadalupe 6 2
 guado 2 1
 gualeguaychu 10 3
-gualeguaychugoldaracena 2 1
-gualeguaychuprofesorado 1 1
 guarana 1 1
 guaranatelefonos 1 1
 guarani 41 17
@@ -15872,7 +15596,7 @@ guillen 2 2
 guillermet 1 1
 guillermina 5 3
 guillermo 42 23
-guillermonarvart 1 1
+guillermonarvarte 1 1
 guillermorigondeaux 1 1
 guilllermo 1 1
 guillon 1 1
@@ -15900,9 +15624,6 @@ gymansium 1 1
 gymnas 18 1
 gymnasium 20 1
 gymnasiums 1 1
-h_email 3 1
-h_secs 3 1
-ha 271 89
 haaretz 2 1
 habana 6 4
 habel 1 1
@@ -16048,12 +15769,10 @@ haydee 1 1
 haz 3 3
 hbacarini@unlu.edu.ar 2 1
 hbsag 1 1
-hc 1 1
 hcd 4 1
 hci 1 1
 hcs 6 2
 hdm 1 1
-he 10 4
 header 1 1
 headers 1 1
 hebe 1 1
@@ -16066,6 +15785,7 @@ hechos 16 6
 hecht 1 1
 hectareas 2 2
 hector 25 12
+hectormoncalvillo 1 1
 hediger 1 1
 hedonista 1 1
 hegel 3 1
@@ -16087,6 +15807,7 @@ help 8 5
 helpdesk 1 1
 heluane 1 1
 helvetica 1 1
+hemail 3 1
 hematofago 1 1
 hematologia 9 3
 hematologico 1 1
@@ -16139,7 +15860,6 @@ hermanos 22 6
 hermida 3 2
 hermosas 1 1
 hermoso 1 1
-hern 1 1
 hernan 8 4
 hernandez 21 10
 hernando 1 1
@@ -16156,7 +15876,6 @@ herriko 4 1
 herve 3 1
 herzog 1 1
 heterodoxo 1 1
-heteroepitexialesdirector 1 1
 heterogenea 1 1
 heterogeneidad 3 3
 heterogeneos 1 1
@@ -16208,7 +15927,6 @@ hilario 1 1
 hilbert 1 1
 hilda 2 1
 hillary 1 1
-hillaryrodhamclinto 1 1
 himno 5 4
 hincapie 3 3
 hincha 2 1
@@ -16235,10 +15953,10 @@ hisher 2 2
 hispanica 1 1
 hispanoamericana 2 2
 hispanoitaliano 1 1
-hist_insue 1 1
 histeducarg 1 1
 histelea 10 3
 histericas 1 1
+histinsue 1 1
 histioria 1 1
 histologia 4 3
 historia 398 97
@@ -16271,10 +15989,8 @@ hitos 2 1
 hiv 3 2
 hivsidaderechos 5 1
 hizo 15 15
-hj 2 1
 hkuhn@citefa.gov.ar 1 1
 hlopez@unlu.edu.ar 1 1
-hm 4 1
 hobbes 1 1
 hoc 3 2
 hockey 2 1
@@ -16296,7 +16012,7 @@ holguin 1 1
 holistica 2 2
 holstein 1 1
 hombre 94 11
-hombreara 1 1
+hombrearañ 1 1
 hombres 21 4
 home 105 34
 homeasp 1 1
@@ -16417,12 +16133,12 @@ hozbor@biol.unlp.edu.ar 1 1
 hplc 1 1
 hrs 3 2
 hrvatski 2 2
-hs 237 56
 hsalign 38 2
 hscirugi 1 1
 hscppv 1 1
 hsdiagnostico 1 1
 hsdimmingopacity 40 2
+hsecs 3 1
 hsfadeinout 40 2
 hsgraphicsdir 39 2
 hsing 2 1
@@ -16494,7 +16210,6 @@ http://www.xtec.es/~jlagares/matemati.htm 2 1
 http://www.youtube.comhttp://www.youtube.com 1 1
 httpcsigstaticcomcsi 1 1
 httptvunqeduar 15 1
-httpwwwhtmldynamicocjbnet 1 1
 huapi 1 1
 huarachi 1 1
 huaycama 1 1
@@ -16522,7 +16237,7 @@ huespedes 2 1
 huevadas 1 1
 huevos 1 1
 hugo 17 10
-hugoch 1 1
+hugochavez 1 1
 huimos 1 1
 huinca 2 1
 huincul 1 1
@@ -16574,9 +16289,6 @@ hypertext 1 1
 hypotheses 1 1
 hys 1 1
 hyyoudo 1 1
-i_filter 3 1
-i_text 6 1
-ia 3 1
 iac 1 1
 iaci 1 1
 iaeste 1 1
@@ -16591,8 +16303,7 @@ ibarra 1 1
 ibañez 6 2
 ibbm 3 1
 ibbm@biol.unlp.edu.ar 1 1
-iberi 1 1
-iberia 1 1
+iberia 2 1
 iberoameri 1 1
 iberoamerica 6 4
 iberoamericadeutsche 1 1
@@ -16622,7 +16333,6 @@ icrym 2 1
 icset 1 1
 ictf 9 1
 ictiologia 2 1
-id 28 12
 ida 2 1
 idaes 2 1
 idea 48 8
@@ -16672,7 +16382,6 @@ idn 2 1
 ido 4 4
 idoneo 1 1
 ids 1 1
-ie 4 4
 iecj 1 1
 ieede 3 1
 ieee 3 2
@@ -16684,12 +16393,12 @@ iesalc 1 1
 iesglo 3 1
 iesglo@satlink.com 2 1
 iesglomiguel 1 1
-if 128 34
 ifas 3 2
 ifas@exa.unicen.edu.ar 1 1
 ifaselinstituto 1 1
 ifasunicenpinto 1 1
 ifide 1 1
+ifilter 3 1
 ifimar 4 1
 ifimarunmdp 1 1
 ifimat 6 2
@@ -16702,12 +16411,10 @@ iframes 1 1
 iframesrcagendahtm 1 1
 ige 1 1
 iglesia 12 5
-iglesiacat 1 1
 iglesias 11 6
 ignacio 47 10
 ignaciochela 1 1
 ignaciocorleto 1 1
-ignaciofern 1 1
 ignaciotitulo 1 1
 ignorancia 3 1
 ignorar 4 2
@@ -16723,8 +16430,6 @@ iguales 8 4
 igualitaria 2 2
 igualitarias 4 1
 igualmente 6 6
-ih 1 1
-ii 178 45
 iia@ffha.unsj.edu.ar 1 1
 iiam 1 1
 iianalisis 1 1
@@ -16768,11 +16473,10 @@ ilustrar 2 1
 ilustrativo 2 2
 ilustres 1 1
 ilya 2 1
-im 4 2
-imag 3 3
+imag 2 2
 image 22 8
-image_crop 1 1
 imagearray 1 1
+imagecrop 1 1
 imagen 31 20
 imagenes 48 29
 images 12 5
@@ -16784,7 +16488,7 @@ imaginaria 1 1
 imaginarias 1 1
 imaginario 5 1
 imaginarios 1 1
-imaginense 2 2
+imaginense 3 2
 imago 2 1
 imanol 2 1
 imasl 1 1
@@ -16949,7 +16653,6 @@ impuso 2 2
 imputados 3 1
 imputar 1 1
 imsunsjeduar 10 2
-in 161 40
 inaceptabilidad 1 1
 inactivas 1 1
 inactividad 1 1
@@ -17123,7 +16826,6 @@ indescifrable 1 1
 indeseados 1 1
 indeterminadas 1 1
 index 31 12
-index_oldhtmmartes 1 1
 indexacion 4 3
 indexaciones 1 1
 indexada 1 1
@@ -17131,6 +16833,7 @@ indexasp 1 1
 indexhtm 4 3
 indexhtml 1 1
 indexing 1 1
+indexoldhtmmartes 1 1
 indexphp 1 1
 india 9 3
 indiafelicitamos 1 1
@@ -17182,8 +16885,7 @@ indizacioncalendario 1 1
 indizados 1 1
 indocumentados 1 1
 indole 7 6
-indonesi 1 1
-indonesia 7 4
+indonesia 8 4
 indonesian 1 1
 induced 1 1
 induction 1 1
@@ -17193,7 +16895,6 @@ indulgencia 1 1
 indumentaria 39 7
 industria 30 17
 industrial 133 39
-industrialdepartamento 1 1
 industriales 12 8
 industrialesdirector 1 1
 industrializables 3 1
@@ -17292,12 +16993,9 @@ infoingenieria@unlam.edu.ar 1 1
 infojus 1 1
 infomultimedia 1 1
 informa 69 35
-informaci 2 1
 informacin 15 4
-informacion 729 179
-informacioncomunicacion 1 1
+informacion 731 179
 informaciones 1 1
-informacioninstitucional 1 1
 informacionsecretaria 6 1
 informado 6 5
 informados 1 1
@@ -17315,7 +17013,6 @@ informarse 1 1
 informarte 1 1
 informate 2 1
 informatica 304 70
-informaticaadquisicion 3 1
 informaticaanalista 2 1
 informaticaarea 1 1
 informaticacontratar 1 1
@@ -17345,7 +17042,6 @@ informes@itba.edu.ar 1 1
 informes@palermo.edu 1 1
 informes@uch.edu.ar 4 1
 informes@unlu.edu.ar 53 13
-informesprediounlateorgar 1 1
 informessecretari 2 1
 informo 10 10
 infosunq 2 1
@@ -17360,9 +17056,8 @@ ing 122 33
 ingagr 5 4
 ingdr 1 1
 ingdra 1 1
-ingenier 1 1
 ingenieri 17 8
-ingenieria 518 74
+ingenieria 519 74
 ingenieriabiomedica 2 1
 ingenieriacarrera 10 1
 ingenieriafacultad 4 2
@@ -17401,7 +17096,6 @@ ingresaste 1 1
 ingrese 26 20
 ingreso 334 106
 ingresoalaunsam 2 1
-ingresoalumnosmanuales 6 1
 ingresoaspx 1 1
 ingresocontacto 6 1
 ingresoobligatorio 1 1
@@ -17441,7 +17135,6 @@ iniciativas 4 4
 inicie 2 2
 inicies 1 1
 inicio 480 148
-iniciocalendariodocentes 2 1
 iniciocasos 1 1
 iniciocertificado 1 1
 inicioinformacion 4 1
@@ -17484,9 +17177,7 @@ inminencia 3 1
 inmobiliaria 2 1
 inmobiliarias 3 2
 inmobiliario 10 1
-inmobiliariolicenciatura 7 1
 inmobiliarios 1 1
-inmobiliariosextension 6 1
 inmovilidad 2 1
 inmovilizacion 1 1
 inmuebles 2 2
@@ -17494,8 +17185,7 @@ inmundo 5 1
 inmunidad 1 1
 inmunitaria 1 1
 inmunizacion 1 1
-inmuno 2 1
-inmuno_ 2 1
+inmuno 4 2
 inmunofluorescencia 1 1
 inmunohematologia 2 1
 inmunologia 4 3
@@ -17621,9 +17311,7 @@ institucioacuten 2 1
 institucion 66 29
 institucional 563 135
 institucionales 75 40
-institucionalessecretaria 7 1
 institucionalestatuto 1 1
-institucionalinformacion 1 1
 institucionaliza 1 1
 institucionalizacion 4 1
 institucionalizadas 1 1
@@ -17631,12 +17319,9 @@ institucionalizado 2 1
 institucionalizar 1 1
 institucionallibreria 1 1
 institucionalplan 4 1
-institucionalpresentacion 2 1
 institucionaltaller 1 1
 institucionel 1 1
 instituciones 183 66
-institucionesasociadas 1 1
-institucionesorganismos 1 1
 instituida 1 1
 instituido 3 3
 instituir 1 1
@@ -17691,7 +17376,6 @@ integra 11 10
 integraba 1 1
 integracion 65 36
 integracionpasantias 2 1
-integracionpasantiasmesas 1 1
 integrada 25 17
 integradas 4 4
 integrado 24 16
@@ -17725,7 +17409,6 @@ intelectualcasos 1 1
 intelectuales 4 3
 intelectualidad 1 1
 intelectualmente 1 1
-intelectualpublicaciones 1 1
 inteligencia 38 12
 inteligencias 2 2
 inteligente 4 2
@@ -17765,7 +17448,6 @@ intento 12 2
 intentos 3 2
 intequi 1 1
 inter 3 3
-inter_universitaria 1 1
 interaccion 20 16
 interaccional 1 1
 interacciones 7 5
@@ -17800,7 +17482,6 @@ interdicciones 4 1
 interdiscipliarios 1 1
 interdisciplinaria 9 6
 interdisciplinaridad 1 1
-interdisciplinaridadel 1 1
 interdisciplinario 14 13
 interdisciplinarios 12 9
 interes 164 73
@@ -17840,7 +17521,6 @@ interinos 1 1
 interinstituciona 1 1
 interinstitucional 13 5
 interinstitucionales 11 5
-interinstitucionalidad 1 1
 interior 34 16
 interiores 10 5
 interioridad 1 1
@@ -17862,7 +17542,6 @@ internacionalcatedra 1 1
 internacionale@unsam.edu.ar 1 1
 internacionales 255 57
 internacionalesiii 1 1
-internacionalesoficina 1 1
 internacionalidad 1 1
 internacionalizacion 10 7
 internacionalla 1 1
@@ -17878,8 +17557,7 @@ international 51 14
 internationale 7 1
 internationally 1 1
 internaunidad 1 1
-interne 1 1
-internet 82 45
+internet 83 45
 interneta 1 1
 internetesta 3 2
 internetmodalidad 1 1
@@ -17891,7 +17569,6 @@ interpersonales 5 2
 interponer 1 1
 interpretacion 15 9
 interpretaciones 1 1
-interpretacionexamenes 7 1
 interpretada 1 1
 interpretadas 1 1
 interpretado 1 1
@@ -17919,7 +17596,7 @@ intersectoriales 2 1
 intersectorialidad 1 1
 intersubjetivo 1 1
 interu 1 1
-interuniversitaria 6 4
+interuniversitaria 7 5
 interuniversitarias 3 2
 interuniversitario 6 6
 interuniversitarios 1 1
@@ -18028,13 +17705,10 @@ investigacioncatedra 1 1
 investigaciondra 1 1
 investigaciones 150 65
 investigacionespacio 1 1
-investigacionextension 2 2
 investigaciongestion 2 1
 investigacionherbario 1 1
 investigacionlineas 6 1
 investigacionpero 1 1
-investigacionpoliticas 6 1
-investigacionproyectos 1 1
 investigacionreseñas 2 1
 investigacionse 2 1
 investigaciontd 1 1
@@ -18043,8 +17717,6 @@ investigador 18 9
 investigadora 14 6
 investigadoras 3 2
 investigadores 105 53
-investigadoresdocentes 1 1
-investigadoresformados 1 1
 investigadoresuntaugm 1 1
 investigamos 1 1
 investigan 1 1
@@ -18096,14 +17768,12 @@ iologia 1 1
 ioma 4 1
 ional 1 1
 iones 1 1
-ip 4 3
 ipau 8 1
 ipgp 7 1
 ippoliti 1 1
-ir 82 38
-ira 4 3
+ira 3 2
 iraguen 1 1
-irak 7 1
+irak 8 1
 iram 2 1
 iran 2 2
 iraolo 1 1
@@ -18141,7 +17811,6 @@ irrumpe 5 1
 irrumpiendo 1 1
 irrupcion 2 1
 irse 1 1
-is 68 27
 isaac 1 1
 isabato@cnea.gov.ar 4 1
 isabel 10 6
@@ -18173,14 +17842,12 @@ isolator 1 1
 isoparametricos 1 1
 isotropico 1 1
 isps 1 1
-israe 1 1
-israel 11 5
+israel 12 5
 israeli 1 1
 issn 46 5
 issues 1 1
 issunne 2 2
 istec 2 1
-it 17 14
 ita 1 1
 italia 14 9
 italiana 5 4
@@ -18189,6 +17856,7 @@ italo 1 1
 itba 9 1
 itc 1 1
 items 5 4
+itext 6 1
 itexto 1 1
 itinerant 1 1
 itinerante 3 2
@@ -18203,7 +17871,6 @@ iuav 2 1
 iulio 1 1
 iuna 7 2
 iupfa 1 1
-iv 20 15
 iva 1 1
 ivaldi 1 1
 ivaldimantenimiento 1 1
@@ -18213,7 +17880,6 @@ ive 1 1
 iviernes 1 1
 ivisitar 1 1
 ivxi 1 1
-ix 5 3
 ixquick 1 1
 izaguirre 2 1
 izquierda 3 2
@@ -18283,7 +17949,6 @@ jcarousel 9 3
 jcst 1 1
 jderrida 1 1
 jdk 1 1
-je 1 1
 jean 6 5
 jeanpierre 1 1
 jefa 2 1
@@ -18299,19 +17964,15 @@ jerarquizacion 1 1
 jeremias 1 1
 jerez 1 1
 jeronimo 2 2
-jes 1 1
 jesuita 4 2
-jesus 12 7
-jf 1 1
+jesus 13 7
 jfkennedy 4 1
 jimena 3 1
 jimenez 2 2
 jimmy 1 1
-jimmycarte 1 1
+jimmycarter 1 1
 jinkus 1 1
-jl 1 1
 jlacan 1 1
-jm 3 1
 joan 1 1
 joaquin 18 5
 jobs 1 1
@@ -18337,9 +17998,9 @@ joomlas 1 1
 joomlaspanish 1 1
 jorge 103 29
 jorgealbertotereso 1 1
-jorgeballester 1 1
+jorgeballestero 1 1
 jorgelina 1 1
-jorgesalom 1 1
+jorgesalomon 1 1
 jornada 67 31
 jornadas 134 48
 jornadascontrol@unnoba.edu.ar. 1 1
@@ -18349,10 +18010,11 @@ jornadaseventos 3 1
 jornalero 1 1
 jornaleros 1 1
 jornales 1 1
-jos 2 2
 jose 87 34
 josefa 1 1
 josefina 5 2
+josemariacampagnoli 1 1
+josenuñ 1 1
 joseph 2 2
 josephwilson 1 1
 josetitulo 1 1
@@ -18365,25 +18027,20 @@ jovic 1 1
 joyas 1 1
 jquery 6 1
 jquerypreloadimages 1 1
-jr 1 1
 jrodrig@fbioyf.unr.edu.ar 2 1
-js 1 1
 jsid 1 1
 jsp 2 2
 jssrc 1 1
 jstor 1 1
-jt 1 1
 jtablesessionstore 1 1
-ju 1 1
 juan 218 59
 juan@unsl.edu.ar, 1 1
 juana 6 4
-juanfern 1 1
-juanguti 1 1
+juanfernandezlobbe 1 1
+juangutierrez 1 1
 juanla 1 1
-juanmanuelleguizam 1 1
-juanmart 1 1
-juanrom 1 1
+juanmartinhernandez 1 1
+juanromanriqulme 1 1
 juantitulo 1 1
 juarez 11 5
 jubilacion 4 2
@@ -18404,7 +18061,6 @@ juega 4 3
 juegan 2 1
 juego 16 7
 juegos 13 7
-juegosol 1 1
 juegospanamericanos 1 1
 jueguen 1 1
 jueves 95 36
@@ -18425,14 +18081,13 @@ juidicas 1 1
 juiz 1 1
 jujuy 19 9
 jul 47 2
-juli 1 1
 julia 1 1
 julian 8 4
 juliana 3 2
 julie 2 1
 julieta 13 6
 julietalantieri 1 1
-julio 162 58
+julio 163 58
 julioemmed 1 1
 july 2 1
 jumilla 1 1
@@ -18465,7 +18120,6 @@ juridicas 70 26
 juridicasdiplomatura 7 1
 juridico 11 9
 juridicocontables 1 1
-juridicoinstitucionales 1 1
 juridicopoliticos 1 1
 juridicos 5 5
 jurisdiccion 3 3
@@ -18523,7 +18177,6 @@ katja 1 1
 katsuhisa 1 1
 kaufmann 1 1
 kawase 2 1
-kb 9 1
 kearney 1 1
 keasylogger 1 1
 keep 2 1
@@ -18536,7 +18189,6 @@ kervel 1 1
 keuken 2 1
 kevin 2 1
 key 2 2
-kg 2 1
 khatchikianfacundo 1 1
 khluchmann@yahoo.com.br 1 1
 khourian 1 1
@@ -18559,7 +18211,7 @@ king 1 1
 kippes 2 2
 kipus 2 2
 kirchheimer 1 1
-kirchner 8 4
+kirchner 7 4
 kit 3 2
 klaussner 1 1
 klein 2 1
@@ -18568,7 +18220,6 @@ kleinianos 1 1
 klich 1 1
 klimovsky 1 1
 kluwer 1 1
-km 27 13
 knowledge 3 3
 kohan 1 1
 kohei 1 1
@@ -18603,7 +18254,6 @@ kurt 1 1
 kury 1 1
 kusturica 1 1
 kv@biol.unlp.edu.ar 1 1
-la 14142 379
 laass 1 1
 lab 22 4
 labatalla 1 1
@@ -18682,7 +18332,7 @@ lalive 24 1
 lamar 1 1
 lamarra 1 1
 lamejora 2 1
-lamelas 2 1
+lamelas 1 1
 lamenta 2 2
 lamentablemente 3 3
 lamentacion 1 1
@@ -18719,8 +18369,7 @@ lanzo 2 2
 laparoscopica 1 1
 laplace 1 1
 laplanche 1 1
-laplat 1 1
-laplata 1 1
+laplata 2 1
 lapprentissage 1 1
 laprida 5 1
 laquidos 8 1
@@ -18751,7 +18400,7 @@ lascerantes 1 1
 lasciencias 2 1
 lasclaves 1 1
 laseisic 1 1
-laselecci 1 1
+laseleccion 1 1
 laser 3 3
 laserdirector 2 1
 laseres 2 1
@@ -18763,8 +18412,7 @@ laspropiedades 1 1
 lassimilation 1 1
 last 2 1
 lastimo 1 1
-lasvega 1 1
-lasvegas 3 1
+lasvegas 4 1
 lategana 1 1
 latente 2 2
 lateral 5 4
@@ -18772,11 +18420,10 @@ latest 2 2
 lathyrus 1 1
 latifolius 1 1
 latin 5 4
-latina 40 22
+latina 39 22
 latinamerican 1 1
 latindex 5 3
-latino 2 2
-latino_ 1 1
+latino 3 3
 latinoamerica 13 8
 latinoamericana 31 14
 latinoamericanas 3 3
@@ -18808,6 +18455,7 @@ lawrence 2 2
 layer 4 2
 layout 1 1
 lazaro 1 1
+lazarolamelas 1 1
 lazarteautores 1 1
 lazo 17 5
 lazos 11 3
@@ -18817,10 +18465,8 @@ lbcloselink 1 1
 lbloading 1 1
 lbnextlinkhover 1 1
 lbprevlinkhover 1 1
-lc 1 1
 lcasey 1 1
 lcozza@unsam.edu.ar 1 1
-le 236 60
 lea 12 8
 leading 1 1
 league 1 1
@@ -18905,7 +18551,7 @@ lei 1 1
 leida 1 1
 leido 3 3
 leila 1 1
-leiva 3 2
+leiva 2 2
 lejanos 1 1
 lejos 7 4
 lelescopiosde 1 1
@@ -18933,8 +18579,7 @@ lentos 1 1
 leo 4 2
 leon 13 6
 leonardo 14 11
-leonardoguti 2 1
-leonardojuniordasilva 1 1
+leonardogutierrez 2 1
 leonel 4 1
 leonela 1 1
 leonie 1 1
@@ -18987,11 +18632,9 @@ leyes 29 15
 leyhaddad 1 1
 lezcano 1 1
 leñosascasermeiro 2 1
-lg 1 1
 lgas 6 1
 lgkraige 1 1
 lhistoire 2 1
-li 21 4
 lia 2 1
 lib 1 1
 libby 2 1
@@ -19022,8 +18665,8 @@ librados 2 1
 libraries 1 1
 library 5 3
 libre 90 51
-libre_real 2 1
 libremente 3 2
+librereal 2 1
 libreria 3 2
 libres 17 9
 libresaquellos 1 1
@@ -19122,7 +18765,6 @@ lina 3 2
 linaje 1 1
 linares 1 1
 lincebono 1 1
-lincecongresosuspension 1 1
 lincoln 6 1
 lindividu 1 1
 lindo 1 1
@@ -19191,14 +18833,12 @@ litologias 1 1
 litoral 38 18
 litwin 3 1
 live 12 1
-liveclockinnerhtmlmyclock 1 1
 livia 2 1
 liviana 1 1
 liviano 1 1
 livio 1 1
 lix 1 1
 lizarralde 2 2
-ll 46 1
 llach 3 1
 llama 23 17
 llamaba 1 1
@@ -19239,7 +18879,6 @@ lleganson 1 1
 llegar 50 35
 llegara 1 1
 llegaria 1 1
-llegarinvestigacionareas 1 1
 llegaron 1 1
 llegarreservas 1 1
 llegartelefonos 1 1
@@ -19282,14 +18921,13 @@ llore 1 1
 llosa 1 1
 lluvia 1 1
 lluvias 2 1
-lo 884 123
 loable 1 1
 load 4 4
 loading 5 4
 loadtimername 1 1
 loadvideoutdt 8 1
 loan 1 1
-lobbe 4 1
+lobbe 2 1
 lobo 2 2
 lobos 1 1
 loca 1 1
@@ -19344,7 +18982,7 @@ logren 3 2
 logro 18 12
 logros 6 3
 logueo 1 1
-logueo_autogestion 1 1
+logueoautogestion 1 1
 lojo 1 1
 lola 2 1
 loma 1 1
@@ -19399,7 +19037,6 @@ lower 4 4
 loyarte 1 1
 lozada 1 1
 lozano 6 4
-lp 1 1
 lrk 4 1
 lrpizzio@quimica.unlp.edu.ar 1 1
 lsa 1 1
@@ -19471,7 +19108,6 @@ luzde 1 1
 lynch 5 2
 lyon 2 1
 lyudmil 1 1
-ma 9 5
 mabel 7 5
 mac 1 1
 macabro 1 1
@@ -19499,7 +19135,6 @@ madero 4 2
 madoery 2 2
 madre 21 4
 madres 5 3
-madri 1 1
 madrid 42 12
 madrugada 1 1
 madryn 3 2
@@ -19617,8 +19252,7 @@ managment 1 1
 managua 1 1
 manantial 1 1
 mancha 1 1
-mancheste 1 1
-manchester 4 1
+manchester 5 1
 manchesteragregar 2 1
 manchesterunited 1 1
 mancho 1 1
@@ -19696,9 +19330,9 @@ manuales 3 3
 manualmente 1 1
 manuel 55 20
 manuela 3 2
-manuelalvare 1 1
+manuelalvarez 1 1
 manuelcontepomi 1 1
-manuelcuest 1 1
+manuelcuesta 1 1
 manuelmun@gmail.com 1 1
 manuelpellegrini 1 1
 manufactura 1 1
@@ -19721,13 +19355,12 @@ maquina 2 1
 maquinabilidad 1 1
 maquinaria 2 1
 maquinas 20 5
-mar 197 37
+mar 194 35
 marabi 1 1
 maralia 1 1
 marargumentoediciones 1 1
 marasmo 1 1
-marat 1 1
-maraton 3 2
+maraton 4 2
 maravillo 1 1
 maravillosa 2 1
 maravillosamente 1 1
@@ -19782,6 +19415,8 @@ margin 1 1
 marginal 1 1
 marginales 3 2
 maria 235 56
+mariaaguilar 1 1
+mariainesfigueroa 1 1
 mariana 13 9
 mariana@inti.gov.ar 1 1
 marianela 2 1
@@ -19799,7 +19434,7 @@ marinas 4 3
 maringa 1 1
 marino 3 3
 mario 37 18
-marioledesm 1 1
+marioledesma 1 1
 maris 6 4
 marisa 7 3
 marisco 7 1
@@ -19822,7 +19457,6 @@ marradi 1 1
 marron 3 2
 marrone 1 1
 marseille 1 1
-mart 8 5
 marta 13 8
 martan 1 1
 martellotto 1 1
@@ -19840,11 +19474,19 @@ martina 10 2
 martinco 1 1
 martincodirector 1 1
 martindaniel 1 1
+martindurand 1 1
 martine 1 1
 martinello 2 1
 martinez 21 12
 martinfecha 5 1
+martingaitan 1 1
+martingonzaloacro 1 1
+martinleiva 1 1
 martino 3 2
+martinscelzo 1 1
+martinschusterman 1 1
+martinsharples 1 1
+martintapia 1 1
 martire 1 1
 martucci 3 1
 marusich 1 1
@@ -19877,7 +19519,7 @@ masivamente 2 2
 masivamentemensajes 1 1
 masivas 2 2
 masivos 2 2
-masnuevo_sitio 1 1
+masnuevositio 1 1
 mason 1 1
 masoquista 1 1
 maspreinscripciones 1 1
@@ -19891,7 +19533,6 @@ massonvivianatitulo 1 1
 master 7 5
 masters 23 1
 mastreta 1 1
-mat 2 1
 mata 2 2
 matanza 10 5
 matanzas 1 1
@@ -19905,7 +19546,6 @@ mate 2 2
 matematica 136 42
 matematicaarea 1 1
 matematicaauxiliares 1 1
-matematicafisicaquimica 1 1
 matematicas 39 15
 matematicasfcfmn 2 1
 matematico 9 5
@@ -19942,6 +19582,7 @@ mathematical 2 1
 mathematics 2 1
 mathias 1 1
 matias 22 8
+matiassandes 2 1
 matienzo 2 1
 matilde 4 3
 matiz 1 1
@@ -19971,7 +19612,6 @@ maurizio 1 1
 mauro 2 2
 maus 1 1
 max 2 1
-max_z_index 1 1
 maxima 7 4
 maximas 5 4
 maxime 2 2
@@ -19982,6 +19622,7 @@ maximo 12 8
 maximos 1 1
 maximum 1 1
 maxivoley 1 1
+maxzindex 1 1
 may 63 7
 mayo 160 62
 mayor 86 47
@@ -20000,7 +19641,6 @@ mazza 3 2
 mazzella 1 1
 mazzini 1 1
 mazzitello 1 1
-mazzitellokarinatitulo 1 1
 mañana 20 12
 mañanarazonde 1 1
 mañanero 1 1
@@ -20015,7 +19655,6 @@ mcorica@unsl.edu.ar 1 1
 mcu 1 1
 mda 1 1
 mde 1 1
-me 135 12
 means 3 3
 meaurio 1 1
 mecanica 64 16
@@ -20068,7 +19707,6 @@ medicasunr 1 1
 medicin 1 1
 medicina 108 28
 medicinacarrera 10 1
-medicinaespecializacion 1 1
 medicinahtm 2 1
 medicinainscripcion 1 1
 medicinakinesiologia 1 1
@@ -20199,10 +19837,9 @@ mentor 25 3
 mentora 6 2
 mentores 7 2
 menu 139 45
-menu_body 4 1
-menu_urlv_selfechaphp 1 1
 menuaca 2 1
 menuacerca 2 1
+menubody 4 1
 menudo 1 1
 menuegre 2 1
 menues 1 1
@@ -20212,6 +19849,7 @@ menuiua 1 1
 menupren 2 1
 menus 1 1
 menuser 2 1
+menuurlvselfechaphp 1 1
 menvielle 2 1
 menº 1 1
 meoni 1 1
@@ -20327,12 +19965,10 @@ mezclada 1 1
 mezclas 2 2
 mflorit@inifta.unlp.edu.ar 2 1
 mfonti@inifta.unlp.edu.ar 1 1
-mg 47 17
 mgt 3 1
 mgter 19 10
 mhm 15 1
 mhz 2 1
-mi 90 27
 mia 2 1
 miami 3 1
 micael 1 1
@@ -20341,7 +19977,7 @@ micco 1 1
 miceli 2 1
 michael 7 4
 michaelduberry 1 1
-michaelowe 1 1
+michaelowen 1 1
 michel 6 3
 michieli 4 1
 michoacana 1 1
@@ -20401,7 +20037,7 @@ mihdi 1 1
 mijail 1 1
 mijovilovichanatitulo 1 1
 mikhail 2 2
-mikhailyouzhn 1 1
+mikhailyouzhny 1 1
 mil 17 11
 milaboranti@hotmail.com 1 1
 milagro 1 1
@@ -20480,7 +20116,7 @@ mira 4 3
 mirabelli 1 1
 mirada 20 13
 miradas 4 4
-miranda 14 4
+miranda 13 4
 mirando 1 1
 mirar 2 2
 miras 3 2
@@ -20536,12 +20172,10 @@ mix 1 1
 mixto 2 2
 mixtos 1 1
 miñones 14 1
-mj 3 1
 mlmiretti@gigared.com 1 1
 mlucci@unlu.edu.ar 1 1
 mmaño 1 1
 mmoreno 1 1
-mn 1 1
 mnblanco@quimica.unlp.edu.ar 1 1
 mnemica 3 1
 mnesithea 2 1
@@ -20596,7 +20230,6 @@ modificarse 1 1
 modificatorias 2 1
 modifico 2 2
 modified 2 1
-modifiedsizedescription 6 3
 modify 1 1
 modo 111 26
 modos 18 6
@@ -20609,8 +20242,6 @@ modulescckcontentcss 1 1
 moduleseventeventcss 1 1
 modulesforumforumcss 1 1
 modulesnodenodecss 1 1
-modulessystemdefaultscss 1 1
-modulessystemsystemcss 1 1
 modulesuserusercss 1 1
 modulo 73 12
 modulos 26 11
@@ -20648,13 +20279,13 @@ momentobodei 1 1
 momentocurvatura 1 1
 momentos 11 5
 mona 2 1
-monaco 2 2
+monaco 3 2
 monamoncalvillo 2 1
 monan 1 1
 monantha 1 1
 monarquica 2 1
 monash 1 1
-moncalvillo 9 1
+moncalvillo 8 1
 monde 1 1
 mondelo 1 1
 mondialisation 2 1
@@ -20715,9 +20346,9 @@ montreal 6 3
 monumental 4 2
 monumentos 1 1
 monzon 2 1
-moo 2 1
 moodle 20 13
 moodlemabel 1 1
+moon 2 1
 mooodle 1 1
 moquear 1 1
 mora 3 1
@@ -20814,19 +20445,16 @@ moyano 6 4
 moyenne 1 1
 moyra 1 1
 mozilla 11 8
-mr 3 1
 mreforma 1 1
 mreynoso@exa.unrc.edu.ar 1 1
 mrm 1 1
 mrs 2 1
 mrtgvideo 1 1
-ms 4 3
 msdn 2 2
 msdnaa 2 2
 msfilter 1 1
 mter 2 2
 mtro 1 1
-mu 1 1
 mucha 8 5
 muchachos 1 1
 muchas 24 9
@@ -20869,7 +20497,6 @@ multiculturalismo 2 2
 multidiscapacidad 1 1
 multidisciplinares 2 1
 multidisciplinaria 2 2
-multidisciplinariapara 1 1
 multidisciplinarias 1 1
 multidisciplinario 4 4
 multidisciplinarios 2 2
@@ -20895,7 +20522,6 @@ multiplicar 3 2
 multiplicidad 7 3
 multiplico 1 1
 multipropiedad 1 1
-multipropositoactualizado 1 1
 multipunto 1 1
 multisectorial 2 1
 multitudinaria 1 1
@@ -20905,7 +20531,6 @@ multmiedial 1 1
 mumenthaler 1 1
 muncipal 1 1
 mundi 1 1
-mundia 1 1
 mundial 28 17
 mundiales 4 3
 mundialista 1 1
@@ -20971,11 +20596,11 @@ mutualidades 1 1
 mutuamente 1 1
 mutuo 2 2
 muy 124 24
+muñ 1 1
 muñeca 2 1
 muñecas 1 1
 muñiz 5 2
 muñoz 4 2
-my 4 3
 myclockhoursminutes 1 1
 mycorhizal 1 1
 mycorrhizal 1 1
@@ -20986,12 +20611,10 @@ mygallerynew 1 1
 myriam 2 2
 mysql 3 3
 mysqul 1 1
-na 6 6
 nac 19 8
 nace 7 4
 nacen 3 2
 nacer 3 3
-naci 1 1
 nacidas 2 1
 nacido 8 3
 nacidos 5 4
@@ -21000,8 +20623,8 @@ naciente 1 1
 nacimiento 23 8
 nacimos 1 1
 nacio 4 3
-nacion 89 48
-nacional 1448 297
+nacion 90 48
+nacional 1447 297
 nacionalde 3 2
 nacionales 136 56
 nacionalesrectorado 2 1
@@ -21126,7 +20749,6 @@ nbsp 27 7
 nbspuniversitaria 1 1
 nbucari@ing.unlp.edu.ar 1 1
 ndesign 2 1
-ne 1 1
 nea 5 3
 necesaria 21 11
 necesariamente 4 2
@@ -21167,7 +20789,6 @@ negociadores 1 1
 negocio 3 3
 negociono 1 1
 negocios 120 22
-negocioshumanidadessede 1 1
 negra 1 1
 negri 3 1
 negrito 3 1
@@ -21206,6 +20827,7 @@ nervadura 1 1
 nervios 2 1
 nese 2 1
 nestor 16 11
+nestorkirchner 1 1
 net 3 3
 netbeui 2 1
 netbeuiconfigurar 1 1
@@ -21221,9 +20843,8 @@ network 17 2
 networking 2 2
 networks 1 1
 neumonia 2 2
-neuqu 1 1
 neuquen 43 16
-neuquenagregar 1 1
+neuquenagregar 2 1
 neuquina 3 3
 neuro 12 2
 neurociencias 5 3
@@ -21247,7 +20868,7 @@ neutrinosdirector 1 1
 neutronica 1 1
 nevada 1 1
 neville 1 1
-new 98 34
+new 113 35
 newbery 2 1
 newer 1 1
 newfield 12 2
@@ -21265,9 +20886,7 @@ next 6 3
 nextbtn 18 4
 nextel 1 1
 nezio 1 1
-ni 54 15
 nicaragua 3 2
-nicol 1 1
 nicolai 1 1
 nicolas 20 9
 nicole 6 1
@@ -21285,7 +20904,7 @@ nietzsche 20 1
 nietzscheana 1 1
 nievas 1 1
 nieves 1 1
-niger 1 1
+niger 2 1
 night 1 1
 nihilismo 2 1
 nihilista 1 1
@@ -21308,6 +20927,7 @@ niveles 40 26
 niveluniversitario 1 1
 nivoslider 1 1
 niza 1 1
+niñ 2 1
 niña 1 1
 niñas 8 1
 niñera 1 1
@@ -21321,7 +20941,6 @@ niñosjovenesdocentes 1 1
 nmanuel 2 1
 nmendonca@anlis.gov.ar 1 1
 nmugica@arnet.com.ar 1 1
-no 1284 212
 noa 5 4
 nobel 2 1
 noble 1 1
@@ -21431,7 +21050,7 @@ note 2 2
 notebooks 2 1
 noted 1 1
 noteros 1 1
-notes 1 1
+notes 3 2
 nothing 2 1
 notice 11 7
 noticia 19 8
@@ -21460,8 +21079,6 @@ novakdjokovic 1 1
 novdic 4 2
 novedad 7 5
 novedades 276 98
-novedadesconcursoscarrera 2 1
-novedadesdocumentacion 1 1
 novedadeseventos 2 2
 novedadeslos 1 1
 novedadesmartes 1 1
@@ -21489,10 +21106,8 @@ npublicaciones 1 1
 nro 12 9
 nros 1 1
 nsnc 1 1
-nt 1 1
 nteresados 1 1
 ntra 1 1
-nu 1 1
 nube 1 1
 nubes 1 1
 nuclea 5 4
@@ -21557,13 +21172,9 @@ nuñez 7 3
 nuño 1 1
 nynorsk 3 3
 nyu 1 1
-nª 1 1
-nº 375 67
-oa 1 1
 oak 1 1
 oaprendi@rec.unrc.edu.ar 1 1
 oaxaca 1 1
-ob 4 1
 obcecada 1 1
 obedece 3 1
 obediencia 7 2
@@ -21571,10 +21182,10 @@ obesidad 4 2
 obispado 1 1
 obispo 4 2
 obj 2 1
-obj_anterior 1 1
-obj_anteriorcapa 1 1
-objasig_nombredisabled 2 1
-objasig_nombrevalue 2 1
+objanterior 1 1
+objanteriorcapa 1 1
+objasignombredisabled 2 1
+objasignombrevalue 2 1
 objeciones 1 1
 object 2 2
 objectoriented 1 1
@@ -21588,8 +21199,7 @@ objetivosobjectives 1 1
 objeto 85 28
 objetos 16 5
 objfacultaddisabled 2 1
-objfacultadselectedindex 1 1
-objl_fechavalue 3 1
+objlfechavalue 3 1
 objoffsetheight 1 1
 objopcdisabled 2 1
 objx 1 1
@@ -21661,7 +21271,6 @@ obtuvieron 5 4
 obtuvo 9 8
 obvia 1 1
 obviamente 4 2
-oc 1 1
 oca 10 2
 ocampos 1 1
 ocasion 17 11
@@ -21745,7 +21354,6 @@ odriozola 1 1
 oea 4 4
 oel 1 1
 oeste 25 11
-of 177 42
 ofender 1 1
 ofendido 1 1
 oferta 191 58
@@ -21787,7 +21395,6 @@ ofrecimientos 1 1
 ofrecio 6 4
 ofrezca 1 1
 oftalmologia 1 1
-oh 2 1
 ohio 1 1
 oido 2 2
 oiframe 2 1
@@ -21795,7 +21402,7 @@ oir 1 1
 ojer 1 1
 ojos 5 2
 ojs 1 1
-okwindowmm_flash 1 1
+okwindowmmflash 1 1
 olaechea 1 1
 olavaria 1 1
 olavarria 5 3
@@ -21803,7 +21410,7 @@ olavarriense 2 1
 olavide 1 1
 olcese 3 1
 old 1 1
-oldtrafor 1 1
+oldtraford 1 1
 ole 1 1
 oleaginosas 2 1
 oleoductos 1 1
@@ -21850,7 +21457,6 @@ omitir 1 1
 omnibus 1 1
 omnipresencia 1 1
 oms 2 2
-on 79 37
 onactive 2 1
 onbackground 2 1
 oncativo 2 1
@@ -21882,7 +21488,6 @@ ontologizacion 1 1
 onu 2 2
 onvenio 1 1
 oozuna@frgp.utn.edu.ar 2 1
-op 8 2
 opac 3 2
 opacaba 1 1
 opacar 1 1
@@ -21914,7 +21519,6 @@ operativa 10 8
 operativas 2 2
 operatividad 2 1
 operativo 6 5
-operativoinstrumentales 1 1
 operativos 4 3
 operatoria 2 2
 opina 2 2
@@ -21962,7 +21566,6 @@ optometria 4 1
 opuesto 1 1
 opuestos 1 1
 opuntia 1 1
-or 19 15
 oracion 1 1
 oraculos 1 1
 oral 18 9
@@ -22013,12 +21616,12 @@ organismo 13 11
 organismos 55 26
 organiz 1 1
 organiza 21 18
-organizaci 3 2
-organizacion 201 64
+organizacion 203 64
 organizacional 18 7
 organizacionales 2 2
 organizacionalviernes 1 1
 organizaciones 56 24
+organizacionmundial 1 1
 organizacmion 1 1
 organizada 17 13
 organizadas 8 6
@@ -22145,7 +21748,7 @@ osuner 1 1
 osunq 23 1
 osunsam 13 11
 osvaldo 12 9
-osvaldogiordan 1 1
+osvaldogiordano 1 1
 osvaldomatera 1 1
 otawa 1 1
 otero 4 3
@@ -22173,15 +21776,14 @@ otorrinolaringologia 1 1
 otoño 2 2
 otra 67 26
 otras 135 66
-otras_instituciones 1 1
 otrasactividades 1 1
+otrasinstituciones 1 1
 otrasla 1 1
 otro 116 28
 otrolas 1 1
 otrora 1 1
 otros 197 73
 otrosvea 1 1
-ou 1 1
 our 4 2
 ouro 2 1
 out 7 4
@@ -22211,7 +21813,6 @@ oyhagaray 3 1
 oyuela 1 1
 ozuna 2 1
 oñativia 1 1
-pa 2 1
 paas 7 4
 paases 4 1
 pabellon 13 8
@@ -22273,7 +21874,6 @@ pages 4 3
 pagetracker 3 2
 pagina 306 102
 paginaa 1 1
-paginacondivenmozillatrue 5 1
 paginaleer 1 1
 paginapagina 1 1
 paginas 23 15
@@ -22356,7 +21956,7 @@ pantallas 3 2
 panza 1 1
 paola 5 5
 paolo 4 3
-paoloquintero 1 1
+paoloquinteros 1 1
 pap 1 1
 pap@caece.edu.ar 1 1
 papa 6 2
@@ -22375,7 +21975,7 @@ pappalardo 1 1
 pappolla 1 1
 paquete 1 1
 paquetes 1 1
-par 13 11
+par 10 9
 para 2795 302
 parabolicas 1 1
 parada 2 2
@@ -22448,7 +22048,7 @@ parezca 1 1
 paridad 1 1
 parino 3 2
 parirles 1 1
-paris 20 10
+paris 23 10
 parisi 2 2
 parisx 1 1
 park 2 2
@@ -22539,7 +22139,6 @@ pasanti 1 1
 pasantia 12 7
 pasantiacuteas 2 1
 pasantias 67 34
-pasantiasactualizacion 1 1
 pasantiaspracticas 2 1
 pasantiassecretaria 6 1
 pasantis 10 8
@@ -22555,7 +22154,7 @@ pascuas 1 1
 pascuet 1 1
 pase 8 6
 paseo 4 3
-paseocol 1 1
+paseocolon 1 1
 pases 7 3
 pasillos 1 1
 pasion 4 2
@@ -22646,7 +22245,6 @@ pays 1 1
 paz 29 15
 pañuelos 2 1
 pbotnet 1 1
-pc 12 6
 pci 1 1
 pcia 22 13
 pcr 1 1
@@ -22928,7 +22526,6 @@ personalizacion 1 1
 personalizada 3 3
 personalizado 2 1
 personalizar 2 2
-personallcanocaeceeduar 1 1
 personalmente 10 8
 personalmiercoles 1 1
 personas 64 35
@@ -23001,7 +22598,7 @@ petroni 1 1
 petti 1 1
 petto 1 1
 peuriot 1 1
-peuriotbouch 1 1
+peuriotbouche 1 1
 peuscovich 1 1
 pevysp 1 1
 pez 3 2
@@ -23010,7 +22607,6 @@ peña 21 12
 peñaloza 1 1
 pfp@biol.unlp.edu.ar 1 1
 pgday 3 1
-ph 1 1
 phantasticus 1 1
 phase 2 1
 phd 13 4
@@ -23025,7 +22621,6 @@ physical 1 1
 physicalreview 1 1
 physics 2 2
 physis 1 1
-pi 2 2
 pia 2 2
 piad 1 1
 piaget 1 1
@@ -23045,7 +22640,7 @@ pich 1 1
 pich@biol.unlp.edu.ar 1 1
 pichel 1 1
 pichon 3 1
-pichot 2 1
+pichot 1 1
 pickenhayn 2 1
 pico 9 4
 picone 1 1
@@ -23148,6 +22743,7 @@ pixel 1 1
 pixels 1 1
 pizzio 1 1
 pizzuto 1 1
+piñ 1 1
 piñeiro 1 1
 piñero 1 1
 pjn 5 1
@@ -23280,14 +22876,12 @@ pluridisciplinaria 2 2
 plus 3 2
 plusvalia 1 1
 pluviometrica 1 1
-pm 4 3
 pmemain 1 1
 pmep 1 1
 pmi 12 2
 pmm 2 1
 pmmlanzamiento 2 1
 pmo 1 1
-pn 2 1
 pnbu 1 1
 pnud 1 1
 poblacion 49 18
@@ -23349,9 +22943,9 @@ polemica 6 1
 polemico 1 1
 polemicos 1 1
 poleri 1 1
-polic 5 3
-policia 11 8
+policia 15 8
 policiacas 1 1
+policiafederal 1 1
 policial 3 3
 policiales 3 2
 policias 2 2
@@ -23545,7 +23139,7 @@ pospuestas 1 1
 possible 1 1
 post 7 5
 posta 1 1
-postajax_susphp 6 1
+postajaxsusphp 6 1
 postal 20 13
 postalriobamba 1 1
 postcosecha 1 1
@@ -23578,7 +23172,6 @@ postgraduados 1 1
 postgresql 5 1
 postguerra 1 1
 posthispanica 3 1
-posthumanismogiacaglia 2 1
 postinfohtml 1 1
 postitulo 19 5
 postitulo@fapyd.unr.edu.ar 1 1
@@ -23597,7 +23190,6 @@ postulado 2 2
 postulados 5 4
 postulante 14 3
 postulantes 12 5
-postulantesinteresados 2 1
 postular 9 5
 postularse 6 5
 postularte 1 1
@@ -23631,14 +23223,12 @@ powered 17 11
 powerful 1 1
 poza 1 1
 pozo 4 4
-pp 3 2
 ppdescargar 1 1
 pphloggerjs 1 1
 pps 3 2
 ppua 4 2
 ppuaspu 2 1
 ppygd@unsam.edu.ar 1 1
-pr 4 2
 pra 1 1
 practica 131 43
 practical 1 1
@@ -23766,10 +23356,10 @@ prender 1 1
 prendizaje 1 1
 prensa 83 35
 prensa@unsj.edu.ar 1 1
-prensa_unsj 1 1
 prensacontacto 6 1
 prensafortalecen 1 1
 prensaplenario 1 1
+prensaunsj 1 1
 prenticehall 1 1
 prenvencion 1 1
 preocupa 2 2
@@ -23777,8 +23367,7 @@ preocupacion 18 6
 preocupaciones 6 5
 preocupado 1 1
 preocupados 1 1
-preol 3 1
-preolimpico 3 1
+preolimpico 6 1
 prepaga 1 1
 prepagas 1 1
 prepara 1 1
@@ -23826,7 +23415,6 @@ present 1 1
 presenta 27 16
 presentaba 2 2
 presentacion 184 68
-presentacionactualmente 1 1
 presentaciondba 1 1
 presentaciondepto 1 1
 presentacionequipo 1 1
@@ -24004,7 +23592,7 @@ principalque 1 1
 principaltiene 2 2
 principaux 1 1
 principe 2 2
-principes 1 1
+principes 2 1
 principio 24 7
 principios 44 18
 pringles 5 4
@@ -24035,6 +23623,7 @@ privado 33 14
 privados 17 9
 privarse 1 1
 private 1 1
+privatemiercoles 1 1
 privatizacion 2 1
 privatizaciones 1 1
 privatizador 1 1
@@ -24092,7 +23681,6 @@ procesal 8 4
 procesales 25 3
 procesamiento 13 8
 procesando 21 11
-procesandoautentificacion 1 1
 procesandoprocesando 2 2
 procesandousuarios 2 1
 procesar 4 2
@@ -24106,8 +23694,7 @@ proclamo 1 1
 proclives 1 1
 procreacion 1 1
 procura 9 8
-procuraci 1 1
-procuracion 3 3
+procuracion 4 3
 procurador 5 2
 procurando 3 3
 procure 1 1
@@ -24481,9 +24068,9 @@ proyectiva 1 1
 proyecto 256 78
 proyectoprograma 1 1
 proyectos 350 100
-proyectos_insue 1 1
 proyectosconsultorios 5 1
 proyectosde 2 2
+proyectosinsue 1 1
 proyectual 1 1
 prthomas 14 1
 prudencia 1 1
@@ -24493,7 +24080,6 @@ prueban 1 1
 pruebas 8 6
 pruebe 2 2
 pryze 1 1
-ps 7 2
 psa 1 1
 pscologia 1 1
 pseudoaleaorios 1 1
@@ -24533,7 +24119,6 @@ psicometricas 1 1
 psicomotor 2 1
 psicomotricidad 2 2
 psiconalisis 2 1
-psiconeurofarmacologia 1 1
 psicopatologia 1 1
 psicopedagogia 8 6
 psicopedagogica 1 1
@@ -24543,7 +24128,6 @@ psicosis 4 1
 psicosocial 4 2
 psicosociolinguistica 1 1
 psicosociologia 1 1
-psicosocioorganizacional 1 1
 psicosomaticas 1 1
 psicosomatico 2 1
 psicotecnia 1 1
@@ -24567,13 +24151,11 @@ psychology 1 1
 pta 1 1
 pto 1 1
 ptos 3 1
-pu 1 1
 pub 14 4
 public 5 3
 publica 161 59
 publicacion 52 32
 publicaciones 184 66
-publicacionesargentina 1 1
 publicacionesautores 1 1
 publicacioneslibros 1 1
 publicacioneslineas 1 1
@@ -24596,14 +24178,12 @@ publicarse 1 1
 publicas 127 30
 publicaseudem 2 1
 publicasfacilitacion 5 1
-publicasnoticiasenlace 1 1
 publications 1 1
 publicciones 1 1
 publicidad 34 7
 publicitario 2 1
 publicitarios 1 1
 publico 234 63
-publicoeconomirelaciones 1 1
 publicoestatal 1 1
 publicolic 1 1
 publicolicenciatura 7 1
@@ -24648,8 +24228,7 @@ puerta 10 7
 puertas 31 17
 puerto 15 8
 puertomadero 3 1
-puertoric 1 1
-puertorico 3 1
+puertorico 4 1
 puertorriqueñidad 1 1
 puertos 2 2
 pues 18 8
@@ -24719,8 +24298,6 @@ python 1 1
 qari 1 1
 qariyusefahmadi 1 1
 qmax 1 1
-qn 2 1
-qu 2 1
 quadros 1 1
 qualite 1 1
 quality 6 3
@@ -24807,11 +24384,9 @@ quimicaingenieria 7 1
 quimicas 18 11
 quimicaunlp 4 1
 quimicaunlpeduar 7 1
-quimicaunlpeduarconsultas 7 1
 quimico 6 5
 quimicos 13 6
-quimil 1 1
-quimili 1 1
+quimili 2 1
 quina 1 1
 quince 1 1
 quincena 2 2
@@ -24849,7 +24424,6 @@ quizas 11 4
 quiñonez 1 1
 quorum 1 1
 qweb 1 1
-ra 6 3
 rabbat 1 1
 rabia 1 1
 rabossi 3 1
@@ -24900,7 +24474,7 @@ raes 8 2
 rafael 26 9
 rafaela 3 1
 rafaelcapote 1 1
-rafaelnada 1 1
+rafaelnadal 1 1
 rafagas 1 1
 ragan 1 1
 raggio 1 1
@@ -24924,7 +24498,7 @@ ramiro 4 3
 ramon 4 3
 ramona 1 1
 ramos 9 5
-ramosmej 1 1
+ramosmejia 1 1
 rampas 1 1
 rancheo 2 1
 random 8 3
@@ -24965,7 +24539,8 @@ ratifico 2 2
 ratito 1 1
 rato 2 1
 ratones 2 1
-raul 21 15
+raul 25 15
+raulcastro 1 1
 ravera 1 1
 ravettino 1 1
 ravioles 1 1
@@ -24978,9 +24553,7 @@ razon 33 11
 razonabilidad 1 1
 razonables 1 1
 razones 13 5
-rc 1 1
 rdu 1 1
-re 3 2
 reabre 3 3
 reabren 2 1
 reabrio 1 1
@@ -25605,7 +25178,6 @@ relevamiento 11 8
 relevamientos 9 2
 relevan 2 2
 relevancia 5 5
-relevanciainstitucional 1 1
 relevante 4 4
 relevantes 7 5
 relevar 1 1
@@ -25849,7 +25421,7 @@ reserva 7 6
 reservadas 2 1
 reservado 1 1
 reservados 76 41
-reservaecol 1 1
+reservaecologica 1 1
 reservaremos 1 1
 reservas 4 4
 reservas@piedramora.com.ar 2 1
@@ -26103,8 +25675,7 @@ revivido 1 1
 reviviendo 1 1
 revivo 1 1
 revocaron 4 1
-revoluci 1 1
-revolucion 33 9
+revolucion 34 9
 revolucionario 1 1
 revolucionarios 4 3
 revolucionaron 1 1
@@ -26119,11 +25690,9 @@ reynoso 1 1
 reynosomatiastitulo 1 1
 reza 1 1
 rezzano 1 1
-rh 2 1
 rhizobia 1 1
 rhizobial 2 1
 rhizogenes 1 1
-ri 5 1
 ribeironeto 1 1
 ribetes 1 1
 rica 1 1
@@ -26181,7 +25750,7 @@ rindo 1 1
 rinesi 2 1
 ringuelet 1 1
 rinweber@yahoo.com.br 1 1
-rio 188 39
+rio 189 39
 riobamba 7 3
 riocuartense 1 1
 rioja 16 12
@@ -26204,7 +25773,7 @@ ripa 1 1
 riquelme 10 2
 riqueza 12 7
 riquezas 4 3
-riqulme 2 1
+riqulme 1 1
 riso 2 1
 risso 2 1
 rita 6 3
@@ -26234,7 +25803,6 @@ riviri 1 1
 rizobios 1 1
 rizzo 1 1
 rizzolatti 2 1
-rm 7 2
 rmarcon@eco.unne.edu.ar 1 1
 rna 1 1
 rnai 2 1
@@ -26305,11 +25873,11 @@ roles 8 4
 roll 1 1
 rolla 5 2
 rolon 1 1
-rom 2 2
 roma 7 5
-roman 18 7
+roman 19 7
 romana 3 3
 romances 1 1
+romangonzalez 1 1
 romano 4 4
 romanowsky 1 1
 romero 7 6
@@ -26369,7 +25937,7 @@ rotary 3 1
 roto 1 1
 roudinesco 1 1
 roundedwhite 41 2
-rousseau 8 1
+rousseau 6 1
 rousseauneano 1 1
 routers 1 1
 rovarino 1 1
@@ -26391,11 +25959,9 @@ rriiconvenios@unr.edu.ar 1 1
 rrll 1 1
 rrnn 1 1
 rrpp 12 2
-rs 6 2
 rsi 3 1
 rss 22 14
 rsu 6 3
-rt 1 1
 rua 2 2
 rubber 2 1
 ruben 21 11
@@ -26434,8 +26000,7 @@ rupturas 1 1
 rural 17 13
 rurales 7 6
 rusa 2 1
-rusi 1 1
-rusia 1 1
+rusia 2 1
 ruso 3 3
 russian 2 2
 russo 5 5
@@ -26447,10 +26012,7 @@ rutherford 1 1
 rutina 5 4
 rutinariamente 1 1
 ruveda 1 1
-rv 1 1
-rx 1 1
 rxrraee 2 1
-sa 4 4
 saabel 1 1
 saavedra 3 3
 sab 13 10
@@ -26494,8 +26056,7 @@ sacudidos 1 1
 sacudio 1 1
 sacudirnos 1 1
 sadam 2 1
-sadamhusei 1 1
-sadamhusein 1 1
+sadamhusein 2 1
 sadava 2 1
 sae 1 1
 saebuunsl 1 1
@@ -26558,7 +26119,7 @@ saltar 42 17
 salte 1 1
 salto 5 4
 saltos 2 2
-salud 303 67
+salud 301 67
 salud@unlam.edu.ar 1 1
 saluda 3 2
 saludaban 1 1
@@ -26571,7 +26132,7 @@ saludmaestria 1 1
 saludmaterias 1 1
 saludo 1 1
 saludos 1 1
-saludtitulodirectoraño 2 1
+saludpublica 2 1
 salvador 11 3
 salvados 2 1
 salvaguarda 1 1
@@ -26607,8 +26168,7 @@ sancionados 1 1
 sancionando 1 1
 sanciono 3 3
 sanda 1 1
-sande 1 1
-sandes 3 1
+sandes 2 1
 sandobal 1 1
 sandoval 2 2
 sandra 8 7
@@ -26621,8 +26181,7 @@ sangre 29 10
 sangrienta 1 1
 sanguineos 1 1
 sanguinetti 2 2
-sanida 1 1
-sanidad 4 3
+sanidad 5 3
 sanitaria 13 7
 sanitarias 1 1
 sanitarios 2 1
@@ -26630,14 +26189,13 @@ sanjuanina 1 1
 sanluiseñosisabel 1 1
 sano 2 2
 sanou 1 1
-sanpabl 1 1
-sanpablo 1 1
+sanpablo 2 1
 sanso 1 1
 sansserif 2 1
 santa 141 45
 santafesina 1 1
 santagada 2 1
-santaluc 1 1
+santalucia 1 1
 santamaria 3 2
 santamarina 2 1
 santander 8 2
@@ -26666,7 +26224,7 @@ saras 1 1
 saravia 1 1
 sarcoplasmatico 1 1
 sardina 1 1
-sarfield 2 1
+sarfield 1 1
 sargento 2 2
 sarmientina 1 1
 sarmiento 27 16
@@ -26703,13 +26261,12 @@ sauter 1 1
 savater 1 1
 sayago 1 1
 sbarra 1 1
-sc 11 3
 scalabrini 1 1
 scanneo 3 1
 scarabino 1 1
 scaramuzzino 1 1
 scba 5 1
-scelzo 2 1
+scelzo 1 1
 schissi 3 1
 schlenker 10 1
 schluter 2 1
@@ -26723,7 +26280,7 @@ schreinercomunitario 1 1
 schuffer 1 1
 schultz 1 1
 schuster 1 1
-schusterman 2 1
+schusterman 1 1
 schutze 1 1
 schwartz 1 1
 schweinheim 1 1
@@ -26746,14 +26303,11 @@ scriptlibrary 3 1
 scripts 6 4
 scrollbararrowcolor 1 1
 scrollbarbasecolor 1 1
-scrollbardarkshadowcolor 1 1
 scrollbarfacecolor 1 1
-scrollbarhighlightcolor 1 1
 scrollbartrackcolor 1 1
 scroller 4 3
 scrollercontentnew 1 1
 sdn 1 1
-se 2461 265
 sea 62 30
 seacad@unlu.edu.ar 2 1
 sead 1 1
@@ -26769,7 +26323,6 @@ seccion 55 19
 seccional 2 2
 secciones 29 8
 seccionessecciones 1 1
-seccionessumarioorganos 1 1
 secco 1 1
 secextension@yahoo.com.ar 1 1
 seco 7 5
@@ -26784,9 +26337,8 @@ secre@fisica.unlp.edu.ar 2 2
 secrecion 3 1
 secret 1 1
 secreta 1 1
-secretar 1 1
 secretari 10 6
-secretaria 524 111
+secretaria 525 111
 secretariado 4 1
 secretarias 116 37
 secretario 27 16
@@ -26870,8 +26422,7 @@ seillant 2 1
 seis 13 7
 sela 2 1
 selajpgmxnet 2 1
-selecci 1 1
-seleccion 47 22
+seleccion 48 22
 selecciona 13 6
 seleccionada 8 5
 seleccionadas 2 2
@@ -26919,11 +26470,11 @@ semillas 2 2
 seminaire 6 1
 seminar 1 1
 seminario 116 43
-seminario_pnl 1 1
 seminarioel 1 1
 seminarioestimados 1 1
 seminariolos 1 1
 seminariopermanente 1 1
+seminariopnl 1 1
 seminarios 148 33
 seminarioscalendario 6 1
 seminariosinformacion 5 1
@@ -27041,7 +26592,7 @@ serbios 1 1
 serenidad 1 1
 seres 11 3
 sergio 24 13
-sergiohern 2 1
+sergiohernandez 2 1
 seria 14 7
 seriadas 1 1
 seriamente 1 1
@@ -27076,7 +26627,6 @@ serviciosleer 2 1
 serviciosmartes 1 1
 serviciosoperatoria 1 1
 serviciosrecursos 1 1
-serviciosseguridadgrupos 2 1
 serviciosweb 21 1
 servido 3 2
 servidor 13 9
@@ -27126,7 +26676,6 @@ sexualidad 16 3
 sexualmente 2 1
 sexylightbox 1 1
 sexypromptbienvenido 1 1
-seydestructura_inicialjsp 1 1
 seyferth 1 1
 señal 6 6
 señala 8 4
@@ -27147,7 +26696,6 @@ señalo 11 7
 señas 1 1
 señor 1 1
 señora 2 2
-sf 6 1
 sfreud 1 1
 sgea 1 1
 sghersevich@yahoo.com.ar 2 1
@@ -27159,7 +26707,6 @@ shara 2 1
 shared 1 1
 sharing 2 2
 sharks 1 1
-sharple 1 1
 sharples 1 1
 shaw 1 1
 sheep 1 1
@@ -27171,7 +26718,6 @@ shortcuts 1 1
 should 5 5
 show 4 4
 shows 2 2
-si 319 96
 sial 11 3
 siat 2 1
 sibilia 2 2
@@ -27336,7 +26882,6 @@ singular 7 1
 singulares 2 2
 singularidad 2 1
 siniestros 3 2
-sininterpretaciondirector 1 1
 sinnumero 3 2
 sino 116 27
 sinoen 1 1
@@ -27393,7 +26938,6 @@ sismorresistentes 7 1
 sismos 1 1
 sist 21 7
 sistema 422 128
-sistemacuanticodirector 1 1
 sistemaeducativo 2 1
 sistemaen 1 1
 sistemas 265 75
@@ -27441,15 +26985,13 @@ siupampa 1 1
 sivia 1 1
 siycg 1 1
 size 5 3
-sj 8 2
 skills 1 1
 skip 6 3
 skunk 3 1
-sl 1 1
 slan 2 1
 slashdot 1 1
 slider 37 4
-slider_b 3 1
+sliderb 3 1
 slideshow 4 3
 slideshowboxnextprev 1 1
 slideshowboxprevpager 1 1
@@ -27461,8 +27003,6 @@ sma 1 1
 small 7 3
 smartphone 2 2
 smolyn 1 1
-sn 5 5
-so 1 1
 soares 1 1
 soberania 8 3
 soberanias 1 1
@@ -27495,7 +27035,6 @@ sociabilidad 3 2
 social 461 100
 sociales 369 88
 sociales@unlam.edu.ar 1 1
-socialesderechomartillero 7 1
 socialeseconomicas 1 1
 socialesestados 1 1
 socialesfacultad 2 1
@@ -27514,7 +27053,6 @@ socialliceo 2 1
 socialmente 6 4
 socialrectorado 2 1
 socials 1 1
-socialtitulodirectoraño 2 1
 socialun 1 1
 socialunidad 1 1
 socialvisitar 1 1
@@ -27677,9 +27215,7 @@ sometimiento 1 1
 sometio 3 2
 sommer 1 1
 somos 17 7
-somosautoridadesreseña 1 1
 somoscontacto 1 1
-somoscontactorecepcion 1 1
 somoza 3 3
 son 252 78
 sonaba 1 1
@@ -27738,7 +27274,6 @@ sostenia 4 2
 sostenian 1 1
 sostenibilidad 3 2
 sostenible 7 4
-sostenibleespecializacion 1 1
 sostenibles 1 1
 sostenida 3 2
 sostenidas 1 1
@@ -27760,7 +27295,6 @@ soñando 1 1
 soñar 1 1
 soñe 1 1
 soño 1 1
-sp 1 1
 spabs 1 1
 space 10 3
 spaciuk 1 1
@@ -27811,7 +27345,6 @@ sqrtet 2 1
 square 1 1
 squid 1 1
 squirrelmail 3 1
-sr 17 9
 sra 21 9
 src 5 2
 srcstylecursordefault 4 1
@@ -27821,7 +27354,6 @@ sri 1 1
 srl 2 2
 srta 2 1
 srvillarroel 1 1
-ss 2 2
 ssaebu@fices.unsl.edu.ar 2 1
 ssh 2 2
 ssitema 1 1
@@ -27829,7 +27361,6 @@ ssp 1 1
 ssr 5 4
 ssrsr 3 1
 ssu 10 2
-st 2 1
 stabile 1 1
 staff 56 2
 stalin 1 1
@@ -27903,7 +27434,6 @@ stylecolor 2 1
 styledisplay 2 1
 styles 2 1
 styrenebutadiene 1 1
-su 1316 234
 suarez 5 4
 suavemente 1 1
 sub 2 2
@@ -28033,8 +27563,8 @@ sufrimiento 3 1
 sufrimientos 1 1
 sufrimos 3 1
 sufrio 5 4
-sufrir 2 2
-sufririamos 1 1
+sufrir 1 1
+sufririamos 2 1
 sugerencia 6 4
 sugerencias 32 25
 sugerir 1 1
@@ -28257,8 +27787,7 @@ swish 1 1
 switch 1 1
 sycz 1 1
 syllabus 2 1
-symante 1 1
-symantec 9 1
+symantec 10 1
 symantecagosto 1 1
 symbiosis 3 1
 symbiotic 4 1
@@ -28275,14 +27804,12 @@ tabaquica 1 1
 tabaquismo 5 1
 tabareslourdestitulo 1 1
 tabiques 1 1
-tabl 2 1
 tabla 22 6
 tablade 4 1
 tableheighttextheight 3 1
 tablero 1 1
-tableuidatepickercalendar 1 1
 tablewidthtextwidth 3 1
-tablon 2 1
+tablon 4 1
 taboada 1 1
 taborga 1 1
 tabs 2 1
@@ -28329,8 +27856,7 @@ tamarit 4 2
 tamayo 1 1
 tamaño 9 7
 tamaños 1 1
-tambi 1 1
-tambien 230 78
+tambien 231 78
 tambores 1 1
 tampoco 13 4
 tan 19 8
@@ -28354,7 +27880,7 @@ tantas 3 3
 tanteraautores 1 1
 tanto 159 69
 tantos 5 3
-tapia 3 2
+tapia 2 2
 tapiales 2 1
 tapitas 4 2
 taquigrafica 1 1
@@ -28399,18 +27925,15 @@ taxonomia 4 4
 taylor 1 1
 tbc 1 1
 tbertain@fhumyar.unr.edu.ar 1 1
-tbl_newsleter 4 1
+tblnewsleter 4 1
 tbody 2 2
-tc 1 1
 tca 1 1
 tcach 2 2
 tcba 1 1
 tcherkaski 1 1
 tcpip 4 3
-td 20 8
 tdhighlight 1 1
 tdirector 1 1
-te 91 32
 teach 1 1
 teacher 1 1
 teaching 4 2
@@ -28445,7 +27968,6 @@ tecnicaturafecha 1 1
 tecnicaturas 9 5
 tecnico 109 57
 tecnicoa 2 1
-tecnicoadministrativas 1 1
 tecnicocientifica 1 1
 tecnicocientificas 1 1
 tecnicocientificos 1 1
@@ -28474,10 +27996,8 @@ tecnologiasmateria 1 1
 tecnologiassoporte 1 1
 tecnologiaunsam 1 1
 tecnologica 167 49
-tecnologicacomunicacion 2 1
 tecnologicamente 1 1
 tecnologicas 30 16
-tecnologicasubsecretaria 1 1
 tecnologico 43 28
 tecnologicos 14 11
 tecnologicosel 1 1
@@ -28496,7 +28016,7 @@ tejidos 10 5
 tejo 1 1
 tel 156 68
 tela 19 7
-telam 4 4
+telam 7 4
 teleclases 1 1
 telecom 1 1
 telecomunicaciones 34 10
@@ -28547,8 +28067,8 @@ temperature 2 2
 temperley 1 1
 tempestades 1 1
 template 3 3
-template_path 1 1
-templatesgk_modish 1 1
+templatepath 1 1
+templatesgkmodish 1 1
 tempobjinnerhtml 1 1
 temporada 1 1
 temporadas 1 1
@@ -28684,7 +28204,6 @@ terra 2 2
 terracciano 1 1
 terragno 2 1
 terranova 3 2
-terranovaguillermotitulo 1 1
 terrazas 1 1
 terremoto 3 2
 terremotos 13 1
@@ -28706,8 +28225,8 @@ terzolo 1 1
 tesina 4 3
 tesinas 3 2
 tesis 93 31
-tesis_insue 1 1
 tesisalojamientos 1 1
+tesisinsue 1 1
 tesista 1 1
 tesistas 4 4
 tesoreria 3 3
@@ -28725,8 +28244,7 @@ testing 2 2
 tests 1 1
 teuton 1 1
 tevez 4 1
-texa 1 1
-texas 1 1
+texas 2 1
 text 11 3
 textalignleft 3 1
 textdecoration 1 1
@@ -28744,7 +28262,6 @@ textnew 3 1
 texto 72 21
 textos 49 16
 textoscompletos 1 1
-textredirurlloadedfalse 3 1
 textsplashcolorsnew 3 1
 textsplit 3 1
 texttargetnew 3 1
@@ -28757,9 +28274,7 @@ textweighta 3 1
 textweightb 3 1
 textweightnormal 3 1
 teñido 2 2
-tf 2 1
 tfoot 1 1
-th 1 1
 thames 1 1
 than 2 2
 thank 1 1
@@ -28774,7 +28289,6 @@ themeszeniconscss 1 1
 themeszenlayoutcss 1 1
 themeszenprintcss 1 1
 themeszenzencss 1 1
-themeszenzenfixedstylecss 1 1
 then 4 4
 theo 1 1
 theoretical 1 1
@@ -28792,16 +28306,14 @@ thin 1 1
 think 1 1
 thinkquest 2 2
 this 40 26
-thisdocumentlocationhref 4 3
 thomas 7 4
 thomson 1 1
 those 3 2
 three 1 1
 through 1 1
-thumb_crop 1 1
+thumbcrop 1 1
 thumbnail 28 1
 thumbnailhover 14 1
-ti 3 3
 tiagliamento 1 1
 tibia 1 1
 tibieza 1 1
@@ -28810,7 +28322,6 @@ tic 20 5
 ticera 1 1
 tichauer 1 1
 tickercontent 3 1
-tickerinnerhtmlcontent 3 1
 ticket 4 2
 tickets 1 1
 tics 16 6
@@ -28881,20 +28392,19 @@ titulados 2 1
 titular 35 12
 titulares 23 11
 titulo 276 64
-titulo_iua 1 1
 tituloinstructivo 1 1
+tituloiua 1 1
 tituloprograma 6 1
 titulos 43 25
 titulos@mail.unlu.edu.ar 1 1
 tizio 1 1
 tizza 1 1
 tles 2 1
-to 120 40
 toallas 1 1
 toas 1 1
 toba 2 1
-toba_hilo_qsai 1 1
-toba_hilo_separador 1 1
+tobahiloqsai 1 1
+tobahiloseparador 1 1
 tobar 1 1
 tobas 2 1
 tobias 3 1
@@ -28910,7 +28420,6 @@ todavia 21 8
 todeschini 1 1
 todo 172 61
 todos 313 114
-todosegresadosexperiencia 1 1
 toefl 1 1
 toeic 1 1
 tofler 1 1
@@ -28956,7 +28465,6 @@ toolkit 1 1
 toolsjar 1 1
 top 9 6
 toparon 1 1
-topdocumentlocationhref 4 3
 tope 2 2
 topes 2 2
 topica 2 1
@@ -28973,7 +28481,6 @@ torino 1 1
 torkil 1 1
 tormentas 1 1
 tormentos 3 2
-torn 1 1
 torna 5 2
 tornan 1 1
 tornandose 1 1
@@ -28983,7 +28490,7 @@ tornavias 1 1
 torneo 2 2
 torneos 1 1
 torno 31 12
-tornu 1 1
+tornu 2 1
 toro 1 1
 toros 1 1
 torra 1 1
@@ -29037,7 +28544,6 @@ toxicomania 5 2
 toxicomanias 1 1
 toxicos 2 2
 toxoplasmosis 1 1
-tp 9 3
 tpalacios@ing.unrc.edu.ar 1 1
 tps 2 1
 tpstp 2 1
@@ -29067,7 +28573,6 @@ trabajocarrera 1 1
 trabajodeberan 1 1
 trabajola 1 1
 trabajomartes 1 1
-trabajopasantipasantimesa 2 1
 trabajos 118 55
 trabajosteoricos 1 1
 trabas 1 1
@@ -29147,7 +28652,6 @@ transferencia 95 35
 transferenciaa 1 1
 transferenciales 3 1
 transferencias 1 1
-transferenciascontactenos 2 1
 transferir 7 5
 transferirlos 1 1
 transfiguracion 1 1
@@ -29180,8 +28684,8 @@ transitado 1 1
 transitando 1 1
 transitar 2 2
 transition 2 2
-transition_speed 1 1
 transitions 1 1
+transitionspeed 1 1
 transito 9 8
 transitoria 5 2
 transitoriamente 1 1
@@ -29358,7 +28862,6 @@ truncado 1 1
 trunco 1 1
 try 21 12
 tsuruoka 1 1
-tu 155 45
 tuco 1 1
 tucto 1 1
 tucuman 94 21
@@ -29416,7 +28919,6 @@ tuvieron 6 4
 tuviesen 2 2
 tuvimos 1 1
 tuvo 21 16
-tv 27 11
 tvradio 1 1
 tweet 6 2
 twitter 9 6
@@ -29427,6 +28929,7 @@ typed 1 1
 typeography 1 1
 tyr 2 1
 tzancoff 1 1
+uacct 29 11
 uade 5 2
 uader 1 1
 uaed 3 1
@@ -29437,7 +28940,6 @@ uaionline@vaneduc.edu.ar 3 1
 uaisoft 1 1
 uam 1 1
 uamespaña 1 1
-ub 2 1
 uba 13 10
 ubica 4 3
 ubicacion 66 22
@@ -29454,7 +28956,6 @@ ubicua 1 1
 ubnews 2 1
 ubs 1 1
 ubsmi 1 1
-uc 1 1
 uca 1 1
 ucaece 5 2
 ucaecemdp 1 1
@@ -29476,26 +28977,21 @@ ucraniano 1 1
 ucu 11 3
 ucuceer 1 1
 ucv 1 1
-ud 11 8
 uda 1 1
 udaondo 2 1
 udemm 9 1
 udesa 1 1
-ue 15 2
 uefa 1 1
 uep 2 1
 ues 36 2
 ueuq 5 2
 ufa 1 1
 ufasta 2 2
-ufastapasantiaspreguntas 2 1
 ufmg 1 1
 ugc 1 1
 uged 3 1
 ugs 1 1
-uh 1 1
 uim 3 1
-ul 22 7
 uleu 2 1
 ulises 1 1
 ullum 1 1
@@ -29520,7 +29016,6 @@ umbral 2 2
 umbrales 1 1
 umcea 1 1
 umdp 1 1
-un 1843 220
 una 1614 206
 unach 1 1
 unainvestigacion 1 1
@@ -29570,7 +29065,6 @@ unidad 147 62
 unidades 82 42
 unidas 7 4
 unidesarrollo 12 2
-unidimensionalesdirector 2 1
 unidimensionalizacion 1 1
 unidireccionales 1 1
 unido 3 3
@@ -29624,22 +29118,14 @@ universitaire 1 1
 universitala 2 1
 universitaria 478 115
 universitariaantonio 2 1
-universitariaconvenios 6 1
 universitariadirector 1 1
 universitariafacultad 6 1
-universitarialicenciatura 1 1
-universitariaolimpiada 1 1
-universitariaorientacion 1 1
 universitariaoverlay 1 1
-universitariarecuperacion 1 1
-universitariareglamento 1 1
 universitariaresulta 2 1
 universitarias 111 37
 universitariaservicio 1 1
 universitariasesta 1 1
-universitariasinscripcion 1 1
 universitariasrios 7 2
-universitariatransformar 1 1
 universitariaunlu 1 1
 universitariaunsj 1 1
 universitario 276 95
@@ -29647,12 +29133,10 @@ universitarioa 2 1
 universitarioanalista 2 1
 universitariofacultad 6 1
 universitarioh 1 1
-universitarioingenieri 8 1
 universitarioplan 1 1
 universitarios 38 21
 universitariosclerici 2 1
 universitarioservicio 1 1
-universitariosprograma 7 1
 universitat 4 1
 universite 14 1
 universites 2 1
@@ -29737,7 +29221,6 @@ unversidad 1 1
 unviersidad 1 1
 unwanted 1 1
 unzue 1 1
-up 6 3
 upami 21 3
 upfo 2 1
 upgrading 1 1
@@ -29784,7 +29267,6 @@ urtubey 1 1
 uruguay 44 16
 uruguaya 2 1
 uruguaysalvi 2 1
-us 5 2
 usa 40 29
 usaba 2 1
 usabilidad 2 2
@@ -29868,13 +29350,11 @@ utp 2 1
 utrera 1 1
 utreral@arnet.com.ar 1 1
 utsupra 1 1
-uv 1 1
 uva 1 1
 uvt 8 2
 uvtconsultora 7 2
 uvtsuspension 1 1
 uvtunsl 1 1
-va 29 9
 vacaciones 15 10
 vacancia 2 1
 vacante 3 2
@@ -30015,7 +29495,6 @@ vcano@unlu.edu.ar 1 1
 vcard 1 1
 vdp 1 1
 vdrl 3 1
-ve 22 9
 vea 9 7
 veamos 3 2
 vean 1 1
@@ -30048,8 +29527,7 @@ veian 2 2
 veinte 10 6
 veinticinco 1 1
 veinticuatro 1 1
-veintitr 1 1
-veintitres 1 1
+veintitres 2 1
 veintiuno 2 1
 veirave 1 1
 vejez 7 3
@@ -30058,6 +29536,7 @@ velar 2 2
 velatorio 1 1
 velazquez 3 2
 velez 5 5
+velezsarfield 1 1
 velia 2 1
 velo 3 1
 velocidad 2 2
@@ -30190,7 +29669,6 @@ vetusta 1 1
 vetustos 1 1
 vexiologia 1 1
 vez 124 54
-vi 12 10
 via 35 24
 viabilidad 2 1
 viable 3 3
@@ -30288,7 +29766,6 @@ vigas 1 1
 vigencia 54 13
 vigente 279 11
 vigentedesde 1 1
-vigenteinformacioncentro 2 1
 vigentes 16 10
 vigentesproyectos 2 1
 vigila 1 1
@@ -30311,8 +29788,7 @@ villalonga 1 1
 villanueva 1 1
 villar 1 1
 villarino 3 2
-villarrea 1 1
-villarreal 9 2
+villarreal 10 2
 villarrica 1 1
 villarruel 1 1
 villarubia 1 1
@@ -30405,7 +29881,7 @@ viscosidad 1 1
 visibilidad 3 3
 visibility 2 2
 visible 5 3
-visible_actualfalse 1 1
+visibleactualfalse 1 1
 visibles 2 2
 vision 30 18
 visiones 2 2
@@ -30544,8 +30020,7 @@ volvio 2 2
 vomitadas 1 1
 von 8 2
 vonhaeften 1 1
-vonwernic 1 1
-vonwernich 3 1
+vonwernich 4 1
 voragine 1 1
 vorticesdirector 1 1
 vos 19 6
@@ -30561,7 +30036,7 @@ voy 22 3
 voz 7 5
 vrillaud 1 1
 vrmu 8 2
-vs 4 2
+vtiinfhtmlmiercoles 1 1
 vucetich 1 1
 vuelca 2 1
 vuelo 4 3
@@ -30606,7 +30081,6 @@ wayne 3 1
 waynebridge 1 1
 waynerooney 1 1
 ways 1 1
-we 1 1
 weather 2 1
 web 285 103
 web@biblioteca.uncoma.edu.ar 1 1
@@ -30651,7 +30125,6 @@ webparacolegioscomar 4 1
 webpicasso 1 1
 webs 2 2
 website 3 2
-webspaceeditorresources 1 1
 webspacepagetype 1 1
 webtodos 1 1
 webtv 4 4
@@ -30707,26 +30180,23 @@ willy 1 1
 wilson 7 2
 win 1 1
 windiani 1 1
-windowaddeventdomready 51 7
 windowaddeventload 2 2
 windowevent 1 1
 windowjquery 1 1
 windowlocationhref 1 1
-windowlocationprolabbeta 2 1
 windownamelno 6 1
 windowonload 1 1
-windowonloadchangecontent 1 1
 windowonloadnew 1 1
 windowonloadstartit 1 1
-windowrp_current_post 1 1
-windowrp_number_posts 1 1
-windowrp_timer_sec 1 1
+windowrpcurrentpost 1 1
+windowrpnumberposts 1 1
+windowrptimersec 1 1
 windows 4 3
 windowstatus 3 2
-windowstatusi_filter 3 1
+windowstatusifilter 3 1
 windowsvista 1 1
-windowtoba_hilo_item 2 2
-windowtoba_qs_zona 5 5
+windowtobahiloitem 2 2
+windowtobaqszona 5 5
 winnicott 1 1
 winnicottiana 1 1
 wins 1 1
@@ -30830,11 +30300,7 @@ www.unse.edu.ar 1 1
 www.unsj.edu.ar 1 1
 www.unt.edu.ar/fcsnat/insue 1 1
 www.webpicasso.de 1 1
-wwweldescansohotelcomar 1 1
-wwwelsolhoteljunincomar 1 1
 wwwibmcom 1 1
-wwwiipebuenosairesorgar 1 1
-wwwlagunahoteljunincomar 1 1
 wwwlotuscom 1 1
 wwwredbibliounneeduar 1 1
 wwwstats 1 1
@@ -30844,7 +30310,6 @@ xdalln 11 6
 xenondirector 1 1
 xenotransplantes 1 1
 xhtml 2 2
-xi 9 5
 xicongreso 1 1
 xii 5 3
 xiii 4 2
@@ -30852,17 +30317,14 @@ ximena 2 2
 xinhua 2 1
 xiv 1 1
 xix 10 5
-xl 1 1
 xochimilco 1 1
 xpartan 1 1
 xuarez 4 2
 xuv 1 1
-xv 3 3
 xvi 6 3
 xvie 2 1
 xvii 2 1
 xviii 3 1
-xx 15 7
 xxdocentes 1 1
 xxi 37 15
 xxii 2 1
@@ -30870,7 +30332,6 @@ xxiii 3 3
 xxvii 1 1
 xxx 2 2
 xxxii 1 1
-ya 188 77
 yael 1 1
 yahoo 2 2
 yakarta 3 1
@@ -30910,7 +30371,6 @@ yestudios 1 1
 yet 5 5
 yfundamentales 1 1
 ylas 1 1
-yo 221 30
 yolanda 4 1
 yonhap 2 1
 yonoyo 1 1
@@ -30931,7 +30391,6 @@ ypionti 1 1
 ypresentaciones 1 1
 yrigoyen 8 3
 ysabel 1 1
-yu 1 1
 yucra 1 1
 yugo 2 1
 yugula 1 1
@@ -31005,8 +30464,7 @@ zorzal 1 1
 zorzi 1 1
 zozobra 1 1
 zsolana@arnet.com.ar 1 1
-zubizarret 1 1
-zubizarreta 1 1
+zubizarreta 2 1
 zulberti 1 1
 zulema 1 1
 zulma 4 2

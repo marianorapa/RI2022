@@ -1,0 +1,34 @@
+<TOP>
+<NUM>1<NUM>
+<TITLE>wealthiest tennis players
+<DESC>ranking of tennis players by money earned
+<NARR>who are the wealthiest tennis players and how much money they have earned
+</TOP>
+
+<TOP>
+<NUM>2<NUM>
+<TITLE>largest country in the world
+<DESC>country with the largest territory in the world
+<NARR>which country in the world posseses the largest territory
+</TOP>
+
+<TOP>
+<NUM>3<NUM>
+<TITLE>usa independence date
+<DESC>when the united states of america declared its independency
+<NARR>when is the date of the declaration of independence of the united states of america
+</TOP>
+
+<TOP>
+<NUM>4<NUM>
+<TITLE>natural wonders of the world
+<DESC>current natural wonders of planet earth 
+<NARR>what are the natural wonders of planet earth
+</TOP>
+
+<TOP>
+<NUM>5<NUM>
+<TITLE>casualties great war 
+<DESC>number of casualties in the great war
+<NARR>what is the number of human beings killed in the great war
+</TOP>

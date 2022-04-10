@@ -7,3 +7,7 @@ pyenv.cfg
 01_collection
 02_index_output.txt
 cisi
+bin
+lib
+09_cisi_trec.txt
+*.all

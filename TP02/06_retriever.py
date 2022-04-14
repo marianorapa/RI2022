@@ -98,10 +98,13 @@ def get_tokens_and_freq_in_line(line, tokens_freq, collection_terms, update_coll
 
 def get_tokens_and_freq(doc, collection_terms):
     tokens_freq = {}    
-    with open(doc, "r", encoding="utf-8") as f:                
-       for line in f.readlines():                 
-           get_tokens_and_freq_in_line(line, tokens_freq, collection_terms)#         
-    return tokens_freq
+    try:
+        with open(doc, "r", encoding="utf-8") as f:                
+            for line in f.readlines():                 
+                get_tokens_and_freq_in_line(line, tokens_freq, collection_terms)
+            return tokens_freq
+    except Exception as e:
+        print(f"Error getting tokens from file {doc}: {e}")
 
 
 def translate(to_translate):
@@ -120,14 +123,22 @@ def read_palabras_vacias(path):
             output.append(stop_words)
     return [item for sublist in output for item in sublist]
 
+def search_files(dir, files = [], recursive = True):
+    path = pathlib.Path(dir)
+    for item in path.iterdir():
+        if (item.is_file()):
+            files.append(item.absolute())
+        else:
+            if (item.is_dir() and recursive):
+                search_files(item, files)            
 
 # Indexing calls
-def index_dir(dirpath):
-    corpus_path = pathlib.Path(dirpath)
+def index_files(files):    
     collection_terms = {}
     docs = {}
-    for doc in corpus_path.iterdir():
-        docs[doc.name] = get_tokens_and_freq(doc, collection_terms)
+    for file in files:
+        current_file = pathlib.Path(file)        
+        docs[current_file.name] = get_tokens_and_freq(current_file, collection_terms)
     return docs, collection_terms
 
 
@@ -219,15 +230,20 @@ if __name__ == '__main__':
     if len(sys.argv) < 2:
         print('Es necesario pasar como argumento un path a un directorio')
         sys.exit(0)
-    dirpath = sys.argv[1]
+    dirpath = sys.argv[1]         
     if len(sys.argv) == 3:        
-        deep_abbrv_process = sys.argv[2].lower() == "true"        
-    if len(sys.argv) == 4:        
-        palabras_vacias = read_palabras_vacias(sys.argv[3])
+        palabras_vacias = read_palabras_vacias(sys.argv[2])
         print(palabras_vacias)
     if not os.path.exists("./output_02"):
-        os.mkdir("./output_02")    
-    doc_collection_frequencies, collection_terms = index_dir(dirpath)
+        os.mkdir("./output_02")   
+    
+    files = []
+    search_files(dirpath, files)
+    print("Files to be indexed: ")
+    for file in files: 
+        print(f"{file}\n") 
+
+    doc_collection_frequencies, collection_terms = index_files(files)
     end = time.time()    
     print("\r\nIndexing time: {} seconds.".format(end - start))
     save_index(doc_collection_frequencies)
@@ -239,3 +255,5 @@ if __name__ == '__main__':
         ordered = dict(sorted(retrieved_docs.items(), key=lambda item: item[1], reverse=True))
         for key in ordered.keys():
             print(f"Doc: {key} - Score: {ordered[key]}")
+    
+    

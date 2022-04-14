@@ -5,6 +5,7 @@ import os
 import re
 import time
 import math
+import pickle as pickle
 
 palabras_vacias = []
 
@@ -141,7 +142,17 @@ def index_files(files):
         docs[current_file.name] = get_tokens_and_freq(current_file, collection_terms)
     return docs, collection_terms
 
-
+def load_queries(path):
+    queries = {}
+    path = pathlib.Path(path)    
+    with open(path, "r") as f:
+        query_count = 1
+        for line in f.readlines():
+            if (line.startswith("<TITLE>")):
+                line = line.replace("<TITLE>", "").strip()
+                queries[query_count] = line
+                query_count += 1
+    return queries
 
 # -------------------------------------------
 # Retrieval functions
@@ -216,44 +227,85 @@ def retrieve_docs(query, doc_collection_frequencies, collection_terms):
 # ----- Saving
 
 def save_index(dict):
-    path = "02_index_output.txt"
-    with open(path, "w", encoding="utf-8") as f:                
-        for key in dict:
-            f.write(f"{key} {dict[key]}\n")
-    
+    path = "output_06/index.pcl"
+    with open(path, "wb") as f:                
+        pickle.dump(dict, f)
+
+def save_terms(terms):
+    path = "output_06/terms.pcl"
+    with open(path, "wb") as f:                
+        pickle.dump(terms, f)
+        
+def save_results(results):
+    path = "output_06/results.txt"
+    with open(path, "w", encoding="utf-8") as f:
+        for key in results.keys():
+            pos = 0
+            for entry in results[key]:
+                f.write(f"{key} Q0 {entry} {pos} {results[key][entry]}\n")
+                pos += 1
+        
 # -------------------------------------------
 # Main
 # -------------------------------------------
+queries_file = False
 
 if __name__ == '__main__':
-    start = time.time()
     if len(sys.argv) < 2:
         print('Es necesario pasar como argumento un path a un directorio')
         sys.exit(0)
     dirpath = sys.argv[1]         
-    if len(sys.argv) == 3:        
-        palabras_vacias = read_palabras_vacias(sys.argv[2])
-        print(palabras_vacias)
-    if not os.path.exists("./output_02"):
-        os.mkdir("./output_02")   
-    
-    files = []
-    search_files(dirpath, files)
-    print("Files to be indexed: ")
-    for file in files: 
-        print(f"{file}\n") 
+    if len(sys.argv) == 4:        
+        arg_2 = sys.argv[2]
+        arg_3 = sys.argv[3]
+        if (arg_2 == "--stopwords"):                        
+            palabras_vacias = read_palabras_vacias(arg_3)
+            print(palabras_vacias)
+        elif (arg_2 == "--queries"):
+            queries_file = True
 
-    doc_collection_frequencies, collection_terms = index_files(files)
-    end = time.time()    
-    print("\r\nIndexing time: {} seconds.".format(end - start))
-    save_index(doc_collection_frequencies)
     
-    while True:
-        query = input("Enter query:")
-        retrieved_docs = retrieve_docs(query, doc_collection_frequencies, collection_terms)
-        print("--------- Results ---------")        
-        ordered = dict(sorted(retrieved_docs.items(), key=lambda item: item[1], reverse=True))
-        for key in ordered.keys():
-            print(f"Doc: {key} - Score: {ordered[key]}")
-    
-    
+    index_loaded = False
+
+    if not os.path.exists("./output_06"):
+        os.mkdir("./output_06")
+    else:
+        try:
+            with open("output_06/index.pcl", "rb") as f:
+                doc_collection_frequencies = pickle.load(f)
+            with open("output_06/terms.pcl", "rb") as f:
+                collection_terms = pickle.load(f)
+            
+            index_loaded = True
+            print("Found index at output_06. Delete the folder to index again.")
+        except:
+            print("Couldn't load pre-existing index.")
+        
+    if not index_loaded:
+        start = time.time()
+        files = []
+        search_files(dirpath, files)
+        print(f"Found {len(files)} files to be indexed.")
+        doc_collection_frequencies, collection_terms = index_files(files)
+        end = time.time()    
+        print("\r\nIndexing time: {} seconds.".format(end - start))
+        save_index(doc_collection_frequencies)
+        save_terms(collection_terms)
+
+    if queries_file:
+        queries = load_queries(arg_3)
+        print(f"Found the following queries in file -> {queries}")
+        results = {}
+        for query_key in queries.keys():
+            retrieved_docs = retrieve_docs(queries[query_key], doc_collection_frequencies, collection_terms)
+            ordered = dict(sorted(retrieved_docs.items(), key=lambda item: item[1], reverse=True))
+            results[query_key] = ordered
+        save_results(results)
+    else:
+        while True:
+            query = input("Enter query:")
+            retrieved_docs = retrieve_docs(query, doc_collection_frequencies, collection_terms)
+            print("--------- Results ---------")        
+            ordered = dict(sorted(retrieved_docs.items(), key=lambda item: item[1], reverse=True))
+            for key in ordered.keys():
+                print(f"Doc: {key} - Score: {ordered[key]}")

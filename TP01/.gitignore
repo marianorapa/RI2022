@@ -11,3 +11,5 @@ test
 *.csv
 .ipynb_checkpoints
 test-collection
+programs
+*.zip

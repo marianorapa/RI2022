@@ -35,10 +35,11 @@ def process_dir(filepath):
     save_lists()
 
 def get_proper_names(line):
-    regex = "((?<!\A)(?<!(?:\.\s))(?:(?:(?:[A-Z][a-z]+)+)(?:[ ]*(?:[A-Z][a-z]+))*)[^\.])"        # Won't consider proper names after a ". " since it could mean the start of a sentence
+    #regex = "((?<!\A)(?<!(?:\.\s))(?:(?:(?:[A-Z][a-z]+)+)(?:[ ]*(?:[A-Z][a-z]+))*)[^\.])"        # Won't consider proper names after a ". " since it could mean the start of a sentence
+    regex = "((?:(?:[A-Z](?:[a-z]+|\.+))+(?:\s[A-Z][a-z]+)+))"
     result = re.findall(regex, line)
-    
-    return list(filter(lambda x: x.lower() not in palabras_vacias and len(x) >= MIN_LENGTH and len(x) <= MAX_LENGTH,
+        
+    return list(filter(lambda x: x.lower() not in palabras_vacias and len(x) >= MIN_LENGTH,
                                      [x.strip() for x in result])) 
     
 def is_date(token):
@@ -72,7 +73,7 @@ def is_mail_or_url(token):
     return bool(re.match(f"{url_regex}|{mail_regex}|{url_regex_2}", token))
 
 def remove_punctuation(token):
-    return re.sub("[\W_]", "", token)
+    return re.sub("[^\w\s]|_", "", token)
 
 def count_frequencies(dirpath):
     
@@ -102,17 +103,17 @@ def count_frequencies(dirpath):
             for line in f.readlines():  
                 line = translate(line).strip()              
                 # Intentar identificar nombres propios 
-                proper_names = get_proper_names(line)
+                proper_names = get_proper_names(line)                
                 for name in proper_names: 
                     # Elimina los nombres identificados para que no sean tomados como tokens al separar por espacios
                     line.replace(name, "")
                     proper_names_list.append(name)
-                
+                                    
                 tokens_list = line.strip().split()
-
+                
+                # Agrego los nombres propios a la lista de tokens para que tengan el mismo tratamiento
                 tokens_list.extend(proper_names)
 
-                # Agrego los nombres propios a la lista de tokens para que tengan el mismo tratamiento
                 for raw_token in tokens_list:                    
                     total_doc_tokens += 1
                     total_tokens     += 1

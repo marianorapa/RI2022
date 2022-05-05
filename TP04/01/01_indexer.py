@@ -5,13 +5,15 @@ import sys
 
 class BooleanIndexer:
 
-    def __init__(self, index_output_path = "01_index.idx", vocabulary_output_path = "01_vocab.pcl"):
+    def __init__(self, index_output_path = "01_index.idx", vocabulary_output_path = "01_vocab.vcb"):
         self.base_indexer = Indexer()
         self.posting_format = "I"
         self.posting_entry_size = 4
         self.index_output_path = index_output_path
         self.vocabulary_output_path = vocabulary_output_path
         self.vocabulary = {}        
+        
+        self.VOCAB_TERM_LENGTH = 50
     
     def index_dir(self, dir):
         self.index, self.docs_total_terms = self.base_indexer.index_dir(dir)
@@ -33,7 +35,16 @@ class BooleanIndexer:
     
     def __save_vocabulary__(self):
         with open(self.vocabulary_output_path, "wb") as file:
-            pickle.dump(self.vocabulary, file)
+            #pickle.dump(self.vocabulary, file)            
+            for term in self.vocabulary.keys():
+                df = self.vocabulary[term][0]
+                pointer = self.vocabulary[term][1]
+                term = term + " " * (self.VOCAB_TERM_LENGTH - len(term))
+                output_format = "IH"                
+                packed_values = struct.pack(output_format, pointer, df)
+                print(term.encode('ascii'))
+                file.write(term.encode('ascii'))
+                file.write(packed_values)    
 
     def save_stats(self):        
         posting_sizes = {}

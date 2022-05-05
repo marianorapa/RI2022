@@ -28,6 +28,12 @@ class Indexer:
         self.total_tokens            = 0
         self.total_terms             = 0
         self.total_terms_length      = 0
+        
+        self.max_term_length = 0
+
+
+    def get_max_term_length(self):
+        return self.max_term_length
 
     def __read_palabras_vacias(self, path):
         output = []
@@ -55,7 +61,10 @@ class Indexer:
                 for token in tokens.keys():
                     if token not in self.palabras_vacias:
                         if token not in index:
-                            index[token] = []                                               
+                            index[token] = []
+                            if len(token) > self.max_term_length:
+                                self.max_term_length = len(token)
+
                         index[token].append([doc_id, tokens[token]])                         
                         docs_terms[doc_id][0] += 1   # Este documento tiene un término más
                 return tokens
@@ -65,8 +74,7 @@ class Indexer:
     def get_index(self):
         return self.index
 
-    def get_collection_size(self):
-        return self.total_docs
+    def get_collection_size(self):        self.max_term_length = 0
 
     def index_dir(self, directory):
         self.dir = directory

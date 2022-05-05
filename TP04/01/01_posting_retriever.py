@@ -1,23 +1,34 @@
-from memory_indexer import Indexer
 import struct
 import sys
 import pickle
 
 class PostingListRetriever:
 
-    def __init__(self, index_path = "01_index.idx", vocabulary_path = "01_vocab.pcl"):
+    def __init__(self, index_path = "01_index.idx", vocabulary_path = "01_vocab.txt"):
         self.posting_format = "I"
         self.posting_entry_size = 4
         self.index_path = index_path
-        self.vocabulary_path = vocabulary_path
-        self.__load_vocabulary__()
+        self.vocabulary_path = vocabulary_path        
+        self.VOCAB_TERM_LENGTH = 50
+        self.__load_vocabulary__()        
+
 
     def __load_vocabulary__(self):
+        self.vocabulary = {}
         try:
-            with open(self.vocabulary_path, "rb") as file:
-                self.vocabulary = pickle.load(file)
-        except:
-            print(f"No se pudo cargar el vocabulario desde {self.vocabulary_path}")
+             with open(self.index_path, "rb") as file:             
+                file.seek(0)
+                binary_info = file.read(self.VOCAB_TERM_LENGTH + 8)                
+                data_format = self.VOCAB_TERM_LENGTH * "c" + "IH"
+                #print(len(binary_info[:self.VOCAB_TERM_LENGTH]))
+                #term = binary_info[:self.VOCAB_TERM_LENGTH].decode("ascii")                
+                #print(term)
+                data = struct.unpack(data_format, binary_info)
+                print(data[0].decode("ascii"))
+                self.vocabulary[term] = [data[0], data[1]]
+
+        except Exception as e:
+            print(f"No se pudo cargar el vocabulario desde {self.vocabulary_path}: {e}")
             sys.exit(0)
 
     def load_posting(self, term):                  

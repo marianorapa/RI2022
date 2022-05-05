@@ -6,19 +6,21 @@ class Tokenizer:
         self.max_length = max_length
         self.PROPER_NAME_SPLITTING_ENABLED = proper_name_splitting  
 
-    def __get_proper_names(self, line):
-        #regex = "((?<!\A)(?<!(?:\.\s))(?:(?:(?:[A-Z][a-z]+)+)(?:[ ]*(?:[A-Z][a-z]+))*)[^\.])"        # Won't consider proper names after a ". " since it could mean the start of a sentence
+    def __get_proper_names(self, line):        
         regex = "((?:(?:[A-Z](?:[a-z]+|\.+))+(?:\s[A-Z][a-z]+)+))"
         result = re.findall(regex, line)           
         return list(result) 
         
     def __is_date(self, token):
-        regex = "(\d+[\/\.\-]\d+[\/\.\-]\d+)"
+        regex = "(?:\s|^)(\d{1,2}[\/\.\-]\d{1,2}[\/\.\-]\d{1,4})(?:\s|$)|(?:\s|^)(\d{2,4}[\/\.\-]\d{1,2}[\/\.\-]\d{1,2})(?:\s|$)"
         return bool(re.match(regex, token))
 
-    def __is_number(self, token):
-        regex = "([\+\-]?(?:[0-9]+[,\-]?)*[0-9](?:[.][0-9]+)?)"     # accepts some form of telephone numbers and also numbers starting with + or -
-        return re.findall(regex, token)
+    def __is_number(self, token):        
+        regex = "^[0-9]+$"
+        regex_decimal = "^[0-9]+[\.|\,][0-9]+$"
+        phones_regex = "([0-9]{1,3}?[-]?[0-9]{8,9}?)(?:$|\s)"
+
+        return re.findall(f"{regex}|{phones_regex}|{regex_decimal}", token)
 
     def __is_abbreviation(self, token, collection = {}):    
         regex_1 = "(?:\A|\W)(?:[a-zA-Z](?:\.[a-zA-Z])+)(?:\Z|\W)"             # matches "i.e", "i.e.", "u.s.a", etc
@@ -52,6 +54,9 @@ class Tokenizer:
         translate_table = dict(zip(tabin, tabout))
         return to_translate.translate(translate_table)
 
+    def __has_numbers__(self, token):
+        return bool(re.match(".*[0-9]+.*", token))
+
     def get_tokens_with_frequency(self, line):        
         abbreviations_list      = []
         numbers_list            = []    
@@ -74,20 +79,24 @@ class Tokenizer:
         for raw_token in tokens_list:                    
             token = raw_token.strip()                                   
             special_token = False                       
-            if self.__is_number(token):
+            if self.__is_number(token):                
                 numbers_list.append(token)   
                 special_token = True     
             elif (self.__is_mail_or_url(token)):
                 mails_urls_list.append(token)                                                    
                 special_token = True        
+                
             elif (self.__is_abbreviation(token)):
-                abbreviations_list.append(token)            
-            elif (self.__is_date(token)):
+                abbreviations_list.append(token)  
+                
+            elif (self.__is_date(token)):                
                 dates_list.append(token)
                 special_token = True    
-
+                
             if not special_token:        
                 token = self.__remove_punctuation(token).lower()                        
+                if self.__has_numbers__(token):
+                    break
 
             if special_token or (len(token) >= self.min_length and len(token) <= self.max_length):
                 result[token] = 1 if token not in result else result[token] + 1
@@ -97,3 +106,7 @@ class Tokenizer:
             result[name] = 1 if name not in result else result[name] + 1
 
         return result
+
+if __name__ == '__main__':
+    tokenizer = Tokenizer(3, 25)
+    print(tokenizer.get_tokens_with_frequency("2021.1.2"))

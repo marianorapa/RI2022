@@ -2,3 +2,7 @@
 __pycache__
 collections
 virtualenv
+*.bin
+./01/*.bin
+./02/*.bin
+./03/*.bin

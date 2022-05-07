@@ -10,7 +10,7 @@ class PostingListRetriever:
         self.posting_entry_size = 4
         self.index_path = index_path
         self.vocabulary_path = vocabulary_path        
-        self.VOCAB_TERM_LENGTH = 82
+        self.VOCAB_TERM_LENGTH = 84
         self.__load_vocabulary__()
 
     def __load_vocabulary__(self):
@@ -23,7 +23,6 @@ class PostingListRetriever:
                     term = binary_info[:self.VOCAB_TERM_LENGTH].decode("ascii").strip()                     
                     data = struct.unpack(data_format, binary_info[self.VOCAB_TERM_LENGTH:])
                     self.vocabulary[term] = [data[0], data[1]]
-                print(self.get_vocabulary())
         except Exception as e:
             print(f"No se pudo cargar el vocabulario desde {self.vocabulary_path}: {e}")            
             sys.exit(0)

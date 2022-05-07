@@ -24,7 +24,7 @@ class PostingListRetriever:
                     data = struct.unpack(data_format, binary_info[self.VOCAB_TERM_LENGTH:])
                     self.vocabulary[term] = [data[0], data[1]]
         except Exception as e:
-            print(f"No se pudo cargar el vocabulario desde {self.vocabulary_path}: {e}")            
+            print(f"No se pudo cargar el vocabulario desde {self.vocabulary_path}: {e}")
             sys.exit(0)
 
     def load_posting(self, term):                  

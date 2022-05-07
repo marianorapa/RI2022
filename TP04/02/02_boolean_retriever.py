@@ -18,7 +18,7 @@ class BooleanRetriever:
         self.posting_entry_size = 4
         self.index_path = index_path
         self.vocabulary_path = vocabulary_path
-        self.VOCAB_TERM_LENGTH = 75
+        self.VOCAB_TERM_LENGTH = 84
         self.__load_vocabulary__()
     
         self.AND_OP = "&"
@@ -59,16 +59,16 @@ class BooleanRetriever:
         return True
         
 
-    def __process_conjunction__(self, conjunction):
+    def __process_non_terminal__(self, non_terminal):
         open_stack = []
         left_side = ""
         i = 0
         
         # Elimina paréntesis de alrededor
-        if conjunction.startswith("(") and conjunction.endswith(")"):
-            conjunction = conjunction[1:-1]
+        if non_terminal.startswith("(") and non_terminal.endswith(")"):
+            non_terminal = non_terminal[1:-1]
 
-        for character in conjunction:
+        for character in non_terminal:
             i += 1
             if character == "(":
                 if len(left_side) > 0:
@@ -90,11 +90,15 @@ class BooleanRetriever:
         fallback = 1
         if (character == ")"):
             fallback = 0
-        operator = conjunction[i-fallback:i+delta]
-        right_side = conjunction[i+delta:]
+        operator = non_terminal[i-fallback:i+delta]
+        right_side = non_terminal[i+delta:]
         return left_side.strip(), operator.strip(), right_side.strip()
 
     def __calc_set_operation__(self, set_a, op, set_b):        
+        if type(set_a) == list:
+            set_a = set(set_a) 
+        if type(set_b) == list:
+            set_b = set(set_b) 
         if (op == self.AND_OP):
             return set_a.intersection(set_b)
         if (op == self.OR_OP):
@@ -102,16 +106,18 @@ class BooleanRetriever:
         if (op == self.NEG_OP):
             return set_a - set_b
 
-    def __process_query__(self, query):
+    def __process_query__(self, query, first_call = False):
         # Get left_side, operator, right_side
         if self.__is_term__(query):       
             posting = self.__load_posting__(query)            
+            if first_call:
+                return sorted(posting)
             return posting
         
-        left_side, operation, right_side = self.__process_conjunction__(query)
+        left_side, operation, right_side = self.__process_non_terminal__(query)
         left_side_posting = self.__process_query__(left_side)
         rigth_side_posting = self.__process_query__(right_side)            
-        return self.__calc_set_operation__(left_side_posting, operation, rigth_side_posting)
+        return sorted(self.__calc_set_operation__(left_side_posting, operation, rigth_side_posting))
     
 
 def print_posting(posting):
@@ -127,5 +133,5 @@ if __name__ == '__main__':
     else:
         retriever = BooleanRetriever(sys.argv[2], sys.argv[3])
     
-    result = retriever.__process_query__(sys.argv[1])
+    result = retriever.__process_query__(sys.argv[1], first_call=True)
     print_posting(result)

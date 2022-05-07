@@ -7,7 +7,7 @@ class Tokenizer:
         self.PROPER_NAME_SPLITTING_ENABLED = proper_name_splitting  
 
     def __get_proper_names(self, line):        
-        regex = "((?:(?:[A-Z](?:[a-z]+|\.+))+(?:\s[A-Z][a-z]+)+))"
+        regex = "\W((?:(?:[A-Z](?:[a-z]+|\.+))+(?:\s[A-Z][a-z]+)+))"
         result = re.findall(regex, line)           
         return list(result) 
         
@@ -47,15 +47,21 @@ class Tokenizer:
     def __remove_punctuation(self, token):
         return re.sub("[^\w\s]|_", "", token)
 
+    def __remove_punctuation_special_token__(self, token):
+        return re.sub("[^\w\s/@\.:-\?]", "", token)
+
     def __translate(self, to_translate):
-        tabin = u'áäâàãéëèêẽíïĩìîóõöòôúüùûũ'
-        tabout = u'aaaaaeeeeeiiiiiooooouuuuu'
+        tabin = u'áäâàãéëèêẽíïĩìîóõöòôúüùûũñ'
+        tabout = u'aaaaaeeeeeiiiiiooooouuuuun'
         tabin = [ord(char) for char in tabin]
         translate_table = dict(zip(tabin, tabout))
         return to_translate.translate(translate_table)
 
     def __has_numbers__(self, token):
         return bool(re.match(".*[0-9]+.*", token))
+
+    def __only_letters__(self, token):        
+        return bool(re.match("\A[a-z]+\Z", token))
 
     def get_tokens_with_frequency(self, line):        
         abbreviations_list      = []
@@ -74,9 +80,9 @@ class Tokenizer:
                 line.replace(name, "")
 
         # Separación de la línea por espacios                    
-        tokens_list = line.strip().split()        
-
-        for raw_token in tokens_list:                    
+        tokens_list = line.strip().split()                
+        
+        for raw_token in tokens_list:                         
             token = raw_token.strip()                                   
             special_token = False                       
             if self.__is_number(token):                
@@ -93,10 +99,12 @@ class Tokenizer:
                 dates_list.append(token)
                 special_token = True    
                 
-            if not special_token:        
-                token = self.__remove_punctuation(token).lower()                        
-                if self.__has_numbers__(token):
-                    break
+            if not special_token:                        
+                token = self.__remove_punctuation(token).lower()                    
+                if not self.__only_letters__(token):
+                    continue
+            else:
+                token = self.__remove_punctuation_special_token__(token).lower()
 
             if special_token or (len(token) >= self.min_length and len(token) <= self.max_length):
                 result[token] = 1 if token not in result else result[token] + 1
@@ -109,4 +117,4 @@ class Tokenizer:
 
 if __name__ == '__main__':
     tokenizer = Tokenizer(3, 25)
-    print(tokenizer.get_tokens_with_frequency("2021.1.2"))
+    print(tokenizer.get_tokens_with_frequency("td257160km prueba² prueba corto žarnićli"))

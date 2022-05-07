@@ -1,31 +1,26 @@
-from ast import Index
-from calendar import c
-from pydoc import doc
-import sys
 import pathlib
-import os
-import re
-import time
-import math
-import pickle as pickle
 from tokenizer import Tokenizer
+import sys
+
+## Tener en cuenta que guarda el CF del término en la primera posición del arreglo
 
 class Indexer:
 
     def __init__(self):
-        
-        self.tokenizer = Tokenizer()
+        self.MIN_LENGTH = 3
+        self.MAX_LENGTH = 25
+
+        self.tokenizer = Tokenizer(self.MIN_LENGTH, self.MAX_LENGTH)
         self.index = {}
 
         self.palabras_vacias = []
-
-        self.MIN_LENGTH = 3
-        self.MAX_LENGTH = 25
 
         self.total_docs              = 0
         self.total_tokens            = 0
         self.total_terms             = 0
         self.total_terms_length      = 0
+
+        self.max_term_length = 0
 
     def __read_palabras_vacias(self, path):
         output = []
@@ -40,31 +35,28 @@ class Indexer:
         for item in path.iterdir():            
             if (item.is_file()):                
                 files.append(item.absolute())
-            else:
-                print("Nope")
+            else:                
                 if (item.is_dir() and recursive):
                     self.__search_files(item, files)            
 
     def __index_doc(self, doc_id, doc, index, docs_terms):        
         try:
-            with open(doc, "r", encoding="utf-8") as f:                
-                
+            
+            with open(doc, "r", encoding="utf-8") as f:                               
                 tokens = self.tokenizer.get_tokens_with_frequency(f.read())
                 
                 for token in tokens.keys():
                     if token not in index:
                         index[token] = [0]
+                        if len(token) > self.max_term_length:
+                            self.max_term_length = len(token)
                     # Acumulate CF in array's first position   
                     index[token][0] += tokens[token]    
-                    index[token].append([doc_id, tokens[token]])
-                    #if doc_id not in docs_terms:
-                    #    docs_terms[doc_id] = {}
-                    #if token not in docs_terms[doc_id]:
-                    #    docs_terms[doc_id][token] = 0
-                    #docs_terms[doc_id][token] += 1 
+                    index[token].append([doc_id, tokens[token]]) 
+                    #docs_terms[doc_id][0] += 1   # Este documento tiene un término más
                 return tokens
-        except Exception as e:
-            print(f"Error indexing doc {doc}: {e}")
+        except Exception as ex:            
+            print(f"Error indexing doc {doc}: {ex}")
 
     def get_index(self):
         return self.index
@@ -83,12 +75,11 @@ class Indexer:
     # Indexing calls
     def __index_files(self, files):        
         index = {}
-        doc_terms = {}  # Not used
+        doc_terms = {} 
         doc_id = 1
         for file in files:
             current_file = pathlib.Path(file)
-            self.__index_doc(doc_id, current_file, index, doc_terms)
-            print(f"{current_file.name} -> id: {doc_id}")
+            self.__index_doc(doc_id, current_file, index, doc_terms)            
             doc_id += 1            
         self.total_docs = doc_id - 1
         return index, doc_terms
@@ -96,19 +87,16 @@ class Indexer:
     def get_terms_from_query(self, query):
         return self.tokenizer.get_tokens_with_frequency(query)
 
-    # ----- Saving
 
-    def __save_index(self, dict):
-        path = self.dir + "index.pcl"
-        with open(path, "wb") as f:                
-            pickle.dump(dict, f)
+def print_dict(dict):
+    for key in dict.keys():
+        print(f"{key} -> {dict[key]}")
 
-        
-    def __save_results(self, results):
-        path = "output_06_inverted/results.txt"
-        with open(path, "w", encoding="utf-8") as f:
-            for key in results.keys():
-                pos = 0
-                for entry in results[key]:
-                    f.write(f"{key} Q0 {entry} {pos} {results[key][entry]}\n")
-                    pos += 1
+def print_index_summary(dict):
+    for key in dict.keys():
+        print(f"{key} -> {len(dict[key]) - 1}")
+
+if __name__ == '__main__':
+    indexer = Indexer()
+    index = indexer.index_dir(sys.argv[1])    
+    print_index_summary(index)

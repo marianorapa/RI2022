@@ -19,7 +19,7 @@ class Indexer:
         self.MIN_LENGTH = 3
         self.MAX_LENGTH = 25
 
-        self.tokenizer = Tokenizer(self.MIN_LENGTH, self.MAX_LENGTH)
+        self.tokenizer = Tokenizer(self.MIN_LENGTH, self.MAX_LENGTH, proper_name_splitting=True)
         self.index = {}
 
         self.palabras_vacias = []

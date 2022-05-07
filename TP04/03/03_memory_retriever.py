@@ -4,6 +4,7 @@ import sys
 import pickle
 import time
 from xmlrpc.client import Boolean
+from functools import partial
 
 class BooleanRetriever:
 
@@ -13,11 +14,12 @@ class BooleanRetriever:
     # - Con operaciones de conjuntos (dadas por la query), combinar las postings
     ###
 
-    def __init__(self, index_path = "01_index.idx", vocabulary_path = "01_vocab.pcl"):
+    def __init__(self, index_path = "01_index.bin", vocabulary_path = "01_vocab.bin"):
         self.posting_format = "I"
         self.posting_entry_size = 4
         self.index_path = index_path
         self.vocabulary_path = vocabulary_path
+        self.VOCAB_TERM_LENGTH = 75
         self.__load_vocabulary__()
         self.preload_index()
         self.AND_OP = "&"
@@ -25,11 +27,18 @@ class BooleanRetriever:
         self.NEG_OP = "-"
 
     def __load_vocabulary__(self):
+        self.vocabulary = {}
         try:
-            with open(self.vocabulary_path, "rb") as file:
-                self.vocabulary = pickle.load(file)
-        except:
-            print(f"No se pudo cargar el vocabulario desde {self.vocabulary_path}")
+             with open(self.vocabulary_path, "rb") as file:       
+                chunk_size = self.VOCAB_TERM_LENGTH + 6
+                for binary_info in iter(partial(file.read, chunk_size), b''):                      
+                    data_format = "IH"                         
+                    term = binary_info[:self.VOCAB_TERM_LENGTH].decode("ascii").strip()                                
+                    data = struct.unpack(data_format, binary_info[self.VOCAB_TERM_LENGTH:])    
+                    self.vocabulary[term] = [data[0], data[1]]                
+
+        except Exception as e:
+            print(f"No se pudo cargar el vocabulario desde {self.vocabulary_path}: {e}")
             sys.exit(0)
 
     def __load_posting__(self, term):           
@@ -103,7 +112,7 @@ class BooleanRetriever:
     def preload_index(self):
         self.index = {}
         for term in self.vocabulary.keys():
-            posting_length, pointer = self.vocabulary[term]            
+            pointer, posting_length  = self.vocabulary[term]            
             with open(self.index_path, "rb") as file:
                 file.seek(pointer)
                 binary_list = file.read(posting_length * self.posting_entry_size)

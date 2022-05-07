@@ -5,7 +5,7 @@ import sys
 
 class BooleanIndexer:
 
-    def __init__(self, index_output_path = "01_index.idx", vocabulary_output_path = "01_vocab.vcb"):
+    def __init__(self, index_output_path = "01_index.bin", vocabulary_output_path = "01_vocab.bin"):
         self.base_indexer = Indexer()
         self.posting_format = "I"
         self.posting_entry_size = 4
@@ -13,8 +13,11 @@ class BooleanIndexer:
         self.vocabulary_output_path = vocabulary_output_path
         self.vocabulary = {}        
         
-        self.VOCAB_TERM_LENGTH = 50
+        self.VOCAB_TERM_LENGTH = 100
     
+    def get_max_term_length(self):
+        return self.base_indexer.get_max_term_length()
+
     def index_dir(self, dir):
         self.index, self.docs_total_terms = self.base_indexer.index_dir(dir)
         self.__save_index__()
@@ -34,18 +37,18 @@ class BooleanIndexer:
                 pointer += bytes_written
     
     def __save_vocabulary__(self):
+        max_term_length = self.base_indexer.get_max_term_length()
+        print(max_term_length)
         with open(self.vocabulary_output_path, "wb") as file:
-            #pickle.dump(self.vocabulary, file)            
             for term in self.vocabulary.keys():
                 df = self.vocabulary[term][0]
-                pointer = self.vocabulary[term][1]
-                term = term + " " * (self.VOCAB_TERM_LENGTH - len(term))
+                pointer = self.vocabulary[term][1]                
+                term = term + " " * (max_term_length - len(term))
                 output_format = "IH"                
                 packed_values = struct.pack(output_format, pointer, df)
-                print(term.encode('ascii'))
-                file.write(term.encode('ascii'))
-                file.write(packed_values)    
-
+                file.write(term.encode('ascii') + packed_values)
+        file.close()
+        
     def save_stats(self):        
         posting_sizes = {}
         for term in self.vocabulary:
@@ -67,5 +70,5 @@ if __name__ == '__main__':
         print('Es necesario pasar como argumento un path a un directorio')
         sys.exit(0)
     indexer = BooleanIndexer()
-    indexer.index_dir(sys.argv[1])
+    indexer.index_dir(sys.argv[1])    
     indexer.save_stats()

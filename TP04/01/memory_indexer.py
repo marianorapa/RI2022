@@ -74,8 +74,6 @@ class Indexer:
     def get_index(self):
         return self.index
 
-    def get_collection_size(self):        self.max_term_length = 0
-
     def index_dir(self, directory):
         self.dir = directory
         files = []
@@ -89,7 +87,7 @@ class Indexer:
         index = {}
         doc_terms = {}
         doc_id = 1
-        with open("doc_ids.csv", "w") as doc_ids_file:
+        with open("doc_ids.csv", mode="w", encoding="utf-8") as doc_ids_file:
             for file in files:
                 current_file = pathlib.Path(file)
                 self.__index_doc(doc_id, current_file, index, doc_terms)

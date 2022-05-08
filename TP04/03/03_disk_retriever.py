@@ -19,7 +19,7 @@ class BooleanRetriever:
         self.posting_entry_size = 4
         self.index_path = index_path
         self.vocabulary_path = vocabulary_path
-        self.VOCAB_TERM_LENGTH = 75
+        self.VOCAB_TERM_LENGTH = 84
         self.__load_vocabulary__()
     
         self.AND_OP = "&"
@@ -44,14 +44,13 @@ class BooleanRetriever:
     def __load_posting__(self, term):                  
         if term in self.vocabulary:
             pointer, posting_length = self.vocabulary[term]
-            print(self.vocabulary[term])
             with open(self.index_path, "rb") as file:
                 file.seek(pointer)
                 binary_list = file.read(posting_length * self.posting_entry_size)
                 data_format = self.posting_format * posting_length
                 posting_list = struct.unpack(data_format, binary_list)
                 return set(posting_list)
-        else:             
+        else:            
             return set()
 
     def __is_term__(self, query):
@@ -61,16 +60,16 @@ class BooleanRetriever:
         return True
         
 
-    def __process_conjunction__(self, conjunction):
+    def __process_non_terminal__(self, non_terminal):
         open_stack = []
         left_side = ""
         i = 0
         
         # Elimina paréntesis de alrededor
-        if conjunction.startswith("(") and conjunction.endswith(")"):
-            conjunction = conjunction[1:-1]
+        if non_terminal.startswith("(") and non_terminal.endswith(")"):
+            non_terminal = non_terminal[1:-1]
 
-        for character in conjunction:
+        for character in non_terminal:
             i += 1
             if character == "(":
                 if len(left_side) > 0:
@@ -92,8 +91,8 @@ class BooleanRetriever:
         fallback = 1
         if (character == ")"):
             fallback = 0
-        operator = conjunction[i-fallback:i+delta].strip()
-        right_side = conjunction[i+delta:].strip()
+        operator = non_terminal[i-fallback:i+delta].strip()
+        right_side = non_terminal[i+delta:].strip()
         left_side = left_side.strip()
         return left_side, operator, right_side
 
@@ -111,7 +110,7 @@ class BooleanRetriever:
             posting = self.__load_posting__(query)            
             return posting
         
-        left_side, operation, right_side = self.__process_conjunction__(query)
+        left_side, operation, right_side = self.__process_non_terminal__(query)
         left_side_posting = self.__process_query__(left_side)
         rigth_side_posting = self.__process_query__(right_side)        
         return self.__calc_set_operation__(left_side_posting, operation, rigth_side_posting)

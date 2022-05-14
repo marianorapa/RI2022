@@ -30,6 +30,8 @@ class Indexer:
         self.total_terms_length      = 0
         
         self.max_term_length = 0
+        self.doc_ids_filename = "doc-ids.csv"
+        self.__create_doc_ids_file__()
 
 
     def get_max_term_length(self):
@@ -43,6 +45,10 @@ class Indexer:
             else:                
                 if (item.is_dir() and recursive):
                     self.search_files(item, files)            
+
+    def __create_doc_ids_file__(self):
+        if os.path.exists(self.doc_ids_filename):
+            os.remove(self.doc_ids_filename)
 
     def __index_doc(self, doc_id, doc, index, docs_terms):        
         try:
@@ -66,20 +72,12 @@ class Indexer:
     def get_index(self):
         return self.index
 
-    #def index_dir(self, directory):
-    #    self.dir = directory
-    #    files = []
-    #    self.search_files(directory, files)        
-    #    index, docs_total_terms = self.__index_files(files)
-    #    self.index = index
-    #    return self.index, docs_total_terms
-
     # Indexing calls
     def index_files(self, files, offset):        
         index = {}
         doc_terms = {}  
         doc_id = 0 + offset
-        with open("doc_ids.csv", mode="a", encoding="utf-8") as doc_ids_file:
+        with open(self.doc_ids_filename, mode="a", encoding="utf-8") as doc_ids_file:
             for file in files:
                 current_file = pathlib.Path(file)
                 self.__index_doc(doc_id, current_file, index, doc_terms)

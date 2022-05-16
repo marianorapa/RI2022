@@ -16,8 +16,8 @@ class Indexer:
 
     def __init__(self):
 
-        self.MIN_LENGTH = 3
-        self.MAX_LENGTH = 25
+        self.MIN_LENGTH = 1
+        self.MAX_LENGTH = 30
 
         self.tokenizer = Tokenizer(self.MIN_LENGTH, self.MAX_LENGTH, proper_name_splitting=True)
         self.index = {}
@@ -78,23 +78,25 @@ class Indexer:
         self.dir = directory
         files = []
         self.__search_files(directory, files)        
-        index, docs_total_terms = self.__index_files(files)
+        index, doc_vectors, docs_total_terms = self.__index_files(files)
         self.index = index
-        return self.index, docs_total_terms
+        return self.index, doc_vectors, docs_total_terms
 
     # Indexing calls
     def __index_files(self, files):        
         index = {}
         doc_terms = {}
         doc_id = 1
+        doc_vectors = {}
         with open("doc_ids.csv", mode="w", encoding="utf-8") as doc_ids_file:
             for file in files:
                 current_file = pathlib.Path(file)
-                self.__index_doc(doc_id, current_file, index, doc_terms)
+                tokens = self.__index_doc(doc_id, current_file, index, doc_terms)
+                doc_vectors[doc_id] = tokens
                 doc_ids_file.write(f"{current_file.name},{doc_id}\n")
                 doc_id += 1            
             self.total_docs = doc_id - 1
-        return index, doc_terms
+        return index, doc_vectors, doc_terms
 
     def get_terms_from_query(self, query):
         return self.tokenizer.get_tokens_with_frequency(query)

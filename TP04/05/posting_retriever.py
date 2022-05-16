@@ -10,10 +10,9 @@ class PostingListRetriever:
         self.posting_entry_size = 6
         self.index_path = index_path
         self.vocabulary_path = vocabulary_path        
-        self.VOCAB_TERM_LENGTH = 53
-        self.__load_vocabulary__()
+        self.VOCAB_TERM_LENGTH = 50        
 
-    def __load_vocabulary__(self):
+    def load_vocabulary(self):
         self.vocabulary = {}
         try:
              with open(self.vocabulary_path, "rb") as file:       
@@ -23,16 +22,17 @@ class PostingListRetriever:
                     term = binary_info[:self.VOCAB_TERM_LENGTH].decode("ascii").strip()                     
                     data = struct.unpack(data_format, binary_info[self.VOCAB_TERM_LENGTH:])
                     self.vocabulary[term] = [data[0], data[1]]
+                return self.vocabulary
         except Exception as e:
             print(f"No se pudo cargar el vocabulario desde {self.vocabulary_path}: {e}")
             sys.exit(0)
 
     def load_posting(self, term):                  
         if term in self.vocabulary:
-            pointer, posting_length = self.vocabulary[term]                      
+            pointer, df = self.vocabulary[term]                      
             with open(self.index_path, "rb") as file:
                 file.seek(pointer)
-                data_format = self.posting_format * posting_length
+                data_format = self.posting_format * df
                 binary_list = file.read(struct.calcsize(data_format))
                 data = struct.unpack(data_format, binary_list)
                 chunks = [data[x:x+2] for x in range(0, len(data), 2)]

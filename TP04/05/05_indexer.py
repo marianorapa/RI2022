@@ -52,13 +52,22 @@ class FrequencyIndexer:
                 try:
                     df = self.vocabulary[term][0]
                     pointer = self.vocabulary[term][1]                
-                    term = term + " " * (max_term_length - len(term))
+                                        
                     output_format = "IH"                
-                    packed_values = struct.pack(output_format, pointer, df)
-                    encoded_term = term.encode('ascii')
-                    file.write(encoded_term + packed_values)
-                except:
-                    print(f"Couldn't save term {term}")                
+                    packed_values = struct.pack(output_format, pointer, df)                    
+                    encoded_term = term.encode('utf-8')
+                    
+                    if len(encoded_term) > max_term_length:
+                        encoded_term = encoded_term[:max_term_length]
+                    else:
+                        # Fill with spaces
+                        encoded_term = encoded_term + (" " * (max_term_length - len(encoded_term))).encode("utf-8")                        
+                    written_bytes = file.write(encoded_term)                    
+                    written_bytes += file.write(packed_values)
+                    if written_bytes != (self.VOCAB_TERM_LENGTH + struct.calcsize(output_format)):
+                        print(f"Error: written bytes {written_bytes} defer from expected size {self.VOCAB_TERM_LENGTH + struct.calcsize(output_format)} for term {term} with length {len(term)} and entry {struct.calcsize(output_format)}")
+                except Exception as e:
+                    print(f"Couldn't save term {term}: {e}")
         file.close()
        
 

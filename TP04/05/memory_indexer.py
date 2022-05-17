@@ -16,7 +16,7 @@ class Indexer:
 
     def __init__(self):
 
-        self.MIN_LENGTH = 1
+        self.MIN_LENGTH = 3
         self.MAX_LENGTH = 30
 
         self.tokenizer = Tokenizer(self.MIN_LENGTH, self.MAX_LENGTH, proper_name_splitting=True)

@@ -1,3 +1,4 @@
+import chunk
 import struct
 import sys
 import pickle
@@ -16,15 +17,15 @@ class PostingListRetriever:
         self.vocabulary = {}
         try:
              with open(self.vocabulary_path, "rb") as file:       
-                chunk_size = self.VOCAB_TERM_LENGTH + 6
-                for binary_info in iter(partial(file.read, chunk_size), b''):                      
-                    data_format = "IH"                         
-                    term = binary_info[:self.VOCAB_TERM_LENGTH].decode("ascii").strip()                     
+                data_format = "IH"               
+                chunk_size = self.VOCAB_TERM_LENGTH + struct.calcsize(data_format)
+                for binary_info in iter(partial(file.read, chunk_size), b''):
+                    term = binary_info[:self.VOCAB_TERM_LENGTH].decode("utf-8").strip()                     
                     data = struct.unpack(data_format, binary_info[self.VOCAB_TERM_LENGTH:])
                     self.vocabulary[term] = [data[0], data[1]]
                 return self.vocabulary
         except Exception as e:
-            print(f"No se pudo cargar el vocabulario desde {self.vocabulary_path}: {e}")
+            print(f"No se pudo cargar el vocabulario desde {self.vocabulary_path} con data {binary_info}: {e}")
             sys.exit(0)
 
     def load_posting(self, term):                  

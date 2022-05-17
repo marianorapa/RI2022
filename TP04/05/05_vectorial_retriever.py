@@ -1,5 +1,4 @@
 # Recibe una query y devuelve ranking por modelo vectorial con TF-IDF
-from cmath import log, sqrt
 import math
 import sys
 import struct
@@ -96,9 +95,10 @@ class VectorialRetriever:
                 else:
                     posting_pointers[term_pos] = None
             results[current_doc] = cosine_numerator / (self.docs_norms[current_doc] * query_norm)
-            print(f"Results ready for doc {current_doc}: {results[current_doc]}")            
-        
-        return results
+                
+        sorted_results = sorted(results.items(), key=lambda kv: kv[1], reverse=True)
+
+        return sorted_results
 
 
 
@@ -119,10 +119,10 @@ class VectorialRetriever:
         for term in query_terms.keys():
             frequency = query_terms[term]         
             df = self.vocabulary[term][1]   
-            idf = math.log(len(self.vocabulary) / df)
-            output[term] = (0.5 + 0.5 * (frequency/max_freq)) * log(idf)
-            squared_sum += pow(output[term], 2)
-        return output, sqrt(squared_sum)
+            idf = math.log(len(self.vocabulary) / df)            
+            output[term] = (0.5 + 0.5 * (frequency/max_freq)) * math.log(idf)
+            squared_sum += pow(output[term], 2)            
+        return output, math.sqrt(squared_sum)
 
     def __calculate_weighted_posting__(self, posting):
         df = len(posting)
@@ -134,12 +134,17 @@ class VectorialRetriever:
             output.append([doc_id, tf * idf])
         return output
 
+def print_results(results):
+    for entry in results:
+        print(f"{entry[0]} {entry[1]}")
+
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         print('Pasar como argumento una query')
         sys.exit(0)
-
+    
     query = sys.argv[1]
 
     retriever = VectorialRetriever()
     results = retriever.query(query)
+    print_results(results)

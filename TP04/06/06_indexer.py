@@ -23,7 +23,7 @@ class FrequencyIndexer:
     def index_dir(self, dir):
         self.index, self.doc_vectors, self.docs_total_terms = self.base_indexer.index_dir(dir)
         self.__save_index__()        
-        #self.__save_vocabulary__()
+        self.__save_vocabulary__()
         #self.__calculate_and_save_docs_norm_by_tf__()
     
     def get_index_size(self):
@@ -122,3 +122,4 @@ if __name__ == '__main__':
     vocab_size = indexer.get_vocab_size()
     if index_size != vocab_size:
         print("Something is wrong with index and vocab size")
+    print(indexer.index)    

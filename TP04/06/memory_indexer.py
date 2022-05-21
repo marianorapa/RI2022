@@ -97,8 +97,8 @@ class Indexer:
             self.total_docs = doc_id - 1
         return index, doc_vectors, doc_terms
 
-    def get_terms_from_query(self, query):
-        return self.tokenizer.get_tokens_with_frequency(query)
+    def get_terms_from_query(self, query, grouping):
+        return self.tokenizer.get_tokens_as_list(query, )
 
     # ----- Saving
 

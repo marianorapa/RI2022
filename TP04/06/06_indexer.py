@@ -5,7 +5,7 @@ import sys
 
 class FrequencyIndexer:
 
-    def __init__(self, index_output_path = "05_index.bin", vocabulary_output_path = "05_vocab.bin", doc_norms_output_path = "05_doc_norms.bin", positions_output_path = "05_positions.bin"):
+    def __init__(self, index_output_path = "06_index.bin", vocabulary_output_path = "06_vocab.bin", doc_norms_output_path = "06_doc_norms.bin", positions_output_path = "06_positions.bin"):
         self.base_indexer = Indexer()
         self.posting_format = "IIH"
         self.posting_entry_size = 6

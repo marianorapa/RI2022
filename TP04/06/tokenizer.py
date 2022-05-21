@@ -130,6 +130,61 @@ class Tokenizer:
 
         return result
 
+    def get_tokens_as_list(self, original_line): 
+        try:
+            line = self.__text_from_html__(original_line)
+            if len(line) == 0:
+                line = original_line # html parsing failed
+        except:
+            pass             
+        abbreviations_list      = []
+        numbers_list            = []    
+        mails_urls_list         = []
+        dates_list              = []
+
+        result = []
+
+        line = self.__translate(line).strip()              
+        # Intentar identificar nombres propios 
+        proper_names_list = self.__get_proper_names(line)    
+        for name in proper_names_list:
+            line = line.replace(name, "")            
+
+        # Separación de la línea por espacios                    
+        tokens_list = line.strip().split()                
+
+        for raw_token in tokens_list:                         
+            token = raw_token.strip()                                   
+            special_token = False                       
+            if self.__is_number(token):                
+                numbers_list.append(token)   
+                special_token = True     
+            elif (self.__is_mail_or_url(token)):
+                mails_urls_list.append(token)                                                    
+                special_token = True        
+                
+            elif (self.__is_abbreviation(token)):
+                abbreviations_list.append(token)  
+                
+            elif (self.__is_date(token)):                
+                dates_list.append(token)
+                special_token = True    
+                
+            if not special_token:                        
+                token = self.__remove_punctuation(token).lower()                    
+                if not self.__only_letters__(token):
+                    continue
+            else:
+                token = self.__remove_punctuation_special_token__(token).lower()
+
+            if special_token or (len(token) >= self.min_length and len(token) <= self.max_length):                
+                result.append(token)
+        
+        for name in proper_names_list:
+            name = self.__remove_punctuation(name).lower()
+            result.append(name)
+
+        return result
 
     ## BeautifulSoup section
     def __tag_visible__(self, element):

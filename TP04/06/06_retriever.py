@@ -5,12 +5,6 @@ from memory_indexer import Indexer
 
 class LiteralProximityRetriever:
 
-    ###
-    # - Toma el índice de entrada. Recibe una query.
-    # - Recupera las postings de cada término a memoria.
-    # - Con operaciones de conjuntos (dadas por la query), combinar las postings
-    ###
-
     def __init__(self,  index_path = "06_index.bin", vocabulary_path = "06_vocab.bin", positions_path = "06_positions.bin"):
         self.posting_format = "IIH"        
         self.index_path = index_path
@@ -23,6 +17,7 @@ class LiteralProximityRetriever:
         self.__load_vocabulary__()
 
         self.PROXIMITY_OP = "cerca_de"
+        self.PROXIMITY_DISTANCE = 3
 
     def __load_vocabulary__(self):
         self.vocabulary = {}
@@ -61,9 +56,7 @@ class LiteralProximityRetriever:
                     result[doc_id] = list(struct.unpack(data_format, binary_positions))
                 return result
 
-    def __process_phrase_query__(self, query):
-        # Obtener postings de cada término
-        terms = self.indexer.get_terms_from_query(query, grouping=False)
+    def __get_candidate_docs__(self, terms):
         postings = {}             
         min_posting = -1        
         min_term = ""
@@ -85,10 +78,15 @@ class LiteralProximityRetriever:
                     break
             if candidate:
                 candidate_docs.append(doc_id)
-        print(f"Candidate docs are {candidate_docs}")
+        return candidate_docs, postings
+
+    def __process_phrase_query__(self, query):
+        # Obtener postings de cada término
+        terms = self.indexer.get_terms_from_query(query)       
+        candidate_docs, postings = self.__get_candidate_docs__(terms)
         result = []
         for doc_id in candidate_docs:
-            phrase_ok = True
+            contiguous = True
             for i in range(0, len(terms) - 1):
                 term_a = terms[i]
                 term_b = terms[i+1]
@@ -96,49 +94,52 @@ class LiteralProximityRetriever:
                 term_b_positions = postings[term_b][doc_id]
                 contiguous = self.__contiguous_terms__(term_a_positions, term_b_positions)
                 if not contiguous:
-                    phrase_ok = False
                     break
-            if phrase_ok:
+            if contiguous:
                 result.append(doc_id)
         # Verificar con las posiciones de cada documento en un dict (query_terms_positions) si contains_literal_query
         return result
 
     def __process_proximity_query__(self, query):
-        pass
+        initial_terms = query.split(self.PROXIMITY_OP)
+        processed_terms = []        
+        for term in initial_terms:
+            if len(term.strip()) == 0:
+                print("Malformed query")
+                sys.exit()
+            subterms = self.indexer.get_terms_from_query(term)            
+            processed_terms.append(subterms[0])
+
+        candidate_docs, postings = self.__get_candidate_docs__(processed_terms)
+
+        result = []
+        for doc_id in candidate_docs:
+            contiguous_ok = True
+            for i in range(0, len(processed_terms) - 1):
+                term_a = processed_terms[i]
+                term_b = processed_terms[i+1]
+                positions_a = postings[term_a][doc_id]
+                positions_b = postings[term_b][doc_id]
+                contiguous_ok = self.__contiguous_terms__(positions_a, positions_b, self.PROXIMITY_DISTANCE, True)
+                if not contiguous_ok:
+                    break
+            if contiguous_ok:
+                result.append(doc_id)
+
+        return result
 
     def __process_normal_query__(self, query):
         return []
 
-    def __process_query__(self, query, first_call = False):
-        # parsear proximidad
+    def __process_query__(self, query, first_call = False):        
         if query.startswith("'") and query.endswith("'"):
             return self.__process_phrase_query__(query)
         if self.PROXIMITY_OP in query:
             return self.__process_proximity_query__(query)
         
-        return self.__process_normal_query__(query)
+        return self.__process_phrase_query__(query)
        
-    
-    def __contains_literal_query__(self, query_terms_positions):
-        for first_list_pos in query_terms_positions.keys()[0]:		# Voy por las posiciones del primer término		
-            previous_position = first_list_pos	
-            for key in query_terms_positions.keys()[1:]:		# Voy por las demás keys			
-                # Para esta key me fijo si encuentro una posicion consecutiva
-                positions = query_terms_positions[key]
-                consecutives = False
-                for position in positions:
-                    if position == previous_position + 1:
-                        consecutives = True
-                        previous_position = position
-                        break			# Del tercer for
-                if not consecutives:
-                    break # Del segundo for - No encontré consecutiva -> sigo con la proxima posicion de la primera fila (main for)                
-            
-            return True # si sigo acá porque no hubo break es que encontré todas las consecutivas
         
-        return False
-
-
     def __contiguous_terms__(self, term_a_positions, term_b_positions, distance = 1, abs_value = False):
         pointer_a = 0
         pointer_b = 0

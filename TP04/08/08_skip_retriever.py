@@ -53,9 +53,13 @@ class SkipListRetriever:
 
 
 
-def print_skips(skip_list):
-    for entry in skip_list:
-        print(f"{entry[0]} {entry[1]}")
+def print_skips(skip_list, include_positions):
+    if include_positions:
+        for entry in skip_list:        
+            print(f"{entry[0]} {entry[1]}")
+    else:
+        for entry in skip_list:        
+            print(f"{entry[0]}")
 
 def save(dict):
     with open("vocab.txt", "w") as file:
@@ -67,11 +71,14 @@ if __name__ == '__main__':
     if len(sys.argv) < 2:
         print("Es obligatorio un término para recuperar su posting")
         sys.exit(0)
-    if len(sys.argv) < 4:        
-        retriever = SkipListRetriever()    
-    else:
-        retriever = SkipListRetriever(sys.argv[2], sys.argv[3])
+    if len(sys.argv) < 3:        
+        include_positions = False
+        term_arg_pos = 1
+    else:        
+        include_positions = sys.argv[1].lower() == "true"    
+        term_arg_pos = 2
+    
+    retriever = SkipListRetriever()
+    skips = retriever.load_skip(sys.argv[term_arg_pos])
 
-    skips = retriever.load_skip(sys.argv[1])
-
-    print_skips(skips)
+    print_skips(skips, include_positions)

@@ -18,7 +18,7 @@ class BooleanRetriever:
         self.posting_entry_size = 4
         self.index_path = index_path
         self.vocabulary_path = vocabulary_path
-        self.VOCAB_TERM_LENGTH = 84
+        self.VOCAB_TERM_LENGTH = 100
         self.__load_vocabulary__()
     
         self.AND_OP = "&"
@@ -32,7 +32,7 @@ class BooleanRetriever:
                 chunk_size = self.VOCAB_TERM_LENGTH + 6
                 for binary_info in iter(partial(file.read, chunk_size), b''):                      
                     data_format = "IH"                         
-                    term = binary_info[:self.VOCAB_TERM_LENGTH].decode("ascii").strip()                                
+                    term = binary_info[:self.VOCAB_TERM_LENGTH].decode("utf-8").strip()                                
                     data = struct.unpack(data_format, binary_info[self.VOCAB_TERM_LENGTH:])    
                     self.vocabulary[term] = [data[0], data[1]]                
 
@@ -106,7 +106,19 @@ class BooleanRetriever:
         if (op == self.NEG_OP):
             return set_a - set_b
 
-    def __process_query__(self, query, first_call = False):
+    def __calc_taat_operation__(self, list_a, op, list_b):
+        output = []
+        for term in list_a:
+            append = (op == self.AND_OP and term in list_b) | (op == self.OR_OP) | (op == self.NEG_OP and term not in list_b)
+            if append and term not in output:
+                output.append(term)
+        if op == self.OR_OP:
+            for term in list_b:
+                if term not in output:
+                    output.append(term)
+        return sorted(output)
+
+    def __process_query__(self, query, first_call = False, set_operation=True):
         # Get left_side, operator, right_side
         if self.__is_term__(query):       
             posting = self.__load_posting__(query)            
@@ -115,23 +127,31 @@ class BooleanRetriever:
             return posting
         
         left_side, operation, right_side = self.__process_non_terminal__(query)
-        left_side_posting = self.__process_query__(left_side)
-        rigth_side_posting = self.__process_query__(right_side)            
-        return sorted(self.__calc_set_operation__(left_side_posting, operation, rigth_side_posting))
+        left_side_posting = self.__process_query__(left_side, set_operation=set_operation)
+        rigth_side_posting = self.__process_query__(right_side, set_operation=set_operation)            
+        if set_operation:
+            return sorted(self.__calc_set_operation__(left_side_posting, operation, rigth_side_posting))
+        else:
+            return self.__calc_taat_operation__(left_side_posting, operation, rigth_side_posting)
     
+
+    def process_query(self, query, set_operation=True):
+        return self.__process_query__(query, first_call=True, set_operation=set_operation)
 
 def print_posting(posting):
     for doc_id in posting:
         print(f"{doc_id}")
 
 if __name__ == '__main__':
+    set_operation = False
     if len(sys.argv) < 2:
         print("Es obligatorio indicar una query entre comillas")
         sys.exit(0)
-    if len(sys.argv) < 4:        
+    if len(sys.argv) < 3:        
         retriever = BooleanRetriever()    
     else:
-        retriever = BooleanRetriever(sys.argv[2], sys.argv[3])
+        set_operation = (sys.argv[2].lower() == "true")
+        retriever = BooleanRetriever()
     
-    result = retriever.__process_query__(sys.argv[1], first_call=True)
+    result = retriever.__process_query__(sys.argv[1], first_call=True, set_operation=set_operation)
     print_posting(result)

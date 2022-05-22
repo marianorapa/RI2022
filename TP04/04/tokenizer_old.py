@@ -1,6 +1,4 @@
 import re
-from bs4 import BeautifulSoup
-from bs4.element import Comment
 
 class Tokenizer:
     def __init__(self, min_length, max_length, proper_name_splitting = False):
@@ -50,7 +48,7 @@ class Tokenizer:
         return re.sub("[^\w\s]|_", "", token)
 
     def __remove_punctuation_special_token__(self, token):
-        return re.sub("[^\w\s/@\.:-\?&\|]", "", token)
+        return re.sub("[^\w\s/@\.:-\?]", "", token)
 
     def __translate(self, to_translate):
         tabin = u'áäâàãéëèêẽíïĩìîóõöòôúüùûũñ'
@@ -65,13 +63,7 @@ class Tokenizer:
     def __only_letters__(self, token):        
         return bool(re.match("\A[a-z]+\Z", token))
 
-    def get_tokens_with_frequency(self, original_line): 
-        try:
-            line = self.__text_from_html__(original_line)
-            if len(line) == 0:
-                line = original_line # html parsing failed
-        except:
-            pass             
+    def get_tokens_with_frequency(self, line):        
         abbreviations_list      = []
         numbers_list            = []    
         mails_urls_list         = []
@@ -123,21 +115,6 @@ class Tokenizer:
 
         return result
 
-
-    ## BeautifulSoup section
-    def __tag_visible__(self, element):
-        if element.parent.name in ['style', 'script', 'head', 'title', 'meta', '[document]']:
-            return False
-        if isinstance(element, Comment):
-            return False
-        return True
-
-    def __text_from_html__(self, body):
-        soup = BeautifulSoup(body, 'html.parser')
-        texts = soup.findAll(text=True)
-        visible_texts = filter(self.__tag_visible__, texts)  
-        return u" ".join(t.strip() for t in visible_texts)
-    
 if __name__ == '__main__':
     tokenizer = Tokenizer(3, 25)
     print(tokenizer.get_tokens_with_frequency("td257160km prueba² prueba corto žarnićli"))

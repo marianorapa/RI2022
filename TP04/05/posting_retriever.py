@@ -1,4 +1,3 @@
-import chunk
 import struct
 import sys
 import pickle
@@ -18,8 +17,9 @@ class PostingListRetriever:
         try:
              with open(self.vocabulary_path, "rb") as file:       
                 data_format = "IH"               
-                chunk_size = self.VOCAB_TERM_LENGTH + struct.calcsize(data_format)
-                for binary_info in iter(partial(file.read, chunk_size), b''):
+                chunk_size = self.VOCAB_TERM_LENGTH + 6
+                for binary_info in iter(partial(file.read, chunk_size), b''):                      
+                              
                     term = binary_info[:self.VOCAB_TERM_LENGTH].decode("utf-8").strip()                     
                     data = struct.unpack(data_format, binary_info[self.VOCAB_TERM_LENGTH:])
                     self.vocabulary[term] = [data[0], data[1]]
@@ -67,6 +67,6 @@ if __name__ == '__main__':
 
     posting = retriever.load_posting(sys.argv[1])
 
-    save(retriever.get_vocabulary())
+    #save(retriever.get_vocabulary())
 
     print_posting(posting)

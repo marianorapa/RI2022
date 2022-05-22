@@ -26,7 +26,7 @@ class LiteralProximityRetriever:
                 chunk_size = self.VOCAB_TERM_LENGTH + 6
                 for binary_info in iter(partial(file.read, chunk_size), b''):                      
                     data_format = "IH"                         
-                    term = binary_info[:self.VOCAB_TERM_LENGTH].decode("ascii").strip()                                
+                    term = binary_info[:self.VOCAB_TERM_LENGTH].decode("utf-8").strip()                                
                     data = struct.unpack(data_format, binary_info[self.VOCAB_TERM_LENGTH:])    
                     self.vocabulary[term] = [data[0], data[1]]                
 
@@ -97,7 +97,6 @@ class LiteralProximityRetriever:
                     break
             if contiguous:
                 result.append(doc_id)
-        # Verificar con las posiciones de cada documento en un dict (query_terms_positions) si contains_literal_query
         return result
 
     def __process_proximity_query__(self, query):
@@ -157,11 +156,8 @@ class LiteralProximityRetriever:
             else:
                 if pos_a < pos_b:
                     pointer_a += 1
-                elif pos_b <= pos_a:
-                    pointer_b += 1
-                #else:
-                #    pointer_a +=1
-                #    pointer_b += 1
+                elif pos_b <= pos_a:        # Si son iguales incrementa solo uno, para soportar dos veces el mismo término
+                    pointer_b += 1                
         return False        
 
 def print_posting(posting):

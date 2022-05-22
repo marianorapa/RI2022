@@ -121,5 +121,4 @@ if __name__ == '__main__':
     print(f"Index size (in terms) is: {index_size}")
     vocab_size = indexer.get_vocab_size()
     if index_size != vocab_size:
-        print("Something is wrong with index and vocab size")
-    print(indexer.index)    
+        print("Something is wrong with index and vocab size")     

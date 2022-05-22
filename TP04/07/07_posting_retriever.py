@@ -66,6 +66,4 @@ if __name__ == '__main__':
 
     posting = retriever.load_posting(sys.argv[1])
 
-    save(retriever.get_vocabulary())
-
     print_posting(posting)

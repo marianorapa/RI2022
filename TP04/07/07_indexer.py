@@ -15,7 +15,7 @@ class BooleanIndexer:
         self.vocabulary = {}                
         self.skips_output_path = skips_output_path
         
-        self.SKIP_AMOUNT = 12
+        self.SKIP_AMOUNT = 6
 
         self.VOCAB_TERM_LENGTH = 100
     
@@ -50,9 +50,9 @@ class BooleanIndexer:
                     for doc_id in posting_lists:                        
                         i += 1
                         values.append(doc_id[0])
-                        if i < df and i % self.SKIP_AMOUNT == 0:
+                        if i % self.SKIP_AMOUNT == 0:
                             skips_list.append(doc_id[0])
-                            skips_list.append(i - 1)        # Se almacena el indice del doc en la posting, zero-based
+                            skips_list.append(i)        # Se almacena el indice del doc en la posting, non-zero-based
                     
                     #values = [sublist[0] for sublist in posting_lists]                                         
                     packed_postings = struct.pack(posting_output_format, *values)                    

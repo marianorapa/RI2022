@@ -97,7 +97,7 @@ class BooleanRetriever:
                                 if previous_entry is not None:                                        
                                     skip_candidate = previous_entry[1]
                                     if skip_candidate > pointers[term]:     # Chequeo que la skip no me indique un doc id menor al previo
-                                        next_pointer = skip_candidate
+                                        next_pointer = skip_candidate - 1   # La lista no es zero-based
                                     break
                             else:
                                 # Cuando me paso 

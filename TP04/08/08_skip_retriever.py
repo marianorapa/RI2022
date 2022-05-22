@@ -1,4 +1,4 @@
-from math import ceil
+from math import ceil, floor
 import struct
 import sys
 from functools import partial
@@ -40,7 +40,7 @@ class SkipListRetriever:
             if skips_pointer > -1:
                 with open(self.skips_path, "rb") as file:
                     file.seek(skips_pointer)
-                    skip_list_size = ceil(posting_length / self.SKIP_AMOUNT) - 1
+                    skip_list_size = floor(posting_length / self.SKIP_AMOUNT)                    
                     data_format = skip_list_size * self.skips_format
                     binary_list = file.read(struct.calcsize(data_format))
                     data = struct.unpack(data_format, binary_list)

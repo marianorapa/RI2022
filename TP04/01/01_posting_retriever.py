@@ -10,7 +10,7 @@ class PostingListRetriever:
         self.posting_entry_size = 4
         self.index_path = index_path
         self.vocabulary_path = vocabulary_path        
-        self.VOCAB_TERM_LENGTH = 84
+        self.VOCAB_TERM_LENGTH = 100
         self.__load_vocabulary__()
 
     def __load_vocabulary__(self):

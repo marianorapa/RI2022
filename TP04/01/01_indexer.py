@@ -42,20 +42,46 @@ class BooleanIndexer:
                 bytes_written = file.write(packed_postings)
                 pointer += bytes_written
     
+    #def __save_vocabulary__(self):
+    #    max_term_length = self.base_indexer.get_max_term_length()        
+    #    with open(self.vocabulary_output_path, "wb") as file:
+    #        for term in self.vocabulary.keys():
+    #            try:
+    #                df = self.vocabulary[term][0]
+    #                pointer = self.vocabulary[term][1]                
+    #                term = term + " " * (max_term_length - len(term))
+    #                output_format = "IH"                
+    #                packed_values = struct.pack(output_format, pointer, df)
+    #                encoded_term = term.encode('ascii')
+    #                file.write(encoded_term + packed_values)
+    #            except:
+    #                print(f"Couldn't save term {term}")                
+    #    file.close()
+
     def __save_vocabulary__(self):
-        max_term_length = self.base_indexer.get_max_term_length()        
+        #max_term_length = self.base_indexer.get_max_term_length()        
+        max_term_length = self.VOCAB_TERM_LENGTH
         with open(self.vocabulary_output_path, "wb") as file:
             for term in self.vocabulary.keys():
                 try:
                     df = self.vocabulary[term][0]
                     pointer = self.vocabulary[term][1]                
-                    term = term + " " * (max_term_length - len(term))
+                                        
                     output_format = "IH"                
-                    packed_values = struct.pack(output_format, pointer, df)
-                    encoded_term = term.encode('ascii')
-                    file.write(encoded_term + packed_values)
-                except:
-                    print(f"Couldn't save term {term}")                
+                    packed_values = struct.pack(output_format, pointer, df)                    
+                    encoded_term = term.encode('utf-8')
+                    
+                    if len(encoded_term) > max_term_length:
+                        encoded_term = encoded_term[:max_term_length]
+                    else:
+                        # Fill with spaces
+                        encoded_term = encoded_term + (" " * (max_term_length - len(encoded_term))).encode("utf-8")                        
+                    written_bytes = file.write(encoded_term)                    
+                    written_bytes += file.write(packed_values)
+                    if written_bytes != (self.VOCAB_TERM_LENGTH + struct.calcsize(output_format)):
+                        print(f"Error: written bytes {written_bytes} defer from expected size {self.VOCAB_TERM_LENGTH + struct.calcsize(output_format)} for term {term} with length {len(term)} and entry {struct.calcsize(output_format)}")
+                except Exception as e:
+                    print(f"Couldn't save term {term}: {e}")
         file.close()
         
     def save_stats(self):        
@@ -81,7 +107,7 @@ if __name__ == '__main__':
     indexer = BooleanIndexer()
     indexer.index_dir(sys.argv[1])    
     indexer.save_stats()
-    print(f"Max term length is: {indexer.get_max_term_length()}")
+    #print(f"Max term length is: {indexer.get_max_term_length()}")
     index_size = indexer.get_index_size()
     print(f"Index size (in terms) is: {index_size}")
     vocab_size = indexer.get_vocab_size()

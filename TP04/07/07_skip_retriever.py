@@ -13,7 +13,7 @@ class SkipListRetriever:
         self.vocabulary_path = vocabulary_path        
         self.VOCAB_TERM_LENGTH = 100
         
-        self.SKIP_AMOUNT = 6
+        self.SKIP_AMOUNT = 25
 
         self.__load_vocabulary__()
 

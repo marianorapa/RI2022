@@ -15,7 +15,7 @@ class BooleanIndexer:
         self.vocabulary = {}                
         self.skips_output_path = skips_output_path
         
-        self.SKIP_AMOUNT = 6
+        self.SKIP_AMOUNT = 25
 
         self.VOCAB_TERM_LENGTH = 100
     
@@ -37,8 +37,7 @@ class BooleanIndexer:
         index_pointer = 0
         skips_pointer = 0
         with open(self.index_output_path, "wb") as index_file:
-            with open(self.skips_output_path, "wb") as skips_file:
-                i = 0
+            with open(self.skips_output_path, "wb") as skips_file:                
                 for term in self.index.keys():                
                     posting_lists = self.index[term]
                     df = len(posting_lists)

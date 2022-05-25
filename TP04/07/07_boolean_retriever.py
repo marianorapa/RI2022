@@ -42,11 +42,13 @@ class BooleanRetriever:
 
 
     def __intersection_with_skips__(self, postings, skips):
-        pointers = {}        
+        pointers = {}                
         shortest_posting_term = list(postings.keys())[0]
         shortest_posting_term_size = len(postings[shortest_posting_term])
-        for term in postings:
+        skip_pointers = {}
+        for term in postings:            
             pointers[term] = 0            
+            skip_pointers[term] = 0
             if len(postings[term]) < shortest_posting_term_size:
                 shortest_posting_term = term
                 shortest_posting_term_size = len(postings[term])
@@ -54,16 +56,20 @@ class BooleanRetriever:
 
         min_term = list(postings.keys())[0]
         min_doc_id = postings[min_term][0]
- 
 
         finished = False
-        while not finished:
-            #max_term = min_term
+
+        while not finished:            
             max_doc_id = min_doc_id
             same_doc_id = True
-            for term in postings.keys():
+            for term in postings.keys():                
                 term_pointer = pointers[term]
+                if term_pointer >= len(postings[term]):
+                    finished = True
+                    break
+
                 term_current_doc_id = postings[term][term_pointer]
+
                 if term_current_doc_id < min_doc_id:
                     min_term = term
                     min_doc_id = term_current_doc_id
@@ -71,42 +77,63 @@ class BooleanRetriever:
                 elif term_current_doc_id > min_doc_id:
                     same_doc_id = False
                     if term_current_doc_id > max_doc_id:
-                        #max_term = term
                         max_doc_id = term_current_doc_id
 
             if same_doc_id:
-                result.append(min_doc_id)
+                result.append(min_doc_id)    
 
             # Actualizo pointers de los menores doc_id
             for term in postings.keys():
                 term_pointer = pointers[term]
                 term_current_doc_id = postings[term][term_pointer]
-                if term_current_doc_id == min_doc_id and min_doc_id == max_doc_id:                    
-                    pointers[term] += 1
-                    if len(postings[term]) == pointers[term]:
+                if term_current_doc_id == min_doc_id and min_doc_id == max_doc_id: 
+                    pointers[term] += 1                    
+                    if len(postings[term]) <= pointers[term]:
                         finished = True
                 elif term_current_doc_id < max_doc_id:
                     # Adelantar este puntero hasta una posicion de la skip mayor o igual al max_doc_id (si existe, más uno si no)
                     next_pointer = pointers[term] + 1
-                    if len(postings[term]) == next_pointer:
+                    if len(postings[term]) <= next_pointer:
                         finished = True
-                    else:
-                        previous_entry = None                        
-                        for entry in skips[term]:
-                            if entry[0] >= max_doc_id:                                
-                                if previous_entry is not None:                                        
-                                    skip_candidate = previous_entry[1]
-                                    if skip_candidate > pointers[term]:     # Chequeo que la skip no me indique un doc id menor al previo
-                                        next_pointer = skip_candidate - 1   # La lista no es zero-based
+                    elif len(skips[term]) > 0:                        
+                        skip_pointer = skip_pointers[term] # pointer de la skip actual      
+                        if skip_pointer < len(skips[term]):                            
+                            
+                            current_skip_entry = skips[term][skip_pointer]
+                            current_skip_doc_id = current_skip_entry[0]
+                            current_skip_pos = current_skip_entry[1]
+                            previous_skip_doc_id = current_skip_doc_id
+                            previous_skip_pos = current_skip_pos - 1
+
+                            # Itero por la skip hasta encontrar un documento que supere al máximo o terminar la lista de skips
+                            while current_skip_doc_id < max_doc_id :
+                                # Avanzar en la skip                            
+                                previous_skip_pos = current_skip_pos - 1 # zero-based
+                                previous_skip_doc_id = current_skip_doc_id
+                                skip_pointer += 1
+                                if skip_pointer == len(skips[term]):
                                     break
-                            else:
-                                # Cuando me paso 
-                                previous_entry = entry    
-                    pointers[term] = next_pointer                    
+                                current_skip_doc_id, current_skip_pos = skips[term][skip_pointer]
+
+                            if skip_pointer == len(skips[term]):
+                                # Estoy en la última posición de las skips y su doc id es menor al máximo
+                                next_pointer = max(next_pointer, current_skip_pos - 1)                                                          
+                            elif previous_skip_doc_id < max_doc_id:                            
+                                next_pointer = previous_skip_pos
+                            
+                            skip_pointers[term] = skip_pointer
+
+                    pointers[term] = next_pointer
+                    #print(next_pointer)
+                    if len(postings[term]) <= next_pointer:
+                        finished = True                                     
             
             # Cambiar min_doc_id por uno candidato si todavia quedan
-            if not finished:                
-                min_doc_id = postings[min_term][pointers[min_term]]
+            if not finished: 
+                if pointers[min_term] < len(postings[min_term]):
+                    min_doc_id = postings[min_term][pointers[min_term]]
+                else:
+                    finished = True
         
         return result
 
@@ -157,16 +184,17 @@ class BooleanRetriever:
     def process_query(self, query, use_skips = False):
         terms = self.indexer.get_terms_from_query(query)
         postings = {}
-        skips = {}
+        skips = {}        
         for term in terms.keys():
             if term in self.vocabulary:
-                postings[term] = self.posting_retriever.load_posting(term)
+                postings[term] = self.posting_retriever.load_posting(term)                
                 if use_skips:
                     skips[term] = self.skips_retriever.load_skip(term)
-                    return self.__intersection_with_skips__(postings, skips)
-                return self.__intersection__(postings)
-            else:
-                return []
+        if len(postings) > 0:
+            if use_skips:
+                return self.__intersection_with_skips__(postings, skips)
+            return self.__intersection__(postings)     
+        return []       
     
 def print_posting(posting):
     for doc_id in posting:

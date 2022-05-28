@@ -4,6 +4,7 @@ from memory_indexer import Indexer
 import struct
 import sys
 from compressor import Compressor
+from bitarray import bitarray
 
 posting_retriever_lib = __import__("11_postings_retriever")
 
@@ -44,7 +45,7 @@ class FrequencyIndexer:
         self.__save_index__(self.index_gamma_path, 1)        
         end = time.time()        
         self.__save_vocabulary__(self.vocabulary_gamma_path)
-        print(f"Gamma compression index saving time: {start - end}")
+        print(f"Gamma compression index saving time: {end - start}")
         
         # With gaps
         start = time.time()
@@ -58,8 +59,7 @@ class FrequencyIndexer:
         end = time.time()        
         self.__save_vocabulary__(self.vocabulary_gaps_gamma_path)
         
-        print(f"Gamma compression index with gaps saving time: {end - start}")
-        self.__save_vocabulary__()
+        print(f"Gamma compression index with gaps saving time: {end - start}")       
        
 
     def evaluate_posting_retrieval(self):
@@ -108,25 +108,25 @@ class FrequencyIndexer:
                 posting_lists = self.index[term]
                 df = len(posting_lists)
                 values = [item for sublist in posting_lists for item in sublist]
-                compressed = []
-                for value in values:
-                    bytes = self.compressor.compress(value, compression_method)
-                    for byte in bytes:
-                        compressed.append(byte)
+                #compressed = []
+                #for value in values:
+                #    bytes = self.compressor.compress(value, compression_method)
+                #    for byte in bytes:
+                #        compressed.append(byte)
 
+                compressed = self.compressor.compress(values, compression_method)
                 output_format = "B" * len(compressed)
                 packed_postings = struct.pack(output_format, *compressed)
                 bytes_written = file.write(packed_postings)
                 self.vocabulary[term] = [df, pointer, bytes_written]
                 pointer += bytes_written
-    
+
     def __save_index_with_gaps__(self, output_path, compression_method = 1):          
         pointer = 0
         with open(output_path, "wb") as file:
             for term in self.index.keys():
                 posting_lists = self.index[term]
-                df = len(posting_lists)
-                self.vocabulary[term] = [df, pointer]
+                df = len(posting_lists)                
                 
                 previous_doc_id = posting_lists[0][0]
                 gaps_lists = []
@@ -134,17 +134,15 @@ class FrequencyIndexer:
                 for entry in posting_lists[1:]:                    
                     doc_id = entry[0]
                     gaps_lists.append([doc_id - previous_doc_id, entry[1]])
-                
+                print(gaps_lists)
                 values = [item for sublist in gaps_lists for item in sublist]
-                compressed = []
-                for value in values:
-                    bytes = self.compressor.compress(value, compression_method)
-                    for byte in bytes:
-                        compressed.append(byte)
 
+                compressed = self.compressor.compress(values, compression_method)                
+                
                 output_format = "B" * len(compressed)
                 packed_postings = struct.pack(output_format, *compressed)
                 bytes_written = file.write(packed_postings)
+                self.vocabulary[term] = [df, pointer, bytes_written]
                 pointer += bytes_written
     
 

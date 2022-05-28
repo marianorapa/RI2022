@@ -41,22 +41,7 @@ class BooleanIndexer:
                 packed_postings = struct.pack(output_format, *values)
                 bytes_written = file.write(packed_postings)
                 pointer += bytes_written
-    
-    #def __save_vocabulary__(self):
-    #    max_term_length = self.base_indexer.get_max_term_length()        
-    #    with open(self.vocabulary_output_path, "wb") as file:
-    #        for term in self.vocabulary.keys():
-    #            try:
-    #                df = self.vocabulary[term][0]
-    #                pointer = self.vocabulary[term][1]                
-    #                term = term + " " * (max_term_length - len(term))
-    #                output_format = "IH"                
-    #                packed_values = struct.pack(output_format, pointer, df)
-    #                encoded_term = term.encode('ascii')
-    #                file.write(encoded_term + packed_values)
-    #            except:
-    #                print(f"Couldn't save term {term}")                
-    #    file.close()
+
 
     def __save_vocabulary__(self):
         #max_term_length = self.base_indexer.get_max_term_length()        

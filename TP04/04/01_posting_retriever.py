@@ -20,7 +20,7 @@ class PostingListRetriever:
                 chunk_size = self.VOCAB_TERM_LENGTH + 6
                 for binary_info in iter(partial(file.read, chunk_size), b''):                      
                     data_format = "IH"                         
-                    term = binary_info[:self.VOCAB_TERM_LENGTH].decode("ascii").strip()                     
+                    term = binary_info[:self.VOCAB_TERM_LENGTH].decode("utf-8").strip()                     
                     data = struct.unpack(data_format, binary_info[self.VOCAB_TERM_LENGTH:])
                     self.vocabulary[term] = [data[0], data[1]]                
         except Exception as e:

@@ -1,3 +1,5 @@
+from math import sqrt
+from math import ceil
 import pickle
 from memory_indexer import Indexer
 import struct
@@ -40,7 +42,8 @@ class BooleanIndexer:
             with open(self.skips_output_path, "wb") as skips_file:                
                 for term in self.index.keys():                
                     posting_lists = self.index[term]
-                    df = len(posting_lists)
+                    df = len(posting_lists)                    
+                    skip_amount = ceil(sqrt(df))                    
                     self.vocabulary[term] = [df, index_pointer, -1]
                     posting_output_format = df * self.posting_format
                     values = []
@@ -49,7 +52,8 @@ class BooleanIndexer:
                     for doc_id in posting_lists:                        
                         i += 1
                         values.append(doc_id[0])
-                        if i % self.SKIP_AMOUNT == 0:
+                        #if i % self.SKIP_AMOUNT == 0:
+                        if i % skip_amount == 0:
                             skips_list.append(doc_id[0])
                             skips_list.append(i)        # Se almacena el indice del doc en la posting, non-zero-based
                     

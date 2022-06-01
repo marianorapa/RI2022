@@ -54,9 +54,8 @@ class Indexer:
 
     def __index_doc(self, doc_id, doc, index, docs_terms):        
         try:
-            with open(doc, "r", encoding="utf-8") as f:                
-                
-                tokens = self.tokenizer.get_tokens_with_frequency(f.read())
+            with open(doc, "r", encoding="utf-8") as f:                                
+                tokens = self.tokenizer.get_tokens_with_frequency(f.read())                
                 docs_terms[doc_id] = [0, doc.stat().st_size]
                 for token in tokens.keys():
                     if token not in self.palabras_vacias:

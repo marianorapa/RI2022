@@ -1,3 +1,4 @@
+from math import ceil, sqrt
 import struct
 import sys
 from BTrees._OOBTree import OOBTree
@@ -29,6 +30,7 @@ class VocabMaker:
                 posting = [int(x) for x in posting]
                 posting = sorted(posting)               
                 skips_list = []
+                skip_amount = ceil(sqrt(int(df)))
                 i = 1                         # i comienza en 1 porque ya pongo un elemento
                 last_doc_id = posting[0]
                 delta_gaps = [last_doc_id]    # El primer id se agrega tal cual
@@ -37,7 +39,8 @@ class VocabMaker:
                     delta = doc_id - last_doc_id
                     delta_gaps.append(delta)
                     i += 1
-                    if i % self.SKIPS_K == 0:
+                    #if i % self.SKIPS_K == 0:
+                    if i % skip_amount == 0:
                         skips_list.append(doc_id)
                         skips_list.append(i)        # no zero-based
                     

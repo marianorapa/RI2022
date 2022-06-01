@@ -43,8 +43,7 @@ class BooleanIndexer:
                 pointer += bytes_written
 
 
-    def __save_vocabulary__(self):
-        #max_term_length = self.base_indexer.get_max_term_length()        
+    def __save_vocabulary__(self):            
         max_term_length = self.VOCAB_TERM_LENGTH
         with open(self.vocabulary_output_path, "wb") as file:
             for term in self.vocabulary.keys():

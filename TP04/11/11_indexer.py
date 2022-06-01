@@ -35,33 +35,42 @@ class FrequencyIndexer:
 
     def index_dir(self, dir):
         self.index, self.doc_vectors, self.docs_total_terms = self.base_indexer.index_dir(dir)
-        start = time.time()
-        self.__save_index__(self.index_variable_byte_path, 2)        
-        end = time.time()
-        print(f"Variable Byte compression index saving time: {end - start}")
-        self.__save_vocabulary__(self.vocabulary_variable_byte_path)
-        
-        start = time.time()
-        self.__save_index__(self.index_gamma_path, 1)        
-        end = time.time()        
-        self.__save_vocabulary__(self.vocabulary_gamma_path)
-        print(f"Gamma compression index saving time: {end - start}")
-        
-        # With gaps
-        start = time.time()
-        self.__save_index_with_gaps__(self.index_gaps_variable_byte_path, 2)        
-        end = time.time()
-        self.__save_vocabulary__(self.vocabulary_gaps_variable_byte_path)
-        print(f"Variable Byte compression index with gaps saving time: {end - start}")
-
-        start = time.time()
-        self.__save_index_with_gaps__(self.index_gaps_gamma_path, 1)        
-        end = time.time()        
-        self.__save_vocabulary__(self.vocabulary_gaps_gamma_path)
-        
-        print(f"Gamma compression index with gaps saving time: {end - start}")       
+        #start = time.time()
+        #self.save_index(self.index_variable_byte_path, 2)        
+        #end = time.time()
+        #print(f"Variable Byte compression index saving time: {end - start}")
+        #self.__save_vocabulary__(self.vocabulary_variable_byte_path)
+        #
+        #start = time.time()
+        #self.save_index(self.index_gamma_path, 1)        
+        #end = time.time()        
+        #self.__save_vocabulary__(self.vocabulary_gamma_path)
+        #print(f"Gamma compression index saving time: {end - start}")
+        #
+        ## With gaps
+        #start = time.time()
+        #self.save_index_with_gaps(self.index_gaps_variable_byte_path, 2)        
+        #end = time.time()
+        #self.__save_vocabulary__(self.vocabulary_gaps_variable_byte_path)
+        #print(f"Variable Byte compression index with gaps saving time: {end - start}")
+#
+#        #start = time.time()
+        #self.save_index_with_gaps(self.index_gaps_gamma_path, 1)        
+        #end = time.time()        
+        #self.__save_vocabulary__(self.vocabulary_gaps_gamma_path)
+        #
+        #print(f"Gamma compression index with gaps saving time: {end - start}")       
        
 
+    def load_index_with_loaded_dict(self, index_path, compression_method):
+        loaded_index = {}
+        for term in self.vocabulary.keys():
+            term_pointer, df, total_bytes, right_padding = self.vocabulary[term]
+            compressed_posting = self.posting_retriever.load_compressed_posting_from_params(index_path, term_pointer, total_bytes)
+            posting = self.compressor.decompress(compressed_posting, compression_method, right_padding)
+            loaded_index[term] = posting
+
+            
     def evaluate_posting_retrieval(self):
         self.posting_retriever.load_vocabulary(self.vocabulary_variable_byte_path)
         start = time.time()
@@ -101,27 +110,22 @@ class FrequencyIndexer:
     def get_vocab_size(self):
         return len(self.vocabulary.keys())
 
-    def __save_index__(self, output_path, compression_method = 1):          
+    def save_index(self, output_path, compression_method = 1):          
         pointer = 0
         with open(output_path, "wb") as file:
             for term in self.index.keys():
                 posting_lists = self.index[term]
                 df = len(posting_lists)
                 values = [item for sublist in posting_lists for item in sublist]
-                #compressed = []
-                #for value in values:
-                #    bytes = self.compressor.compress(value, compression_method)
-                #    for byte in bytes:
-                #        compressed.append(byte)
 
-                compressed = self.compressor.compress(values, compression_method)
+                compressed, right_padding = self.compressor.compress(values, compression_method)
                 output_format = "B" * len(compressed)
                 packed_postings = struct.pack(output_format, *compressed)
                 bytes_written = file.write(packed_postings)
-                self.vocabulary[term] = [df, pointer, bytes_written]
+                self.vocabulary[term] = [df, pointer, bytes_written, right_padding]
                 pointer += bytes_written
 
-    def __save_index_with_gaps__(self, output_path, compression_method = 1):          
+    def save_index_with_gaps(self, output_path, compression_method = 1):          
         pointer = 0
         with open(output_path, "wb") as file:
             for term in self.index.keys():
@@ -134,15 +138,16 @@ class FrequencyIndexer:
                 for entry in posting_lists[1:]:                    
                     doc_id = entry[0]
                     gaps_lists.append([doc_id - previous_doc_id, entry[1]])
-                print(gaps_lists)
+                    previous_doc_id = doc_id
+                
                 values = [item for sublist in gaps_lists for item in sublist]
 
-                compressed = self.compressor.compress(values, compression_method)                
+                compressed, right_padding = self.compressor.compress(values, compression_method)                
                 
                 output_format = "B" * len(compressed)
                 packed_postings = struct.pack(output_format, *compressed)
                 bytes_written = file.write(packed_postings)
-                self.vocabulary[term] = [df, pointer, bytes_written]
+                self.vocabulary[term] = [df, pointer, bytes_written, right_padding]
                 pointer += bytes_written
     
 
@@ -152,10 +157,10 @@ class FrequencyIndexer:
         with open(output_path, "wb") as file:
             for term in self.vocabulary.keys():
                 try:
-                    df, pointer, bytes = self.vocabulary[term]
+                    df, pointer, bytes, right_padding = self.vocabulary[term]
                                         
-                    output_format = "IHH"                
-                    packed_values = struct.pack(output_format, pointer, df, bytes)                    
+                    output_format = "IHHH"                
+                    packed_values = struct.pack(output_format, pointer, df, bytes, right_padding)                    
                     encoded_term = term.encode('utf-8')
                     
                     if len(encoded_term) > max_term_length:

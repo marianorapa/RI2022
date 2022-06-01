@@ -32,6 +32,15 @@ class PostingsListRetriever:
             print(f"No se pudo cargar el vocabulario desde {self.vocabulary_path}: {e}")
             sys.exit(0)
 
+
+    def load_compressed_posting_from_params(self, index_path, term_pointer, total_bytes):
+        with open(index_path, "rb") as file:
+            file.seek(term_pointer)
+            compressed_bytes = file.read(total_bytes)
+            data_format = "B" * total_bytes
+            compressed_ints = struct.unpack(data_format, compressed_bytes)
+            return compressed_ints
+
     def load_compressed_posting(self, index_path, term):                  
         if term in self.vocabulary:
             #gaps = self.gaps_retriever.load_gaps(term)

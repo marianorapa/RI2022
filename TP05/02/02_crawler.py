@@ -8,8 +8,8 @@ from pyvis.network import Network
 class Crawler:
 
     def __init__(self):
-        self.MAX_SITE_PAGES = 40
-        self.MAX_PAGES_DEPTH = 2
+        self.MAX_SITE_PAGES = 30
+        self.MAX_PAGES_DEPTH = 3
         self.CRAWL_LIMIT = 500
 
     def __normalize_base_url__(self, url):
@@ -83,8 +83,8 @@ class Crawler:
 
         done_list = {}
         
-        crawled_pages = 0
-        while not q.empty() and crawled_pages < self.CRAWL_LIMIT:
+        
+        while (not q.empty()) and (id <= self.CRAWL_LIMIT):
             # Get next page from queue
             page = q.get()
             # Remove page from todo list
@@ -101,7 +101,7 @@ class Crawler:
                             page["outlinks"].append(done_list[link])
                         elif link in todo_list:
                             page["outlinks"].append(todo_list[link])
-                        else:
+                        elif id < self.CRAWL_LIMIT:
                             # If the link is not done nor todo, add it to todo (will add param checks in here)
                             protocol, host, path = self.__split_url__(link)
                             if host not in site_pages_amt:
@@ -114,7 +114,7 @@ class Crawler:
                                 page["outlinks"].append(new_page["id"])
                                 # Count page in this host
                                 site_pages_amt[host] += 1
-                crawled_pages += 1
+                
                 result.append(page)
                 #print(result)
             except Exception as e:

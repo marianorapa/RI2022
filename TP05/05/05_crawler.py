@@ -4,13 +4,17 @@ import requests
 import queue
 import networkx as nx
 from pyvis.network import Network
+import matplotlib.pyplot as plt
+from numpy import intersect1d
+
+CRAWL_LIMIT = 500
 
 class Crawler:
 
     def __init__(self):
         self.MAX_SITE_PAGES = 40
-        self.MAX_PAGES_DEPTH = 2
-        self.CRAWL_LIMIT = 500
+        self.MAX_PAGES_DEPTH = 3
+        self.CRAWL_LIMIT = CRAWL_LIMIT
 
     def __normalize_base_url__(self, url):
         output_link = url
@@ -82,9 +86,8 @@ class Crawler:
             site_pages_amt[host] = 0
 
         done_list = {}
-        
-        crawled_pages = 0
-        while not q.empty() and crawled_pages < self.CRAWL_LIMIT:
+                
+        while (not q.empty()) and (id <= self.CRAWL_LIMIT):
             # Get next page from queue
             page = q.get()
             # Remove page from todo list
@@ -96,12 +99,12 @@ class Crawler:
                 if page["depth"] < self.MAX_PAGES_DEPTH:
                     # Get links from page
                     links = self.__retrieve_links__(page["url"], False)
-                    for link in links:
+                    for link in links:                    
                         if link in done_list:
                             page["outlinks"].append(done_list[link])
                         elif link in todo_list:
                             page["outlinks"].append(todo_list[link])
-                        else:
+                        elif id < self.CRAWL_LIMIT:
                             # If the link is not done nor todo, add it to todo (will add param checks in here)
                             protocol, host, path = self.__split_url__(link)
                             if host not in site_pages_amt:
@@ -113,8 +116,8 @@ class Crawler:
                                 todo_list[link] = new_page["id"]
                                 page["outlinks"].append(new_page["id"])
                                 # Count page in this host
-                                site_pages_amt[host] += 1
-                crawled_pages += 1
+                                site_pages_amt[host] += 1                                    
+                
                 result.append(page)
                 #print(result)
             except Exception as e:
@@ -133,13 +136,13 @@ if __name__ == '__main__':
     if len(sys.argv) < 2:
         print("El programa espera un archivo con la semilla")
         sys.exit(0)
+
     crawler = Crawler()
     seed_path = sys.argv[1]
     initial_seed = read_seed(seed_path)
         
     pages = crawler.crawl(initial_seed)
-    
-    
+
     nodes = []
     node_mappings = {}
     edges = []
@@ -150,15 +153,58 @@ if __name__ == '__main__':
         nodes.append(id)
         node_mappings[id] = url
         for outlink in outlinks:
-            edges.append((id, outlink))
+            if outlink < CRAWL_LIMIT:               
+                edges.append((id, outlink))
 
     print(f"Total crawled pages: {len(pages)}")
     G = nx.DiGraph()
+    print(f"Nodes length {len(nodes)}")
     G.add_nodes_from(nodes)
     G.add_edges_from(edges)
-    H = nx.relabel_nodes(G, node_mappings)
-    nt = Network('720px', '1280px')
 
-    nt.from_nx(H)
-    nt.show('graph.html')
+    page_rank = nx.pagerank(G, alpha=0.8, max_iter=100)
+    #print ("PageRank:{}".format(page_rank))
+    hubs, auth = nx.hits(G, max_iter=200)    
 
+    #print ("auth:{}".format(auth))
+
+    
+    sorted_page_rank = list(dict(sorted(page_rank.items(), key=lambda item: item[1], reverse=True)).keys())
+    sorted_auth = list(dict(sorted(auth.items(), key=lambda item: item[1], reverse=True)).keys())
+
+    # La respuesta final es una serie donde el eje x es la cantidad de docs 
+    # recuperados por PageRank. La serie es el overlap.
+
+    print(f"Page rank len {len(sorted_page_rank)}")
+    print(f"Auth len {len(sorted_auth)}")
+
+    overlap_page_rank_series = []
+    overlap_my_crawling_series = []
+    total_pages = len(sorted_page_rank)
+    for i in range(0, total_pages):      
+        overlap_pr = len(intersect1d(sorted_page_rank[:i], sorted_auth[:i]))/total_pages        
+        overlap_my_crawling = len(intersect1d(nodes[:i], sorted_auth[:i]))/total_pages
+        overlap_page_rank_series.append(overlap_pr)
+        overlap_my_crawling_series.append(overlap_my_crawling)
+
+    x = [x/total_pages for x in range(1, len(overlap_page_rank_series)+1)]
+    
+
+    print(f"overlap page rank series len {len(overlap_page_rank_series)}")
+    print(f"x len {len(x)}")
+
+
+    print(f"my series len {len(overlap_my_crawling_series)}")
+
+    # Pendiente de agregar el resultado de mi crawling con respecto a Auth
+    
+    #plt.plot(x, x, label="Auths")
+    plt.plot(x, overlap_page_rank_series, label="PageRank")
+    plt.plot(x, overlap_my_crawling_series, label="Crawled order")
+    plt.plot( [0,1],[0,1], label="Auth")
+    plt.xlabel("Cobertura")
+    plt.ylabel("Solapamiento")
+    plt.legend(loc='upper center')
+    plt.savefig("overlap.png")
+
+    
